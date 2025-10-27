@@ -7,34 +7,41 @@
 
 <body>
     <!-- ======= Sidebar ======= -->
-    <aside th:fragment="menu" class="sidebar">
+    <aside th:fragment="menu" class="sidebar"
+        th:with="currentContent=${content},
+                 componentsActive=${currentContent == 'accordion' or currentContent == 'alerts' or currentContent == 'badges'},
+                 authActive=${currentContent == 'login' or currentContent == 'register' or currentContent == 'forgot-password'},
+                 errorsActive=${currentContent == 'error-403' or currentContent == 'error-404' or currentContent == 'error-500'}">
 
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link " th:href="@{/}">
+                <a class="nav-link" th:href="@{/}"
+                    th:classappend="${currentContent} == 'index' ? ' active' : ' collapsed'">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
             </li><!-- End Dashboard Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+                <a class="nav-link" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#"
+                    th:classappend="${componentsActive} ? ' active' : ' collapsed'">
                     <i class="bi bi-menu-button-wide"></i><span>Componentes</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
-                <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav"
+                    th:classappend="${componentsActive} ? ' show' : ''">
                     <li>
-                        <a th:href="@{/accordion}">
+                        <a th:href="@{/accordion}" th:classappend="${currentContent} == 'accordion' ? ' active' : ''">
                             <i class="bi bi-circle"></i><span>Accordion</span>
                         </a>
                     </li>
                     <li>
-                        <a th:href="@{/alerts}">
+                        <a th:href="@{/alerts}" th:classappend="${currentContent} == 'alerts' ? ' active' : ''">
                             <i class="bi bi-circle"></i><span>Alerts</span>
                         </a>
                     </li>
                     <li>
-                        <a th:href="@{/badges}">
+                        <a th:href="@{/badges}" th:classappend="${currentContent} == 'badges' ? ' active' : ''">
                             <i class="bi bi-circle"></i><span>Badges</span>
                         </a>
                     </li>
@@ -44,71 +51,80 @@
             <li class="nav-heading">Pages</li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" th:href="@{/usuarios}">
+                <a class="nav-link" th:href="@{/usuarios}"
+                    th:classappend="${currentContent} == 'usuarios' ? ' active' : ' collapsed'">
                     <i class="bi bi-people"></i>
                     <span>Usuários</span>
                 </a>
             </li><!-- End Profile Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" th:href="@{/configuracoes}">
+                <a class="nav-link" th:href="@{/configuracoes}"
+                    th:classappend="${currentContent} == 'configuracoes' ? ' active' : ' collapsed'">
                     <i class="bi bi-gear"></i>
                     <span>Configurações</span>
                 </a>
             </li><!-- End F.A.Q Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" th:href="@{/botoes}">
+                <a class="nav-link" th:href="@{/botoes}"
+                    th:classappend="${currentContent} == 'botoes' ? ' active' : ' collapsed'">
                     <i class="bi bi-menu-button-wide"></i>
                     <span>Botões</span>
                 </a>
             </li><!-- End Buttons Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" th:href="@{/formularios}">
+                <a class="nav-link" th:href="@{/formularios}"
+                    th:classappend="${currentContent} == 'formularios' ? ' active' : ' collapsed'">
                     <i class="bi bi-journal-text"></i>
                     <span>Formulários</span>
                 </a>
             </li><!-- End Forms Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" th:href="@{/form-editor}">
+                <a class="nav-link" th:href="@{/form-editor}"
+                    th:classappend="${currentContent} == 'form-editor' ? ' active' : ' collapsed'">
                     <i class="bi bi-textarea-t"></i>
                     <span>Editor</span>
                 </a>
             </li><!-- End Editor Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" th:href="@{/graficos}">
+                <a class="nav-link" th:href="@{/graficos}"
+                    th:classappend="${currentContent} == 'graficos' ? ' active' : ' collapsed'">
                     <i class="bi bi-bar-chart"></i>
                     <span>Gráficos</span>
                 </a>
             </li><!-- End Charts Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" th:href="@{/tabelas}">
+                <a class="nav-link" th:href="@{/tabelas}"
+                    th:classappend="${currentContent} == 'tabelas' ? ' active' : ' collapsed'">
                     <i class="bi bi-layout-text-window-reverse"></i>
                     <span>Tabelas</span>
                 </a>
             </li><!-- End Tables Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#auth-nav" data-bs-toggle="collapse" href="#">
+                <a class="nav-link" data-bs-target="#auth-nav" data-bs-toggle="collapse" href="#"
+                    th:classappend="${authActive} ? ' active' : ' collapsed'">
                     <i class="bi bi-shield-lock"></i><span>Authentication</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
-                <ul id="auth-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <ul id="auth-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav"
+                    th:classappend="${authActive} ? ' show' : ''">
                     <li>
-                        <a th:href="@{/login}">
+                        <a th:href="@{/login}" th:classappend="${currentContent} == 'login' ? ' active' : ''">
                             <i class="bi bi-circle"></i><span>Login</span>
                         </a>
                     </li>
                     <li>
-                        <a th:href="@{/register}">
+                        <a th:href="@{/register}" th:classappend="${currentContent} == 'register' ? ' active' : ''">
                             <i class="bi bi-circle"></i><span>Register</span>
                         </a>
                     </li>
                     <li>
-                        <a th:href="@{/forgot-password}">
+                        <a th:href="@{/forgot-password}" th:classappend="${currentContent} == 'forgot-password' ? ' active' : ''">
                             <i class="bi bi-circle"></i><span>Forgot Password</span>
                         </a>
                     </li>
@@ -116,22 +132,24 @@
             </li><!-- End Auth Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#errors-nav" data-bs-toggle="collapse" href="#">
+                <a class="nav-link" data-bs-target="#errors-nav" data-bs-toggle="collapse" href="#"
+                    th:classappend="${errorsActive} ? ' active' : ' collapsed'">
                     <i class="bi bi-bug"></i><span>Errors</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
-                <ul id="errors-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <ul id="errors-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav"
+                    th:classappend="${errorsActive} ? ' show' : ''">
                     <li>
-                        <a th:href="@{/error-403}">
+                        <a th:href="@{/error-403}" th:classappend="${currentContent} == 'error-403' ? ' active' : ''">
                             <i class="bi bi-circle"></i><span>Error 403</span>
                         </a>
                     </li>
                     <li>
-                        <a th:href="@{/error-404}">
+                        <a th:href="@{/error-404}" th:classappend="${currentContent} == 'error-404' ? ' active' : ''">
                             <i class="bi bi-circle"></i><span>Error 404</span>
                         </a>
                     </li>
                     <li>
-                        <a th:href="@{/error-500}">
+                        <a th:href="@{/error-500}" th:classappend="${currentContent} == 'error-500' ? ' active' : ''">
                             <i class="bi bi-circle"></i><span>Error 500</span>
                         </a>
                     </li>
