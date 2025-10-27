@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Error 500</title>
+
+    <!-- Favicons -->
+    <link th:href="@{/img/favicon.png}" rel="icon">
+    <link th:href="@{/img/apple-touch-icon.png}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+
+            <section class="section error-404 min-vh-100 d-flex flex-column align-items-center justify-content-center">
+                <h1>500</h1>
+                <h2>Erro Interno do Servidor.</h2>
+                <a class="btn" th:href="@{/}">Voltar para o Início</a>
+                <img th:src="@{/img/not-found.svg}" class="img-fluid py-5" alt="Page Not Found" style="max-height: 400px;">
+            </section>
+
+        </div>
+    </main><!-- End #main -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script th:src="@{/js/main.js}"></script>
+
+</body>
+
+</html>

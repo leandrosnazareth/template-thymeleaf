@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header th:fragment="header" class="header d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <a th:href="@{/}" class="logo d-flex align-items-center">
+                <img th:src="@{/img/logo.png}" alt="">
+                <span class="d-none d-lg-block">Nazareth</span>
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div><!-- End Logo -->
+
+        <div class="header-search d-none d-md-flex">
+            <form class="search-form d-flex align-items-center" action="#" method="get">
+                <i class="bi bi-search"></i>
+                <input type="text" name="query" class="form-control" placeholder="Pesquisar dashboards, usuários, relatórios..." aria-label="Pesquisar">
+                <button type="submit" class="search-submit">
+                    <i class="bi bi-arrow-return-left"></i>
+                </button>
+            </form>
+        </div>
+
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+
+                <li class="nav-item nav-icon-item d-none d-sm-inline-block">
+                    <a id="theme-toggle-link" class="nav-link nav-icon" href="#" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" title="Mudar Tema">
+                        <i class="bi bi-sun" id="theme-toggle-icon"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item nav-icon-item d-none d-sm-inline-block">
+                    <a class="nav-link nav-icon" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Notificações">
+                        <i class="bi bi-bell"></i>
+                        <span class="badge bg-danger badge-number">3</span>
+                    </a>
+                </li>
+
+                <li class="nav-item nav-icon-item d-none d-sm-inline-block">
+                    <a class="nav-link nav-icon" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                        title="Mensagens">
+                        <i class="bi bi-envelope"></i>
+                        <span class="badge bg-success badge-number">5</span>
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown pe-3">
+
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <img th:src="@{/img/profile-img.jpg}" alt="Profile" class="rounded-circle">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">L. Nazareth</span>
+                    </a><!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6>Leandro Nazareth</h6>
+                            <span>Developer</span>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" th:href="@{/my-profile}">
+                                <i class="bi bi-person"></i>
+                                <span>My Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-start" href="#">
+                                <i class="bi bi-layout-sidebar-inset me-2"></i>
+                                <div class="flex-grow-1">
+                                    <span class="d-block">Posição do Menu</span>
+                                    <div class="profile-menu-options">
+                                        <label class="form-check align-items-center">
+                                            <input class="form-check-input" type="radio" name="menuPosition" id="menuLeftDropdown" value="left" checked>
+                                            <span class="form-check-label">Esquerda</span>
+                                        </label>
+                                        <label class="form-check align-items-center">
+                                            <input class="form-check-input" type="radio" name="menuPosition" id="menuRightDropdown" value="right">
+                                            <span class="form-check-label">Direita</span>
+                                        </label>
+                                        <label class="form-check align-items-center mb-0">
+                                            <input class="form-check-input" type="radio" name="menuPosition" id="menuTopDropdown" value="top">
+                                            <span class="form-check-label">Topo</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" th:href="@{/login}">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Sign Out</span>
+                            </a>
+                        </li>
+
+                    </ul><!-- End Profile Dropdown Items -->
+                </li><!-- End Profile Nav -->
+
+            </ul>
+        </nav><!-- End Icons Navigation -->
+
+    </header><!-- End Header -->
+</body>
+
+</html>

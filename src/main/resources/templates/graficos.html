@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+    <div th:fragment="content">
+        <div class="pagetitle">
+            <h1>Gráficos</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                    <li class="breadcrumb-item">Componentes</li>
+                    <li class="breadcrumb-item active">Gráficos</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <p>Esta página usa <a href="https://apexcharts.com/" target="_blank">ApexCharts.js</a> para criar os gráficos. Veja a documentação oficial para mais opções.</p>
+
+        <section class="section">
+            <div class="row">
+
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Gráfico de Linha</h5>
+                            <div id="lineChart"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Gráfico de Área</h5>
+                            <div id="areaChart"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Gráfico de Barras</h5>
+                            <div id="barChart"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Gráfico de Pizza</h5>
+                            <div id="pieChart"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Gráfico de Rosca (Donut)</h5>
+                            <div id="donutChart"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Gráfico de Radar</h5>
+                            <div id="radarChart"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <script th:inline="javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const currentTheme = localStorage.getItem('theme') || 'light';
+
+                // Line Chart
+                new ApexCharts(document.querySelector("#lineChart"), {
+                    series: [{
+                        name: "Desktops",
+                        data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+                    }],
+                    chart: {
+                        height: 350,
+                        type: 'line',
+                        zoom: {
+                            enabled: false
+                        }
+                    },
+                    theme: { mode: currentTheme },
+                    dataLabels: {
+                        enabled: false
+                    },
+                    stroke: {
+                        curve: 'straight'
+                    },
+                    grid: {
+                        row: {
+                            colors: ['#f3f3f3', 'transparent'],
+                            opacity: 0.5
+                        },
+                    },
+                    xaxis: {
+                        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                    }
+                }).render();
+
+                // Area Chart
+                new ApexCharts(document.querySelector("#areaChart"), {
+                    series: [{
+                        name: 'Series 1',
+                        data: [31, 40, 28, 51, 42, 109, 100]
+                    }, {
+                        name: 'Series 2',
+                        data: [11, 32, 45, 32, 34, 52, 41]
+                    }],
+                    chart: {
+                        height: 350,
+                        type: 'area',
+                        toolbar: {
+                            show: false
+                        },
+                    },
+                    theme: { mode: currentTheme },
+                    dataLabels: {
+                        enabled: false
+                    },
+                    stroke: {
+                        curve: 'smooth'
+                    },
+                    xaxis: {
+                        type: 'datetime',
+                        categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                    },
+                }).render();
+
+                // Bar Chart
+                new ApexCharts(document.querySelector("#barChart"), {
+                    series: [{
+                        data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380]
+                    }],
+                    chart: {
+                        type: 'bar',
+                        height: 350
+                    },
+                    theme: { mode: currentTheme },
+                    plotOptions: {
+                        bar: {
+                            borderRadius: 4,
+                            horizontal: true,
+                        }
+                    },
+                    dataLabels: {
+                        enabled: false
+                    },
+                    xaxis: {
+                        categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France', 'Japan', 'United States', 'China', 'Germany'],
+                    }
+                }).render();
+
+                // Pie Chart
+                new ApexCharts(document.querySelector("#pieChart"), {
+                    series: [44, 55, 13, 43, 22],
+                    chart: {
+                        height: 350,
+                        type: 'pie',
+                        toolbar: {
+                            show: true
+                        }
+                    },
+                    theme: { mode: currentTheme },
+                    labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E']
+                }).render();
+
+                // Donut Chart
+                new ApexCharts(document.querySelector("#donutChart"), {
+                    series: [44, 55, 13, 43, 22],
+                    chart: {
+                        height: 350,
+                        type: 'donut',
+                        toolbar: {
+                            show: true
+                        }
+                    },
+                    theme: { mode: currentTheme },
+                    labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E']
+                }).render();
+
+                // Radar Chart
+                new ApexCharts(document.querySelector("#radarChart"), {
+                    series: [{
+                        name: 'Series 1',
+                        data: [80, 50, 30, 40, 100, 20],
+                    }],
+                    chart: {
+                        height: 350,
+                        type: 'radar',
+                    },
+                    theme: { mode: currentTheme },
+                    xaxis: {
+                        categories: ['January', 'February', 'March', 'April', 'May', 'June']
+                    }
+                }).render();
+
+            });
+        </script>
+    </div>
+
+</body>
+
+</html>

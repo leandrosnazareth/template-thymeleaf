@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+    th:with="currentPage='configuracoes'">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Configurações</title>
+</head>
+
+<body>
+
+    <div th:fragment="content">
+        <div class="pagetitle">
+            <h1>Configurações</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                    <li class="breadcrumb-item">Pages</li>
+                    <li class="breadcrumb-item active">Configurações</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Layout</h5>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="mb-3">
+                                        <label class="form-label">Posição do Menu</label>
+                                        <div class="d-flex">
+                                            <div class="form-check me-3">
+                                                <input class="form-check-input" type="radio" name="menuPosition" id="menuLeft" value="left" checked>
+                                                <label class="form-check-label" for="menuLeft">
+                                                    Esquerda
+                                                </label>
+                                            </div>
+                                            <div class="form-check me-3">
+                                                <input class="form-check-input" type="radio" name="menuPosition" id="menuRight" value="right">
+                                                <label class="form-check-label" for="menuRight">
+                                                    Direita
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="menuPosition" id="menuTop" value="top">
+                                                <label class="form-check-label" for="menuTop">
+                                                    Topo
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

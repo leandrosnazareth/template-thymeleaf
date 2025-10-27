@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+    <div th:fragment="content">
+        <div class="pagetitle">
+            <h1>Alertas</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                    <li class="breadcrumb-item">Componentes</li>
+                    <li class="breadcrumb-item active">Alertas</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Alertas Padrão</h5>
+                            <div class="alert alert-primary" role="alert">
+                                Um simples alerta primary—confira!
+                            </div>
+                            <div class="alert alert-secondary" role="alert">
+                                Um simples alerta secondary—confira!
+                            </div>
+                            <div class="alert alert-success" role="alert">
+                                Um simples alerta success—confira!
+                            </div>
+                            <div class="alert alert-danger" role="alert">
+                                Um simples alerta danger—confira!
+                            </div>
+                            <div class="alert alert-warning" role="alert">
+                                Um simples alerta warning—confira!
+                            </div>
+                            <div class="alert alert-info" role="alert">
+                                Um simples alerta info—confira!
+                            </div>
+                            <div class="alert alert-light" role="alert">
+                                Um simples alerta light—confira!
+                            </div>
+                            <div class="alert alert-dark" role="alert">
+                                Um simples alerta dark—confira!
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Alertas com Ícones</h5>
+                            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                <i class="bi bi-star me-1"></i>
+                                Um simples alerta primary com um ícone
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <i class="bi bi-check-circle me-1"></i>
+                                Um simples alerta success com um ícone
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                <i class="bi bi-exclamation-octagon me-1"></i>
+                                Um simples alerta danger com um ícone
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <i class="bi bi-exclamation-triangle me-1"></i>
+                                Um simples alerta warning com um ícone
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

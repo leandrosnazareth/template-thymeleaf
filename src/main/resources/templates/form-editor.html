@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+    <div th:fragment="content">
+        <div class="pagetitle">
+            <h1>Editor de Formulário</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                    <li class="breadcrumb-item">Componentes</li>
+                    <li class="breadcrumb-item active">Editor</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Editor de Texto Moderno (Quill)</h5>
+                            <!-- Quill Editor -->
+                            <div id="quill-editor" style="height: 200px;">
+                                <p>Hello World!</p>
+                                <p>This is Quill, a modern WYSIWYG editor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Editor Clássico (CKEditor 5)</h5>
+                            <!-- CKEditor -->
+                            <textarea id="ckeditor-editor">Este é o CKEditor 5.</textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script th:inline="javascript">
+            document.addEventListener('DOMContentLoaded', (event) => {
+                // Quill
+                new Quill('#quill-editor', {
+                    theme: 'snow'
+                });
+
+                // CKEditor
+                ClassicEditor
+                    .create(document.querySelector('#ckeditor-editor'))
+                    .catch(error => {
+                        console.error(error);
+                    });
+            });
+        </script>
+    </div>
+
+</body>
+
+</html>

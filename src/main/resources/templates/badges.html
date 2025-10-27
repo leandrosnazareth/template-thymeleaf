@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+    <div th:fragment="content">
+        <div class="pagetitle">
+            <h1>Badges</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                    <li class="breadcrumb-item">Componentes</li>
+                    <li class="breadcrumb-item active">Badges</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Badges Padrão</h5>
+                            <span class="badge bg-primary">Primary</span>
+                            <span class="badge bg-secondary">Secondary</span>
+                            <span class="badge bg-success">Success</span>
+                            <span class="badge bg-danger">Danger</span>
+                            <span class="badge bg-warning text-dark">Warning</span>
+                            <span class="badge bg-info text-dark">Info</span>
+                            <span class="badge bg-light text-dark">Light</span>
+                            <span class="badge bg-dark">Dark</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Badges Arredondados (Pill)</h5>
+                            <span class="badge rounded-pill bg-primary">Primary</span>
+                            <span class="badge rounded-pill bg-secondary">Secondary</span>
+                            <span class="badge rounded-pill bg-success">Success</span>
+                            <span class="badge rounded-pill bg-danger">Danger</span>
+                            <span class="badge rounded-pill bg-warning text-dark">Warning</span>
+                            <span class="badge rounded-pill bg-info text-dark">Info</span>
+                            <span class="badge rounded-pill bg-light text-dark">Light</span>
+                            <span class="badge rounded-pill bg-dark">Dark</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Badges em Botões</h5>
+                            <button type="button" class="btn btn-primary">
+                                Notificações <span class="badge bg-white text-primary">4</span>
+                            </button>
+                            <button type="button" class="btn btn-success position-relative">
+                                Perfil
+                                <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                                    <span class="visually-hidden">New alerts</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+    th:with="currentPage='profile'">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+</head>
+
+<body>
+
+    <div th:fragment="content">
+        <div class="pagetitle">
+            <h1>My Profile</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                    <li class="breadcrumb-item">Account</li>
+                    <li class="breadcrumb-item active">My Profile</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section profile-section">
+            <div class="profile-hero card border-0 shadow-sm">
+                <div class="profile-cover"></div>
+                <div class="profile-body">
+                    <div class="profile-avatar">
+                        <img th:src="@{/img/profile-img.jpg}" alt="Profile photo">
+                    </div>
+                    <div class="profile-heading">
+                        <div>
+                            <h2 class="profile-name">Leandro Nazareth</h2>
+                            <p class="profile-role">Head of Analytics • São Paulo, Brasil</p>
+                        </div>
+                        <div class="profile-actions">
+                            <button class="btn btn-outline-light"><i class="bi bi-pencil me-2"></i>Editar Perfil</button>
+                            <button class="btn btn-light"><i class="bi bi-chat-dots me-2"></i>Enviar Mensagem</button>
+                            <button class="btn btn-primary"><i class="bi bi-box-arrow-up-right me-2"></i>Compartilhar</button>
+                        </div>
+                    </div>
+                    <div class="profile-meta">
+                        <div>
+                            <span class="label">Equipe</span>
+                            <span>Growth Intelligence</span>
+                        </div>
+                        <div>
+                            <span class="label">Desde</span>
+                            <span>Jul 2019</span>
+                        </div>
+                        <div>
+                            <span class="label">Contato</span>
+                            <span>leandro.nazareth@empresa.com</span>
+                        </div>
+                        <div>
+                            <span class="label">Disponibilidade</span>
+                            <span>Interagindo até 18h BRT</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <span class="stat-label">Projetos ativos</span>
+                        <span class="stat-value">08</span>
+                        <span class="stat-trend positive"><i class="bi bi-arrow-up-right"></i> +2 este mês</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Tarefas concluídas</span>
+                        <span class="stat-value">124</span>
+                        <span class="stat-trend positive"><i class="bi bi-check-circle"></i> 98% de SLA</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Horas logadas</span>
+                        <span class="stat-value">142h</span>
+                        <span class="stat-trend neutral"><i class="bi bi-clock-history"></i> Dentro do planejado</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Score de impacto</span>
+                        <span class="stat-value">9.4</span>
+                        <span class="stat-trend positive"><i class="bi bi-lightning-charge"></i> Top 5% da equipe</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row gy-4 mt-4">
+                <div class="col-xl-8">
+                    <div class="card profile-card h-100">
+                        <div class="card-body">
+                            <div class="profile-tabs">
+                                <ul class="nav nav-pills mb-3" id="profileTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="overview-tab" data-bs-toggle="pill" data-bs-target="#overview"
+                                            type="button" role="tab" aria-controls="overview" aria-selected="true">Visão Geral</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="activity-tab" data-bs-toggle="pill" data-bs-target="#activity"
+                                            type="button" role="tab" aria-controls="activity" aria-selected="false">Atividade</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="security-tab" data-bs-toggle="pill" data-bs-target="#security"
+                                            type="button" role="tab" aria-controls="security" aria-selected="false">Segurança</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="profileTabContent">
+                                    <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <div class="info-item">
+                                                    <span class="info-label">Nome completo</span>
+                                                    <span class="info-value">Leandro da Silva Nazareth</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="info-item">
+                                                    <span class="info-label">Cargo</span>
+                                                    <span class="info-value">Head of Analytics &amp; Insights</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="info-item">
+                                                    <span class="info-label">Telefone</span>
+                                                    <span class="info-value">+55 (11) 98765-4321</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="info-item">
+                                                    <span class="info-label">Idioma</span>
+                                                    <span class="info-value">Português, Inglês, Espanhol</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="info-item">
+                                                    <span class="info-label">Bio</span>
+                                                    <span class="info-value">Apaixonado por transformar dados em histórias que orientam decisões.
+                                                        Lidero iniciativas de crescimento orientadas por dados, com foco em experiências personalizadas e escaláveis.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr class="my-4">
+
+                                        <div class="row g-4">
+                                            <div class="col-md-6">
+                                                <h6 class="section-title">Times</h6>
+                                                <ul class="list-unstyled profile-list">
+                                                    <li>
+                                                        <span class="badge rounded-pill bg-primary-subtle text-primary">Growth Squad</span>
+                                                        <small>Weekly planning • Segunda, 09h</small>
+                                                    </li>
+                                                    <li>
+                                                        <span class="badge rounded-pill bg-success-subtle text-success">Analytics Guild</span>
+                                                        <small>Compartilhamento mensal de cases</small>
+                                                    </li>
+                                                    <li>
+                                                        <span class="badge rounded-pill bg-warning-subtle text-warning">Data Council</span>
+                                                        <small>Curadoria de indicadores estratégicos</small>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6 class="section-title">Habilidades principais</h6>
+                                                <div class="skill-meter">
+                                                    <div class="skill-label">
+                                                        <span>Analytics Strategy</span>
+                                                        <span>Avançado</span>
+                                                    </div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 92%"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="skill-meter">
+                                                    <div class="skill-label">
+                                                        <span>Data Storytelling</span>
+                                                        <span>Avançado</span>
+                                                    </div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 88%"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="skill-meter">
+                                                    <div class="skill-label">
+                                                        <span>Experimentação</span>
+                                                        <span>Intermediário</span>
+                                                    </div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 74%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="activity" role="tabpanel" aria-labelledby="activity-tab">
+                                        <div class="timeline">
+                                            <div class="timeline-item">
+                                                <span class="timeline-dot bg-primary"></span>
+                                                <div class="timeline-content">
+                                                    <div class="timeline-header">
+                                                        <span class="timeline-time">Hoje, 10h12</span>
+                                                        <span class="badge bg-primary-subtle text-primary">Growth</span>
+                                                    </div>
+                                                    <p class="timeline-text">Publicou o relatório de desempenho do Q1 com novos indicadores de retenção e forecasting.</p>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-item">
+                                                <span class="timeline-dot bg-success"></span>
+                                                <div class="timeline-content">
+                                                    <div class="timeline-header">
+                                                        <span class="timeline-time">Ontem, 16h40</span>
+                                                        <span class="badge bg-success-subtle text-success">Experiments</span>
+                                                    </div>
+                                                    <p class="timeline-text">Concluiu o experimento de onboarding personalizado com uplift de +18% em ativação.</p>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-item">
+                                                <span class="timeline-dot bg-warning"></span>
+                                                <div class="timeline-content">
+                                                    <div class="timeline-header">
+                                                        <span class="timeline-time">Seg, 09h05</span>
+                                                        <span class="badge bg-warning-subtle text-warning">Council</span>
+                                                    </div>
+                                                    <p class="timeline-text">Facilitou o Data Council alinhando novos critérios de qualidade dos dashboards estratégicos.</p>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-item">
+                                                <span class="timeline-dot bg-info"></span>
+                                                <div class="timeline-content">
+                                                    <div class="timeline-header">
+                                                        <span class="timeline-time">Sex, 14h20</span>
+                                                        <span class="badge bg-info-subtle text-info">Mentoria</span>
+                                                    </div>
+                                                    <p class="timeline-text">Sessão de mentoria com o time de Produto sobre métricas de north-star e análise de coerência.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
+                                        <div class="security-cards">
+                                            <div class="security-card">
+                                                <div class="security-icon bg-primary-subtle text-primary">
+                                                    <i class="bi bi-shield-lock"></i>
+                                                </div>
+                                                <div>
+                                                    <h6>Autenticação multifator</h6>
+                                                    <p class="mb-1">Protege sua conta com um segundo fator.</p>
+                                                    <span class="badge bg-success">Ativo</span>
+                                                </div>
+                                                <button class="btn btn-outline-primary btn-sm">Gerenciar</button>
+                                            </div>
+                                            <div class="security-card">
+                                                <div class="security-icon bg-warning-subtle text-warning">
+                                                    <i class="bi bi-key"></i>
+                                                </div>
+                                                <div>
+                                                    <h6>Chaves de acesso</h6>
+                                                    <p class="mb-1">3 dispositivos confiáveis cadastrados.</p>
+                                                    <span class="badge bg-light text-dark border">Última revisão: há 12 dias</span>
+                                                </div>
+                                                <button class="btn btn-outline-warning btn-sm">Atualizar</button>
+                                            </div>
+                                            <div class="security-card">
+                                                <div class="security-icon bg-danger-subtle text-danger">
+                                                    <i class="bi bi-incognito"></i>
+                                                </div>
+                                                <div>
+                                                    <h6>Sessões ativas</h6>
+                                                    <p class="mb-1">2 sessões em execução (Web • Mobile).</p>
+                                                    <span class="badge bg-danger-subtle text-danger-emphasis">Recomendado revogar</span>
+                                                </div>
+                                                <button class="btn btn-outline-danger btn-sm">Encerrar tudo</button>
+                                            </div>
+                                        </div>
+                                        <div class="alert alert-info border-0 mt-3 mb-0">
+                                            <i class="bi bi-info-circle me-2"></i>
+                                            Reforce a segurança ativando alertas de login em novos dispositivos.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4">
+                    <div class="card profile-card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title d-flex align-items-center gap-2 mb-3"><i class="bi bi-calendar-event text-primary"></i>Agenda</h5>
+                            <ul class="profile-list agenda-list">
+                                <li>
+                                    <div>
+                                        <span class="agenda-time">Hoje • 14h00</span>
+                                        <p class="mb-0">Revisão OKRs Growth Squad</p>
+                                    </div>
+                                    <span class="badge bg-primary-subtle text-primary">90 min</span>
+                                </li>
+                                <li>
+                                    <div>
+                                        <span class="agenda-time">Quarta • 11h30</span>
+                                        <p class="mb-0">Workshop Data Storytelling</p>
+                                    </div>
+                                    <span class="badge bg-success-subtle text-success">Online</span>
+                                </li>
+                                <li>
+                                    <div>
+                                        <span class="agenda-time">Sexta • 09h00</span>
+                                        <p class="mb-0">One-on-one com Júlia</p>
+                                    </div>
+                                    <span class="badge bg-warning-subtle text-warning">Presencial</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary w-100 mt-2">Ver agenda completa</a>
+                        </div>
+                    </div>
+
+                    <div class="card profile-card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title d-flex align-items-center gap-2 mb-3"><i class="bi bi-award text-success"></i>Reconhecimentos</h5>
+                            <div class="recognition-item">
+                                <div class="icon bg-success-subtle text-success"><i class="bi bi-trophy"></i></div>
+                                <div>
+                                    <h6>Mentor do trimestre</h6>
+                                    <p class="mb-0">Impacto de +35% no índice de satisfação do time.</p>
+                                </div>
+                                <span class="badge bg-light text-dark">Mar 2024</span>
+                            </div>
+                            <div class="recognition-item">
+                                <div class="icon bg-primary-subtle text-primary"><i class="bi bi-stars"></i></div>
+                                <div>
+                                    <h6>Case destaque</h6>
+                                    <p class="mb-0">Dashboard de ROI inteligente apresentado no Summit.</p>
+                                </div>
+                                <span class="badge bg-light text-dark">Jan 2024</span>
+                            </div>
+                            <div class="recognition-item">
+                                <div class="icon bg-warning-subtle text-warning"><i class="bi bi-lightbulb"></i></div>
+                                <div>
+                                    <h6>Ideia premiada</h6>
+                                    <p class="mb-0">Modelo de recomendação para cross-sell aprovado.</p>
+                                </div>
+                                <span class="badge bg-light text-dark">Nov 2023</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card profile-card">
+                        <div class="card-body">
+                            <h5 class="card-title d-flex align-items-center gap-2 mb-3"><i class="bi bi-gear text-info"></i>Preferências</h5>
+                            <div class="preferences">
+                                <div class="preferences-item">
+                                    <div>
+                                        <h6>Notificações</h6>
+                                        <span>Resumos diários às 18h</span>
+                                    </div>
+                                    <span class="badge bg-success">Ativo</span>
+                                </div>
+                                <div class="preferences-item">
+                                    <div>
+                                        <h6>Modo de foco</h6>
+                                        <span>Silenciar avisos entre 12h e 14h</span>
+                                    </div>
+                                    <span class="badge bg-warning-subtle text-warning">Agendado</span>
+                                </div>
+                                <div class="preferences-item">
+                                    <div>
+                                        <h6>Idioma</h6>
+                                        <span>Português (principal), Inglês</span>
+                                    </div>
+                                    <button class="btn btn-outline-secondary btn-sm">Alterar</button>
+                                </div>
+                                <div class="preferences-item">
+                                    <div>
+                                        <h6>Newsletter</h6>
+                                        <span>Insights de Experimentação</span>
+                                    </div>
+                                    <span class="badge bg-primary-subtle text-primary">Semanal</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

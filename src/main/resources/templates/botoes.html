@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+    <div th:fragment="content">
+
+        <div class="pagetitle">
+            <h1>Botões</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                    <li class="breadcrumb-item">Componentes</li>
+                    <li class="breadcrumb-item active">Botões</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Botões Padrão</h5>
+                            <button type="button" class="btn btn-primary">Primary</button>
+                            <button type="button" class="btn btn-secondary">Secondary</button>
+                            <button type="button" class="btn btn-success">Success</button>
+                            <button type="button" class="btn btn-danger">Danger</button>
+                            <button type="button" class="btn btn-warning">Warning</button>
+                            <button type="button" class="btn btn-info">Info</button>
+                            <button type="button" class="btn btn-light">Light</button>
+                            <button type="button" class="btn btn-dark">Dark</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Botões com Contorno (Outline)</h5>
+                            <button type="button" class="btn btn-outline-primary">Primary</button>
+                            <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                            <button type="button" class="btn btn-outline-success">Success</button>
+                            <button type="button" class="btn btn-outline-danger">Danger</button>
+                            <button type="button" class="btn btn-outline-warning">Warning</button>
+                            <button type="button" class="btn btn-outline-info">Info</button>
+                            <button type="button" class="btn btn-outline-light">Light</button>
+                            <button type="button" class="btn btn-outline-dark">Dark</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tamanhos de Botão</h5>
+                            <button type="button" class="btn btn-primary btn-sm">Small</button>
+                            <button type="button" class="btn btn-secondary">Default</button>
+                            <button type="button" class="btn btn-success btn-lg">Large</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Botões Arredondados</h5>
+                            <button type="button" class="btn btn-primary rounded-pill">Primary</button>
+                            <button type="button" class="btn btn-secondary rounded-pill">Secondary</button>
+                            <button type="button" class="btn btn-outline-success rounded-pill">Success</button>
+                            <button type="button" class="btn btn-outline-danger rounded-pill">Danger</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Botão em Bloco</h5>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary" type="button">Botão em Bloco</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Botões com Ícones</h5>
+                            <button type="button" class="btn btn-primary"><i class="bi bi-star"></i> Com Ícone</button>
+                            <button type="button" class="btn btn-success"><i class="bi bi-check-circle"></i> Salvar</button>
+                            <button type="button" class="btn btn-danger"><i class="bi bi-exclamation-octagon"></i> Excluir</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Botões Divididos (Split)</h5>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary">Ação</button>
+                                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Ação 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Ação 2</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Link Separado</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success">Dropdown</button>
+                                <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="visually-hidden">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Ação 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Ação 2</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Grupo de Botões</h5>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-primary">Esquerda</button>
+                                <button type="button" class="btn btn-primary">Meio</button>
+                                <button type="button" class="btn btn-primary">Direita</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Botões de Redes Sociais</h5>
+                            <button type="button" class="btn btn-social btn-facebook"><i class="bi bi-facebook"></i> Facebook</button>
+                            <button type="button" class="btn btn-social btn-twitter"><i class="bi bi-twitter"></i> Twitter</button>
+                            <button type="button" class="btn btn-social btn-linkedin"><i class="bi bi-linkedin"></i> LinkedIn</button>
+                            <button type="button" class="btn btn-social btn-instagram"><i class="bi bi-instagram"></i> Instagram</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+    <div th:fragment="content">
+        <div class="pagetitle">
+            <h1>Tabelas</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                    <li class="breadcrumb-item">Componentes</li>
+                    <li class="breadcrumb-item active">Tabelas</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tabela Padrão</h5>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Posição</th>
+                                        <th scope="col">Idade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Brandon Jacob</td>
+                                        <td>Designer</td>
+                                        <td>28</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Bridie Kessler</td>
+                                        <td>Developer</td>
+                                        <td>35</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tabela com Linhas Listradas</h5>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Posição</th>
+                                        <th scope="col">Idade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Brandon Jacob</td>
+                                        <td>Designer</td>
+                                        <td>28</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Bridie Kessler</td>
+                                        <td>Developer</td>
+                                        <td>35</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tabela com Bordas</h5>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Posição</th>
+                                        <th scope="col">Idade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Brandon Jacob</td>
+                                        <td>Designer</td>
+                                        <td>28</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Bridie Kessler</td>
+                                        <td>Developer</td>
+                                        <td>35</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tabela com Hover</h5>
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Posição</th>
+                                        <th scope="col">Idade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Brandon Jacob</td>
+                                        <td>Designer</td>
+                                        <td>28</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Bridie Kessler</td>
+                                        <td>Developer</td>
+                                        <td>35</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tabela Avançada com Paginação</h5>
+                            <p>Uma tabela mais rica com busca, ordenação e paginação, com textos traduzidos.</p>
+
+                            <table class="table datatable">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Cliente</th>
+                                        <th scope="col">Produto</th>
+                                        <th scope="col">Preço</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col">Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Brandon Jacob</td>
+                                        <td>At praesentium</td>
+                                        <td>$64</td>
+                                        <td><span class="badge bg-success">Aprovado</span></td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm" title="Ver"><i class="bi bi-eye"></i></button>
+                                            <button class="btn btn-info btn-sm" title="Editar"><i class="bi bi-pencil"></i></button>
+                                            <button class="btn btn-danger btn-sm" title="Excluir"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Bridie Kessler</td>
+                                        <td>Blanditiis dolor</td>
+                                        <td>$47</td>
+                                        <td><span class="badge bg-warning">Pendente</span></td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm" title="Ver"><i class="bi bi-eye"></i></button>
+                                            <button class="btn btn-info btn-sm" title="Editar"><i class="bi bi-pencil"></i></button>
+                                            <button class="btn btn-danger btn-sm" title="Excluir"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Ashleigh Langosh</td>
+                                        <td>At recusandae</td>
+                                        <td>$147</td>
+                                        <td><span class="badge bg-success">Aprovado</span></td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm" title="Ver"><i class="bi bi-eye"></i></button>
+                                            <button class="btn btn-info btn-sm" title="Editar"><i class="bi bi-pencil"></i></button>
+                                            <button class="btn btn-danger btn-sm" title="Excluir"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Angus Grady</td>
+                                        <td>Ut voluptatem</td>
+                                        <td>$67</td>
+                                        <td><span class="badge bg-danger">Rejeitado</span></td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm" title="Ver"><i class="bi bi-eye"></i></button>
+                                            <button class="btn btn-info btn-sm" title="Editar"><i class="bi bi-pencil"></i></button>
+                                            <button class="btn btn-danger btn-sm" title="Excluir"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>Raheem Lehner</td>
+                                        <td>Sunt similique</td>
+                                        <td>$165</td>
+                                        <td><span class="badge bg-success">Aprovado</span></td>
+                                        <td>
+                                            <button class="btn btn-primary btn-sm" title="Ver"><i class="bi bi-eye"></i></button>
+                                            <button class="btn btn-info btn-sm" title="Editar"><i class="bi bi-pencil"></i></button>
+                                            <button class="btn btn-danger btn-sm" title="Excluir"><i class="bi bi-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script th:inline="javascript">
+            document.addEventListener('DOMContentLoaded', () => {
+                if (document.querySelector('.datatable')) {
+                    new simpleDatatables.DataTable('.datatable', {
+                        labels: {
+                            placeholder: "Pesquisar...",
+                            perPage: "{select} entradas por página",
+                            noRows: "Nenhuma entrada encontrada",
+                            info: "Mostrando {start} a {end} de {rows} entradas",
+                        }
+                    });
+                }
+            });
+        </script>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+    <div th:fragment="content">
+
+        <div class="pagetitle">
+            <div class="dashboard-hero">
+                <div class="hero-copy">
+                    <span class="hero-eyebrow">Visão geral</span>
+                    <h1>Dashboard</h1>
+                    <p class="hero-subtitle">Monitore métricas-chave, acompanhe a performance da equipe e antecipe
+                        tendências com dados em tempo real.</p>
+                </div>
+                <div class="hero-metrics">
+                    <div class="hero-metric">
+                        <span class="metric-label">Receita mensal</span>
+                        <span class="metric-value">R$ 86K</span>
+                        <span class="metric-trend positive">+14% desde o mês passado</span>
+                    </div>
+                    <div class="hero-metric">
+                        <span class="metric-label">Ticket médio</span>
+                        <span class="metric-value">R$ 247</span>
+                        <span class="metric-trend neutral">Estável na semana</span>
+                    </div>
+                    <div class="hero-metric">
+                        <span class="metric-label">Satisfação NPS</span>
+                        <span class="metric-value">82</span>
+                        <span class="metric-trend positive">+5 pontos</span>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End Page Title -->
+
+        <section class="section dashboard">
+            <div class="row">
+
+                <!-- Left side columns -->
+                <div class="col-lg-9">
+                    <div class="row">
+
+                        <!-- Sales Card -->
+                        <div class="col-xxl-4 col-md-6">
+                            <div class="card info-card sales-card accent-card">
+                                <div class="card-body">
+                                    <div class="card-heading">
+                                        <h5 class="card-title">Vendas</h5>
+                                        <span class="card-period">Hoje</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div
+                                            class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <i class="bi bi-cart"></i>
+                                        </div>
+                                        <div class="ps-3">
+                                            <h6>145</h6>
+                                            <span class="trend trend-up">+12%</span>
+                                            <span class="trend-label">vs. ontem</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End Sales Card -->
+
+                        <!-- Revenue Card -->
+                        <div class="col-xxl-4 col-md-6">
+                            <div class="card info-card revenue-card accent-card">
+                                <div class="card-body">
+                                    <div class="card-heading">
+                                        <h5 class="card-title">Receita</h5>
+                                        <span class="card-period">Este mês</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div
+                                            class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <i class="bi bi-currency-dollar"></i>
+                                        </div>
+                                        <div class="ps-3">
+                                            <h6>$3,264</h6>
+                                            <span class="trend trend-up">+8%</span>
+                                            <span class="trend-label">vs. mês passado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End Revenue Card -->
+
+                        <!-- Customers Card -->
+                        <div class="col-xxl-4 col-xl-12">
+                            <div class="card info-card customers-card accent-card">
+                                <div class="card-body">
+                                    <div class="card-heading">
+                                        <h5 class="card-title">Clientes</h5>
+                                        <span class="card-period">Este ano</span>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <div
+                                            class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                            <i class="bi bi-people"></i>
+                                        </div>
+                                        <div class="ps-3">
+                                            <h6>1.244</h6>
+                                            <span class="trend trend-down">-12%</span>
+                                            <span class="trend-label">vs. ano passado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End Customers Card -->
+
+                        <!-- Reports -->
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Relatórios <span>/Hoje</span></h5>
+
+                                    <!-- Line Chart -->
+                                    <div id="reportsChart"></div>
+
+                                </div>
+
+                            </div>
+                        </div><!-- End Reports -->
+
+                        <!-- Recent Sales -->
+                        <div class="col-12">
+                            <div class="card recent-sales overflow-auto">
+                                <div class="card-body">
+                                    <div class="card-heading">
+                                        <h5 class="card-title">Vendas Recentes</h5>
+                                        <span class="card-period">Hoje</span>
+                                    </div>
+
+                                    <div class="table-wrapper">
+                                        <table class="table table-borderless datatable align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Cliente</th>
+                                                    <th scope="col">Produto</th>
+                                                    <th scope="col">Preço</th>
+                                                    <th scope="col">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row"><a href="#">#2457</a></th>
+                                                    <td>Brandon Jacob</td>
+                                                    <td><a href="#" class="text-primary">At praesentium minu</a></td>
+                                                    <td>$64</td>
+                                                    <td><span class="badge bg-success">Approved</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="#">#2147</a></th>
+                                                    <td>Bridie Kessler</td>
+                                                    <td><a href="#" class="text-primary">Blanditiis dolor omnis
+                                                            similique</a></td>
+                                                    <td>$47</td>
+                                                    <td><span class="badge bg-warning">Pending</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="#">#2049</a></th>
+                                                    <td>Ashleigh Langosh</td>
+                                                    <td><a href="#" class="text-primary">At recusandae consectetur</a>
+                                                    </td>
+                                                    <td>$147</td>
+                                                    <td><span class="badge bg-success">Approved</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="#">#2644</a></th>
+                                                    <td>Angus Grady</td>
+                                                    <td><a href="#" class="text-primary">Ut voluptatem id earum et</a>
+                                                    </td>
+                                                    <td>$67</td>
+                                                    <td><span class="badge bg-danger">Rejected</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><a href="#">#2644</a></th>
+                                                    <td>Raheem Lehner</td>
+                                                    <td><a href="#" class="text-primary">Sunt similique distinctio</a>
+                                                    </td>
+                                                    <td>$165</td>
+                                                    <td><span class="badge bg-success">Approved</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div><!-- End Recent Sales -->
+
+                    </div>
+                </div><!-- End Left side columns -->
+
+                <!-- Right side columns -->
+                <div class="col-lg-3">
+
+                    <!-- Recent Activity -->
+                    <div class="card timeline-card">
+                        <div class="card-body">
+                            <div class="card-heading">
+                                <h5 class="card-title">Atividade Recente</h5>
+                                <span class="card-period">Hoje</span>
+                            </div>
+
+                            <div class="activity">
+
+                                <div class="activity-item d-flex">
+                                    <div class="activite-label">32 min</div>
+                                    <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
+                                    <div class="activity-content">
+                                        Quia quae rerum <a href="#" class="fw-bold text-dark">explicabo officiis</a>
+                                        beatae
+                                    </div>
+                                </div><!-- End activity item-->
+
+                                <div class="activity-item d-flex">
+                                    <div class="activite-label">56 min</div>
+                                    <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
+                                    <div class="activity-content">
+                                        Voluptatem blanditiis blanditiis eveniet
+                                    </div>
+                                </div><!-- End activity item-->
+
+                                <div class="activity-item d-flex">
+                                    <div class="activite-label">2 hrs</div>
+                                    <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
+                                    <div class="activity-content">
+                                        Voluptates corrupti praesentium quo nos
+                                    </div>
+                                </div><!-- End activity item-->
+
+                            </div>
+
+                        </div>
+                    </div><!-- End Recent Activity -->
+
+                    <!-- Traffic Chart -->
+                    <div class="card chart-card">
+                        <div class="card-body pb-0">
+                            <div class="card-heading with-gap">
+                                <h5 class="card-title">Fontes de Tráfego</h5>
+                                <span class="card-period">Hoje</span>
+                            </div>
+
+                            <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
+
+                        </div>
+                    </div><!-- End Traffic Chart -->
+
+                    <!-- Team Pulse -->
+                    <div class="card profile-card team-pulse-card">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <h5 class="card-title">Pulso da Equipe</h5>
+                                <span class="card-period">Esta semana</span>
+                            </div>
+                            <p class="text-muted small mb-3">Resumo rápido sobre clima, foco e estado do time.</p>
+                            <div class="pulse-indicators">
+                                <div class="pulse-item">
+                                    <div class="pulse-label">
+                                        <span>Engajamento</span>
+                                        <span class="badge bg-success-subtle text-success">Alto</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 78%"></div>
+                                    </div>
+                                </div>
+                                <div class="pulse-item">
+                                    <div class="pulse-label">
+                                        <span>Risco de Burnout</span>
+                                        <span class="badge bg-warning-subtle text-warning">Moderado</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 42%"></div>
+                                    </div>
+                                </div>
+                                <div class="pulse-item">
+                                    <div class="pulse-label">
+                                        <span>Capacidade Disponível</span>
+                                        <span class="badge bg-primary-subtle text-primary">+6h</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 64%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline-primary w-100 mt-3">Ver relatório completo</a>
+                        </div>
+                    </div><!-- End Team Pulse -->
+
+                </div><!-- End Right side columns -->
+
+            </div>
+        </section>
+
+        <script th:inline="javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const currentTheme = localStorage.getItem('theme') || 'light';
+
+                new ApexCharts(document.querySelector("#reportsChart"), {
+                    series: [{
+                        name: 'Sales',
+                        data: [31, 40, 28, 51, 42, 82, 56],
+                    }, {
+                        name: 'Revenue',
+                        data: [11, 32, 45, 32, 34, 52, 41]
+                    }, {
+                        name: 'Customers',
+                        data: [15, 11, 32, 18, 9, 24, 11]
+                    }],
+                    chart: {
+                        height: 350,
+                        type: 'area',
+                        toolbar: {
+                            show: false
+                        },
+                    },
+                    theme: {
+                        mode: currentTheme
+                    },
+                    markers: {
+                        size: 4
+                    },
+                    colors: ['#4154f1', '#2eca6a', '#ff771d'],
+                    fill: {
+                        type: "gradient",
+                        gradient: {
+                            shadeIntensity: 1,
+                            opacityFrom: 0.3,
+                            opacityTo: 0.4,
+                            stops: [0, 90, 100]
+                        }
+                    },
+                    dataLabels: {
+                        enabled: false
+                    },
+                    stroke: {
+                        curve: 'smooth',
+                        width: 2
+                    },
+                    xaxis: {
+                        type: 'datetime',
+                        categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                    },
+                    tooltip: {
+                        x: {
+                            format: 'dd/MM/yy HH:mm'
+                        },
+                    }
+                }).render();
+
+                new ApexCharts(document.querySelector("#trafficChart"), {
+                    series: [44, 55, 13],
+                    chart: {
+                        height: 350,
+                        type: 'donut',
+                        toolbar: {
+                            show: true
+                        }
+                    },
+                    theme: {
+                        mode: currentTheme
+                    },
+                    labels: ['Direto', 'Social', 'Busca'],
+                }).render();
+            });
+        </script>
+    </div>
+
+</body>
+
+</html>

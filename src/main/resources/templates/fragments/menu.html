@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <!-- ======= Sidebar ======= -->
+    <aside th:fragment="menu" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link " th:href="@{/}">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-menu-button-wide"></i><span>Componentes</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a th:href="@{/accordion}">
+                            <i class="bi bi-circle"></i><span>Accordion</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/alerts}">
+                            <i class="bi bi-circle"></i><span>Alerts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/badges}">
+                            <i class="bi bi-circle"></i><span>Badges</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Components Nav -->
+
+            <li class="nav-heading">Pages</li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" th:href="@{/usuarios}">
+                    <i class="bi bi-people"></i>
+                    <span>Usuários</span>
+                </a>
+            </li><!-- End Profile Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" th:href="@{/configuracoes}">
+                    <i class="bi bi-gear"></i>
+                    <span>Configurações</span>
+                </a>
+            </li><!-- End F.A.Q Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" th:href="@{/botoes}">
+                    <i class="bi bi-menu-button-wide"></i>
+                    <span>Botões</span>
+                </a>
+            </li><!-- End Buttons Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" th:href="@{/formularios}">
+                    <i class="bi bi-journal-text"></i>
+                    <span>Formulários</span>
+                </a>
+            </li><!-- End Forms Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" th:href="@{/form-editor}">
+                    <i class="bi bi-textarea-t"></i>
+                    <span>Editor</span>
+                </a>
+            </li><!-- End Editor Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" th:href="@{/graficos}">
+                    <i class="bi bi-bar-chart"></i>
+                    <span>Gráficos</span>
+                </a>
+            </li><!-- End Charts Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" th:href="@{/tabelas}">
+                    <i class="bi bi-layout-text-window-reverse"></i>
+                    <span>Tabelas</span>
+                </a>
+            </li><!-- End Tables Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#auth-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-shield-lock"></i><span>Authentication</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="auth-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a th:href="@{/login}">
+                            <i class="bi bi-circle"></i><span>Login</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/register}">
+                            <i class="bi bi-circle"></i><span>Register</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/forgot-password}">
+                            <i class="bi bi-circle"></i><span>Forgot Password</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Auth Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#errors-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-bug"></i><span>Errors</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="errors-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a th:href="@{/error-403}">
+                            <i class="bi bi-circle"></i><span>Error 403</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/error-404}">
+                            <i class="bi bi-circle"></i><span>Error 404</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/error-500}">
+                            <i class="bi bi-circle"></i><span>Error 500</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Errors Nav -->
+
+        </ul>
+
+    </aside><!-- End Sidebar-->
+</body>
+
+</html>

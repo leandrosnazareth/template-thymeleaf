@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+    <div th:fragment="content">
+        <div class="pagetitle">
+            <h1>Formulários</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                    <li class="breadcrumb-item">Componentes</li>
+                    <li class="breadcrumb-item active">Formulários</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Elementos Gerais</h5>
+
+                            <!-- General Form Elements -->
+                            <form>
+                                <div class="row mb-3">
+                                    <label for="inputText" class="col-sm-2 col-form-label">Texto</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">Senha</label>
+                                    <div class="col-sm-10">
+                                        <input type="password" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">Textarea</label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" style="height: 100px"></textarea>
+                                    </div>
+                                </div>
+                                <fieldset class="row mb-3">
+                                    <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+                                    <div class="col-sm-10">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                            <label class="form-check-label" for="gridRadios1">Primeiro radio</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                            <label class="form-check-label" for="gridRadios2">Segundo radio</label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <div class="row mb-3">
+                                    <legend class="col-form-label col-sm-2 pt-0">Checkboxes</legend>
+                                    <div class="col-sm-10">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                            <label class="form-check-label" for="gridCheck1">Exemplo de checkbox</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label class="col-sm-2 col-form-label">Select</label>
+                                    <div class="col-sm-10">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Abra este menu de seleção</option>
+                                            <option value="1">Um</option>
+                                            <option value="2">Dois</option>
+                                            <option value="3">Três</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </form><!-- End General Form Elements -->
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Validação de Formulário</h5>
+                            <form class="row g-3">
+                                <div class="col-md-12">
+                                    <label for="validationServer01" class="form-label">Campo Válido</label>
+                                    <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" required>
+                                    <div class="valid-feedback">
+                                        Tudo certo!
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="validationServer02" class="form-label">Campo Inválido</label>
+                                    <input type="text" class="form-control is-invalid" id="validationServer02" value="Otto" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, corrija este campo.
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Layouts Avançados</h5>
+
+                            <!-- Advanced Form Elements -->
+                            <form>
+                                <div class="row mb-3">
+                                    <label class="col-sm-2 col-form-label">Switch</label>
+                                    <div class="col-sm-10">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">Switch com estado checked</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label class="col-sm-2 col-form-label">Multi Select</label>
+                                    <div class="col-sm-10">
+                                        <select class="form-select" multiple aria-label="multiple select example">
+                                            <option selected>Abra este menu de seleção</option>
+                                            <option value="1">Um</option>
+                                            <option value="2">Dois</option>
+                                            <option value="3">Três</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <h5 class="card-title mt-4">Input Groups</h5>
+
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                    <input type="text" class="form-control" placeholder="Username">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" placeholder="Recipient's username">
+                                    <span class="input-group-text">@example.com</span>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">$</span>
+                                    <input type="text" class="form-control">
+                                    <span class="input-group-text">.00</span>
+                                </div>
+
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Pesquisar por...">
+                                    <button class="btn btn-outline-secondary" type="button"><i class="bi bi-search"></i></button>
+                                </div>
+
+                            </form><!-- End General Form Elements -->
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Labels Flutuantes (Floating)</h5>
+                            <form class="row g-3">
+                                <div class="col-md-12">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="floatingEmail" placeholder="Your Email">
+                                        <label for="floatingEmail">Seu Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                        <label for="floatingPassword">Senha</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-select" id="floatingSelect" aria-label="State">
+                                            <option value="1">New York</option>
+                                            <option value="2">Oregon</option>
+                                            <option value="3">DC</option>
+                                        </select>
+                                        <label for="floatingSelect">Estado</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Full-width Registration Form -->
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Exemplo de Formulário de Cadastro</h5>
+
+                            <!-- Multi Columns Form -->
+                            <form class="row g-3">
+                                <div class="col-md-12">
+                                    <label for="inputName5" class="form-label">Seu Nome</label>
+                                    <input type="text" class="form-control" id="inputName5">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputEmail5" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail5">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputPassword5" class="form-label">Senha</label>
+                                    <input type="password" class="form-control" id="inputPassword5">
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputAddress5" class="form-label">Endereço</label>
+                                    <input type="text" class="form-control" id="inputAddres5s" placeholder="Rua, 1234">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputCity" class="form-label">Cidade</label>
+                                    <input type="text" class="form-control" id="inputCity">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="inputState" class="form-label">Estado</label>
+                                    <select id="inputState" class="form-select">
+                                        <option selected="">Escolha...</option>
+                                        <option>...</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for="inputZip" class="form-label">CEP</label>
+                                    <input type="text" class="form-control" id="inputZip">
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Concordo com os termos
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                    <button type="reset" class="btn btn-secondary">Limpar</button>
+                                </div>
+                            </form><!-- End Multi Columns Form -->
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
