@@ -56,14 +56,21 @@
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img th:src="@{/img/profile-img.jpg}" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">L. Nazareth</span>
+                        <img th:src="@{/imagens/user.png}" alt="Foto do usuário Leandro Nazareth"
+                            class="rounded-circle header-avatar">
+                        <span class="d-none d-md-block dropdown-toggle ps-2 header-username">Leandro Nazareth</span>
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>Leandro Nazareth</h6>
-                            <span>Developer</span>
+                            <div class="dropdown-profile d-flex align-items-center">
+                                <img th:src="@{/imagens/user.png}" alt="Foto do usuário Leandro Nazareth"
+                                    class="rounded-circle dropdown-profile-avatar me-3">
+                                <div class="dropdown-profile-info">
+                                    <h6 class="mb-0">Leandro Nazareth</h6>
+                                    <span>Developer</span>
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
@@ -72,7 +79,7 @@
                         <li>
                             <a class="dropdown-item d-flex align-items-center" th:href="@{/my-profile}">
                                 <i class="bi bi-person"></i>
-                                <span>My Profile</span>
+                                <span>Meu Perfil</span>
                             </a>
                         </li>
                         <li>
