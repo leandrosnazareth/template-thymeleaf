@@ -45,6 +45,42 @@
     }
 
     /**
+     * Collapse sidebar automatically on smaller screens
+     */
+    const responsiveSidebarMq = window.matchMedia('(max-width: 991px)');
+
+    const syncSidebarWithViewport = (isSmallScreen) => {
+        const bodyEl = select('body');
+
+        if (!bodyEl || !bodyEl.classList.contains('app-body')) {
+            return;
+        }
+
+        if (bodyEl.classList.contains('menu-top')) {
+            bodyEl.classList.remove('toggle-sidebar');
+            return;
+        }
+
+        if (isSmallScreen) {
+            bodyEl.classList.add('toggle-sidebar');
+        } else {
+            bodyEl.classList.remove('toggle-sidebar');
+        }
+    };
+
+    syncSidebarWithViewport(responsiveSidebarMq.matches);
+
+    const handleSidebarBreakpoint = (event) => syncSidebarWithViewport(event.matches);
+
+    if (typeof responsiveSidebarMq.addEventListener === 'function') {
+        responsiveSidebarMq.addEventListener('change', handleSidebarBreakpoint);
+    } else if (typeof responsiveSidebarMq.addListener === 'function') {
+        responsiveSidebarMq.addListener(handleSidebarBreakpoint);
+    }
+
+    window.addEventListener('load', () => syncSidebarWithViewport(responsiveSidebarMq.matches));
+
+    /**
      * Back to top button
      */
     let backtotop = select('.back-to-top')
@@ -116,6 +152,8 @@
         } else {
             body.classList.add('menu-left'); // Default
         }
+
+        syncSidebarWithViewport(responsiveSidebarMq.matches);
     };
 
     // Apply menu position on initial load
