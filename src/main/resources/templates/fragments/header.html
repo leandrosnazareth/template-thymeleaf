@@ -31,26 +31,112 @@
             <ul class="d-flex align-items-center">
 
                 <li class="nav-item nav-icon-item d-none d-sm-inline-block">
-                    <a id="theme-toggle-link" class="nav-link nav-icon" href="#" data-bs-toggle="tooltip"
-                        data-bs-placement="bottom" title="Mudar Tema">
+                    <a id="theme-toggle-link" class="nav-link nav-icon" href="#"
+                        title="Alternar modo (claro/escuro)" aria-label="Alternar modo">
                         <i class="bi bi-sun" id="theme-toggle-icon"></i>
                     </a>
                 </li>
 
                 <li class="nav-item nav-icon-item d-none d-sm-inline-block">
-                    <a class="nav-link nav-icon" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                        title="Notificações">
-                        <i class="bi bi-bell"></i>
-                        <span class="badge bg-danger badge-number">3</span>
+                    <a id="theme-manager-link" class="nav-link nav-icon" href=""
+                        data-bs-toggle="modal" data-bs-target="#themeModal" data-theme-modal-trigger="true"
+                        title="Gerenciar temas personalizados" aria-label="Gerenciar temas personalizados">
+                        <i class="bi bi-palette"></i>
                     </a>
                 </li>
 
-                <li class="nav-item nav-icon-item d-none d-sm-inline-block">
-                    <a class="nav-link nav-icon" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                        title="Mensagens">
-                        <i class="bi bi-envelope"></i>
-                        <span class="badge bg-success badge-number">5</span>
+                <li class="nav-item dropdown nav-icon-item d-none d-sm-inline-block">
+                    <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown" role="button"
+                        aria-expanded="false" aria-haspopup="true">
+                        <i class="bi bi-bell"></i>
+                        <span class="badge bg-danger badge-number">3</span>
                     </a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                        <li class="dropdown-header">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Notificações</span>
+                                <span class="badge bg-primary-subtle text-primary rounded-pill">3 novas</span>
+                            </div>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="notification-item">
+                            <i class="bi bi-exclamation-circle text-warning"></i>
+                            <div>
+                                <h6>Serviço de API</h6>
+                                <p>Latência média acima de 450ms nos últimos 5 minutos.</p>
+                                <span class="notification-meta">há 12 min</span>
+                            </div>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="notification-item">
+                            <i class="bi bi-people-fill text-info"></i>
+                            <div>
+                                <h6>Equipe Produto</h6>
+                                <p>Novos comentários na retrospectiva semanal.</p>
+                                <span class="notification-meta">há 47 min</span>
+                            </div>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="notification-item">
+                            <i class="bi bi-credit-card text-success"></i>
+                            <div>
+                                <h6>Faturamento</h6>
+                                <p>Assinatura da Conta Enterprise foi renovada automaticamente.</p>
+                                <span class="notification-meta">há 2 h</span>
+                            </div>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="dropdown-footer">
+                            <a href="#">Ver todas as notificações</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown nav-icon-item d-none d-sm-inline-block">
+                    <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown" role="button"
+                        aria-expanded="false" aria-haspopup="true">
+                        <i class="bi bi-envelope"></i>
+                        <span class="badge bg-success badge-number">3</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+                        <li class="dropdown-header">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Mensagens</span>
+                                <span class="badge bg-success-subtle text-success rounded-pill">3 novas</span>
+                            </div>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="message-item">
+                            <img th:src="@{/imagens/user.png}" alt="Avatar equipe Marketing" class="message-avatar">
+                            <div>
+                                <h6>Equipe Marketing</h6>
+                                <p>Alinhamento de campanha para o lançamento do trimestre.</p>
+                                <span class="message-meta">há 18 min</span>
+                            </div>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="message-item">
+                            <span class="message-avatar message-avatar-initials bg-primary text-white">LG</span>
+                            <div>
+                                <h6>Lara Gomes</h6>
+                                <p>Enviei a planilha de métricas atualizada, consegue revisar?</p>
+                                <span class="message-meta">há 52 min</span>
+                            </div>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="message-item">
+                            <span class="message-avatar message-avatar-initials bg-warning text-dark">CS</span>
+                            <div>
+                                <h6>Customer Success</h6>
+                                <p>Cliente Neon solicitou onboarding personalizado para novos usuários.</p>
+                                <span class="message-meta">há 3 h</span>
+                            </div>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="dropdown-footer">
+                            <a href="#">Ir para caixa de entrada</a>
+                        </li>
+                    </ul>
                 </li>
 
                 <li class="nav-item dropdown pe-3">

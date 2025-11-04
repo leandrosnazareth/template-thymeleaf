@@ -414,6 +414,151 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-muted);
 }
 
+.header-nav .dropdown-menu.notifications {
+    width: 360px;
+    padding: 0;
+    border: 1px solid rgba(143, 155, 179, 0.16);
+    box-shadow: 0 24px 48px rgba(20, 25, 34, 0.18);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.header-nav .dropdown-menu.notifications .dropdown-header {
+    padding: 16px 18px;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.header-nav .dropdown-menu.notifications .dropdown-divider {
+    margin: 0;
+}
+
+.header-nav .dropdown-menu.notifications .notification-item {
+    padding: 16px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transition: background 0.2s ease;
+}
+
+.header-nav .dropdown-menu.notifications .notification-item h6 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--color-dark);
+}
+
+.header-nav .dropdown-menu.notifications .notification-item p {
+    margin: 0 0 6px 0;
+    font-size: 13px;
+    color: var(--color-dark-variant);
+    line-height: 1.45;
+}
+
+.header-nav .dropdown-menu.notifications .notification-meta {
+    font-size: 12px;
+    color: var(--color-muted);
+}
+
+.header-nav .dropdown-menu.notifications .notification-item i {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.header-nav .dropdown-menu.notifications .notification-item:hover {
+    background: rgba(var(--color-primary-rgb), 0.08);
+}
+
+.header-nav .dropdown-menu.notifications .dropdown-footer {
+    padding: 12px 18px 14px;
+    text-align: center;
+}
+
+.header-nav .dropdown-menu.notifications .dropdown-footer a {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.header-nav .dropdown-menu.messages {
+    width: 360px;
+    padding: 0;
+    border: 1px solid rgba(143, 155, 179, 0.16);
+    box-shadow: 0 24px 48px rgba(20, 25, 34, 0.18);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.header-nav .dropdown-menu.messages .dropdown-header {
+    padding: 16px 18px;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.header-nav .dropdown-menu.messages .dropdown-divider {
+    margin: 0;
+}
+
+.header-nav .dropdown-menu.messages .message-item {
+    padding: 16px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transition: background 0.2s ease;
+}
+
+.header-nav .dropdown-menu.messages .message-item h6 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--color-dark);
+}
+
+.header-nav .dropdown-menu.messages .message-item p {
+    margin: 0 0 6px 0;
+    font-size: 13px;
+    color: var(--color-dark-variant);
+    line-height: 1.45;
+}
+
+.header-nav .dropdown-menu.messages .message-meta {
+    font-size: 12px;
+    color: var(--color-muted);
+}
+
+.header-nav .dropdown-menu.messages .message-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.header-nav .dropdown-menu.messages .message-avatar-initials {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.header-nav .dropdown-menu.messages .message-item:hover {
+    background: rgba(var(--color-primary-rgb), 0.08);
+}
+
+.header-nav .dropdown-menu.messages .dropdown-footer {
+    padding: 12px 18px 14px;
+    text-align: center;
+}
+
+.header-nav .dropdown-menu.messages .dropdown-footer a {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
 [data-bs-theme="dark"] .header-nav .nav-profile .header-username {
     color: rgba(255, 255, 255, 0.85);
 }
@@ -1034,6 +1179,57 @@ h1, h2, h3, h4, h5, h6 {
 [data-bs-theme="dark"] .header-nav .nav-icon {
     background: rgba(255, 255, 255, 0.05);
     color: rgba(255, 255, 255, 0.72);
+}
+
+[data-bs-theme="dark"] .header-nav .dropdown-menu.notifications {
+    background: rgba(30, 34, 47, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 28px 60px rgba(5, 7, 16, 0.6);
+}
+
+[data-bs-theme="dark"] .header-nav .dropdown-menu.notifications .dropdown-header {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+[data-bs-theme="dark"] .header-nav .dropdown-menu.notifications .notification-item h6,
+[data-bs-theme="dark"] .header-nav .dropdown-menu.notifications .notification-item p {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+[data-bs-theme="dark"] .header-nav .dropdown-menu.notifications .notification-meta {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+[data-bs-theme="dark"] .header-nav .dropdown-menu.notifications .notification-item:hover {
+    background: rgba(var(--color-primary-rgb), 0.18);
+}
+
+[data-bs-theme="dark"] .header-nav .dropdown-menu.notifications .dropdown-footer a {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+[data-bs-theme="dark"] .header-nav .dropdown-menu.messages {
+    background: rgba(30, 34, 47, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 28px 60px rgba(5, 7, 16, 0.6);
+}
+
+[data-bs-theme="dark"] .header-nav .dropdown-menu.messages .dropdown-header,
+[data-bs-theme="dark"] .header-nav .dropdown-menu.messages .message-item h6,
+[data-bs-theme="dark"] .header-nav .dropdown-menu.messages .message-item p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+[data-bs-theme="dark"] .header-nav .dropdown-menu.messages .message-meta {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+[data-bs-theme="dark"] .header-nav .dropdown-menu.messages .message-item:hover {
+    background: rgba(var(--color-primary-rgb), 0.18);
+}
+
+[data-bs-theme="dark"] .header-nav .dropdown-menu.messages .dropdown-footer a {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 [data-bs-theme="dark"] .header-nav .nav-icon:hover,
