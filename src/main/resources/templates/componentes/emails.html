@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+    <div th:fragment="content">
+        <th:block th:with="content='componentes/emails'"></th:block>
+
+        <div class="pagetitle">
+            <h1>Emails</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                    <li class="breadcrumb-item">Componentes</li>
+                    <li class="breadcrumb-item active">Emails</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-7">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-heading">
+                                <h5 class="card-title">Resumo de email</h5>
+                                <span class="card-period">Exemplo 01</span>
+                            </div>
+
+                            <div class="email-preview">
+                                <div class="email-preview-header">
+                                    <div class="email-preview-meta">
+                                        <span class="badge bg-primary-subtle text-primary">Sprint</span>
+                                        <span class="email-preview-date">Enviado em 12/07/2024 às 09:14</span>
+                                    </div>
+                                    <h4 class="email-preview-subject">[Sprint 24] Check-in de alinhamento semanal</h4>
+                                </div>
+                                <div class="email-preview-body">
+                                    <p>Olá squad,</p>
+                                    <p>Segue o resumo do que precisamos validar na reunião desta tarde:</p>
+                                    <ul>
+                                        <li>Concluir testes do novo onboarding mobile</li>
+                                        <li>Validar métricas do experimento de pricing</li>
+                                        <li>Definir responsáveis pelos OKRs do próximo ciclo</li>
+                                    </ul>
+                                    <p>Links úteis:</p>
+                                    <ul>
+                                        <li><a href="#">Dashboard de growth</a></li>
+                                        <li><a href="#">Documento com pendências da retro</a></li>
+                                        <li><a href="#">Backlog priorizado no Jira</a></li>
+                                    </ul>
+                                    <p>Abraços,<br>Equipe PMO</p>
+                                </div>
+                                <div class="email-preview-footer">
+                                    <button class="btn btn-primary">Responder</button>
+                                    <button class="btn btn-outline-secondary">Encaminhar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-5">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-heading">
+                                <h5 class="card-title">Card de newsletter</h5>
+                                <span class="card-period">Exemplo 02</span>
+                            </div>
+
+                            <div class="newsletter-card">
+                                <span class="newsletter-pill">Atualizações do produto</span>
+                                <h4>Roadmap Q3 liberado com novidades</h4>
+                                <p>Veja os principais lançamentos previstos e participe das sessões de feedback.</p>
+                                <div class="newsletter-meta">
+                                    <span class="badge bg-info-subtle text-info">12.420 inscritos</span>
+                                    <span class="newsletter-date">Último envio há 2 dias</span>
+                                </div>
+                                <div class="newsletter-actions">
+                                    <button class="btn btn-outline-primary">Ver edição mais recente</button>
+                                    <button class="btn btn-outline-secondary">Editar sequência</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-heading">
+                                <h5 class="card-title">Templates rápidos</h5>
+                                <span class="card-period">Exemplo 03</span>
+                            </div>
+
+                            <div class="email-templates-grid">
+                                <div class="email-template">
+                                    <span class="email-template-title">Confirmação</span>
+                                    <p class="email-template-description">Agradeça o cadastro e encaminhe os próximos passos.</p>
+                                    <button class="btn btn-sm btn-outline-primary">Ver modelo</button>
+                                </div>
+                                <div class="email-template">
+                                    <span class="email-template-title">Boas-vindas trial</span>
+                                    <p class="email-template-description">Introdução personalizada para quem iniciou o teste.</p>
+                                    <button class="btn btn-sm btn-outline-primary">Ver modelo</button>
+                                </div>
+                                <div class="email-template">
+                                    <span class="email-template-title">Recuperação</span>
+                                    <p class="email-template-description">Sugestões de melhorias para leads inativos.</p>
+                                    <button class="btn btn-sm btn-outline-primary">Ver modelo</button>
+                                </div>
+                                <div class="email-template">
+                                    <span class="email-template-title">Upsell</span>
+                                    <p class="email-template-description">Recomendações de upgrades com CTA direto.</p>
+                                    <button class="btn btn-sm btn-outline-primary">Ver modelo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

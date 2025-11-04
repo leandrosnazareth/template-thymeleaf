@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+    <div th:fragment="content">
+        <th:block th:with="content='componentes/mensagens'"></th:block>
+
+        <div class="pagetitle">
+            <h1>Mensagens</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                    <li class="breadcrumb-item">Componentes</li>
+                    <li class="breadcrumb-item active">Mensagens</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-heading">
+                                <h5 class="card-title">Lista de mensagens</h5>
+                                <span class="card-period">Exemplo 01</span>
+                            </div>
+
+                            <div class="message-list">
+                                <div class="message-list-item is-unread">
+                                    <div class="message-avatar bg-primary text-white">LG</div>
+                                    <div class="message-content">
+                                        <div class="message-content-header">
+                                            <span class="message-author">Lara Gomes</span>
+                                            <span class="message-time">há 5 min</span>
+                                        </div>
+                                        <p class="message-subject">Revisão de métricas da sprint</p>
+                                        <p class="message-snippet">Pode validar o painel de métricas até o fim do dia? Ajustei o funil de conversão.</p>
+                                    </div>
+                                    <div class="message-actions">
+                                        <button class="btn btn-sm btn-outline-primary">Responder</button>
+                                        <button class="btn btn-sm btn-outline-secondary">Arquivar</button>
+                                    </div>
+                                </div>
+
+                                <div class="message-list-item">
+                                    <img th:src="@{/imagens/user.png}" alt="Avatar Juliana" class="message-avatar">
+                                    <div class="message-content">
+                                        <div class="message-content-header">
+                                            <span class="message-author">Juliana Sales</span>
+                                            <span class="message-time">há 32 min</span>
+                                        </div>
+                                        <p class="message-subject">Atualização da proposta comercial</p>
+                                        <p class="message-snippet">O cliente aprovou os novos termos. Podemos avançar com a assinatura digital.</p>
+                                    </div>
+                                    <div class="message-actions">
+                                        <button class="btn btn-sm btn-outline-primary">Responder</button>
+                                        <button class="btn btn-sm btn-outline-secondary">Arquivar</button>
+                                    </div>
+                                </div>
+
+                                <div class="message-list-item">
+                                    <div class="message-avatar bg-warning text-dark">CS</div>
+                                    <div class="message-content">
+                                        <div class="message-content-header">
+                                            <span class="message-author">Customer Success</span>
+                                            <span class="message-time">há 1 h</span>
+                                        </div>
+                                        <p class="message-subject">Plano de onboarding</p>
+                                        <p class="message-snippet">Nova conta enterprise precisa de apoio nas primeiras duas semanas. Agenda ideal?</p>
+                                    </div>
+                                    <div class="message-actions">
+                                        <button class="btn btn-sm btn-outline-primary">Responder</button>
+                                        <button class="btn btn-sm btn-outline-secondary">Arquivar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-heading">
+                                <h5 class="card-title">Caixa compacta</h5>
+                                <span class="card-period">Exemplo 02</span>
+                            </div>
+
+                            <div class="message-compact">
+                                <div class="message-compact-item">
+                                    <span class="badge bg-success-subtle text-success">Online</span>
+                                    <div class="message-compact-body">
+                                        <strong>Canal Suporte</strong>
+                                        <span>Esperando retorno com logs do ambiente</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-link">Abrir</button>
+                                </div>
+                                <div class="message-compact-item">
+                                    <span class="badge bg-primary-subtle text-primary">Equipe</span>
+                                    <div class="message-compact-body">
+                                        <strong>Squad Growth</strong>
+                                        <span>Ajustes finais da campanha de remarketing</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-link">Abrir</button>
+                                </div>
+                                <div class="message-compact-item">
+                                    <span class="badge bg-warning-subtle text-warning">Alerta</span>
+                                    <div class="message-compact-body">
+                                        <strong>Serviços Cloud</strong>
+                                        <span>Atualização agendada para amanhã 22h</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-link">Abrir</button>
+                                </div>
+                                <div class="message-compact-item">
+                                    <span class="badge bg-danger-subtle text-danger">Escalar</span>
+                                    <div class="message-compact-body">
+                                        <strong>Financeiro</strong>
+                                        <span>Pagamentos automáticos com falha</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-link">Abrir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>

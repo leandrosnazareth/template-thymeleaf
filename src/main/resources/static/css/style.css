@@ -559,6 +559,263 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-primary);
 }
 
+.message-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.message-list-item {
+    border: 1px solid rgba(143, 155, 179, 0.16);
+    border-radius: 16px;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+    align-items: start;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.message-list-item.is-unread {
+    border-color: rgba(var(--color-primary-rgb), 0.45);
+    box-shadow: 0 20px 40px rgba(var(--color-primary-rgb), 0.18);
+}
+
+.message-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+    background: rgba(var(--color-primary-rgb), 0.12);
+    color: var(--color-primary);
+    object-fit: cover;
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.message-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.message-author {
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.message-time {
+    font-size: 12px;
+    color: var(--color-muted);
+}
+
+.message-subject {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--color-dark);
+}
+
+.message-snippet {
+    margin: 0;
+    font-size: 13px;
+    color: var(--color-dark-variant);
+    line-height: 1.55;
+}
+
+.message-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.message-list-item:hover {
+    transform: translateY(-2px);
+    border-color: rgba(var(--color-primary-rgb), 0.35);
+    box-shadow: 0 24px 48px rgba(var(--color-primary-rgb), 0.18);
+}
+
+.message-compact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.message-compact-item {
+    border: 1px solid rgba(143, 155, 179, 0.18);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.message-compact-item:hover {
+    border-color: rgba(var(--color-primary-rgb), 0.35);
+    box-shadow: 0 18px 30px rgba(var(--color-primary-rgb), 0.18);
+}
+
+.message-compact-body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.message-compact-body strong {
+    font-size: 14px;
+    color: var(--color-dark);
+}
+
+.message-compact-body span {
+    font-size: 13px;
+    color: var(--color-dark-variant);
+}
+
+.email-preview {
+    border: 1px solid rgba(143, 155, 179, 0.18);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(20, 25, 34, 0.12);
+}
+
+.email-preview-header {
+    padding: 18px 24px 12px;
+    background: rgba(var(--color-primary-rgb), 0.07);
+    border-bottom: 1px solid rgba(var(--color-primary-rgb), 0.18);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.email-preview-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: var(--color-muted);
+}
+
+.email-preview-subject {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.email-preview-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    font-size: 14px;
+    color: var(--color-dark-variant);
+}
+
+.email-preview-body ul {
+    margin: 0 0 8px 0;
+    padding-left: 18px;
+}
+
+.email-preview-footer {
+    padding: 16px 24px;
+    border-top: 1px solid rgba(143, 155, 179, 0.16);
+    background: rgba(143, 155, 179, 0.08);
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-card {
+    border: 1px solid rgba(143, 155, 179, 0.16);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(var(--color-primary-rgb), 0.05);
+}
+
+.newsletter-pill {
+    align-self: flex-start;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(var(--color-primary-rgb), 0.12);
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.newsletter-card h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.newsletter-card p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--color-dark-variant);
+}
+
+.newsletter-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: var(--color-muted);
+}
+
+.newsletter-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.email-templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.email-template {
+    border: 1px solid rgba(143, 155, 179, 0.16);
+    border-radius: 14px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.email-template-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--color-dark);
+}
+
+.email-template-description {
+    margin: 0;
+    font-size: 13px;
+    color: var(--color-dark-variant);
+    line-height: 1.45;
+}
+
+.email-template:hover {
+    border-color: rgba(var(--color-primary-rgb), 0.35);
+    box-shadow: 0 18px 30px rgba(var(--color-primary-rgb), 0.18);
+}
+
 [data-bs-theme="dark"] .header-nav .nav-profile .header-username {
     color: rgba(255, 255, 255, 0.85);
 }
@@ -1230,6 +1487,76 @@ h1, h2, h3, h4, h5, h6 {
 
 [data-bs-theme="dark"] .header-nav .dropdown-menu.messages .dropdown-footer a {
     color: rgba(255, 255, 255, 0.9);
+}
+
+[data-bs-theme="dark"] .message-list-item {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(30, 34, 47, 0.92);
+}
+
+[data-bs-theme="dark"] .message-list-item.is-unread {
+    border-color: rgba(var(--color-primary-rgb), 0.55);
+    box-shadow: 0 24px 50px rgba(var(--color-primary-rgb), 0.28);
+}
+
+[data-bs-theme="dark"] .message-author,
+[data-bs-theme="dark"] .message-subject,
+[data-bs-theme="dark"] .message-compact-body strong,
+[data-bs-theme="dark"] .email-preview-subject,
+[data-bs-theme="dark"] .newsletter-card h4,
+[data-bs-theme="dark"] .email-template-title {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+[data-bs-theme="dark"] .message-snippet,
+[data-bs-theme="dark"] .message-compact-body span,
+[data-bs-theme="dark"] .email-preview-body,
+[data-bs-theme="dark"] .newsletter-card p,
+[data-bs-theme="dark"] .email-template-description {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+[data-bs-theme="dark"] .message-compact-item,
+[data-bs-theme="dark"] .newsletter-card,
+[data-bs-theme="dark"] .email-template {
+    background: rgba(30, 34, 47, 0.9);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-bs-theme="dark"] .email-preview {
+    background: rgba(26, 30, 44, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 28px 60px rgba(5, 7, 16, 0.65);
+}
+
+[data-bs-theme="dark"] .email-preview-header {
+    background: rgba(var(--color-primary-rgb), 0.18);
+    border-bottom-color: rgba(var(--color-primary-rgb), 0.35);
+}
+
+[data-bs-theme="dark"] .email-preview-footer {
+    background: rgba(255, 255, 255, 0.05);
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-bs-theme="dark"] .newsletter-actions .btn-outline-primary,
+[data-bs-theme="dark"] .newsletter-actions .btn-outline-secondary,
+[data-bs-theme="dark"] .email-template button {
+    color: rgba(255, 255, 255, 0.85);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+[data-bs-theme="dark"] .newsletter-meta,
+[data-bs-theme="dark"] .message-time,
+[data-bs-theme="dark"] .message-meta,
+[data-bs-theme="dark"] .email-preview-meta {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+[data-bs-theme="dark"] .message-compact-item:hover,
+[data-bs-theme="dark"] .email-template:hover {
+    border-color: rgba(var(--color-primary-rgb), 0.45);
+    box-shadow: 0 24px 45px rgba(var(--color-primary-rgb), 0.28);
 }
 
 [data-bs-theme="dark"] .header-nav .nav-icon:hover,

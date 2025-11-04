@@ -73,6 +73,18 @@ public class DashboardController {
         return "layout/main";
     }
 
+    @GetMapping("/componentes/mensagens")
+    public String componentesMensagens(Model model) {
+        model.addAttribute("content", "componentes/mensagens");
+        return "layout/main";
+    }
+
+    @GetMapping("/componentes/emails")
+    public String componentesEmails(Model model) {
+        model.addAttribute("content", "componentes/emails");
+        return "layout/main";
+    }
+
 
     @GetMapping("/my-profile")
     public String profile(Model model) {
