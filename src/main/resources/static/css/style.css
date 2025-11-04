@@ -13,6 +13,9 @@
     --color-dark-variant: #677483;
     --color-background: #f8f9fa;
     --color-surface: #ffffff;
+    --color-accent: #f9a826;
+    --color-accent-rgb: 249, 168, 38;
+    --color-background-rgb: 248, 249, 250;
     --color-muted: #8f9bb3;
     --color-border: rgba(143, 155, 179, 0.24);
     --shadow-soft: 0 12px 30px rgba(115, 103, 240, 0.12);
