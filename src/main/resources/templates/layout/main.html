@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" data-bs-theme="light">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" data-theme="light" data-bs-theme="light">
 
 <head>
     <meta charset="utf-8">
@@ -22,13 +22,83 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <script>
-        (function() {
+        (function () {
+            var docEl = document.documentElement;
+            var DEFAULT_THEME = 'light';
+            var PALETTE_KEYS = ['primary', 'secondary', 'bg', 'text', 'border', 'success', 'warning', 'danger', 'info'];
+            var VAR_MAP = {
+                primary: '--color-primary',
+                secondary: '--color-secondary',
+                bg: '--color-bg',
+                text: '--color-text',
+                border: '--color-border',
+                success: '--color-success',
+                warning: '--color-warning',
+                danger: '--color-danger',
+                info: '--color-info'
+            };
+
+            function hexToRgb(hex) {
+                var sanitized = String(hex || '').replace('#', '');
+                if (sanitized.length === 3) {
+                    sanitized = sanitized.split('').map(function (ch) { return ch + ch; }).join('');
+                }
+                if (sanitized.length !== 6) {
+                    return { r: 255, g: 255, b: 255 };
+                }
+                var intVal = parseInt(sanitized, 16);
+                return {
+                    r: (intVal >> 16) & 255,
+                    g: (intVal >> 8) & 255,
+                    b: intVal & 255
+                };
+            }
+
+            function relativeLuminance(hex) {
+                var rgb = hexToRgb(hex);
+                var srgb = [rgb.r, rgb.g, rgb.b].map(function (channel) {
+                    var val = channel / 255;
+                    return val <= 0.03928 ? val / 12.92 : Math.pow((val + 0.055) / 1.055, 2.4);
+                });
+                return 0.2126 * srgb[0] + 0.7152 * srgb[1] + 0.0722 * srgb[2];
+            }
+
             try {
-                var storedTheme = localStorage.getItem('theme');
-                var theme = storedTheme ? storedTheme : 'light';
-                document.documentElement.setAttribute('data-bs-theme', theme);
-            } catch (e) {
-                document.documentElement.setAttribute('data-bs-theme', 'light'); // Graceful fallback
+                var storedTheme = localStorage.getItem('app.theme');
+                var storedPalette = localStorage.getItem('app.palette');
+                var theme = storedTheme || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : DEFAULT_THEME);
+
+                if (theme === 'custom' && !storedPalette) {
+                    theme = DEFAULT_THEME;
+                }
+
+                docEl.setAttribute('data-theme', theme);
+                if (theme === 'custom') {
+                    var parsed;
+                    try {
+                        parsed = JSON.parse(storedPalette || '{}');
+                    } catch (err) {
+                        parsed = {};
+                    }
+                    PALETTE_KEYS.forEach(function (key) {
+                        var cssVar = VAR_MAP[key];
+                        if (!cssVar) {
+                            return;
+                        }
+                        var value = parsed[key];
+                        if (typeof value === 'string' && value.trim()) {
+                            docEl.style.setProperty(cssVar, value);
+                        }
+                    });
+                    var luminance = relativeLuminance(parsed.bg || '#ffffff');
+                    var scheme = luminance < 0.45 ? 'dark' : 'light';
+                    docEl.setAttribute('data-bs-theme', scheme);
+                } else {
+                    docEl.setAttribute('data-bs-theme', theme);
+                }
+            } catch (error) {
+                docEl.setAttribute('data-theme', DEFAULT_THEME);
+                docEl.setAttribute('data-bs-theme', DEFAULT_THEME);
             }
         })();
     </script>
@@ -43,6 +113,7 @@
     <!-- Template Main CSS File -->
     <link th:href="@{/css/style.css}" rel="stylesheet">
     <link th:href="@{/css/theme.css}" rel="stylesheet">
+    <link th:href="@{/css/theme-custom.css}" rel="stylesheet">
 
 </head>
 
@@ -89,6 +160,7 @@
     <!-- Template Main JS File -->
     <script th:src="@{/js/main.js}"></script>
     <script th:src="@{/js/theme.js}"></script>
+    <script defer th:src="@{/js/theme-custom.js}"></script>
 
 </body>
 

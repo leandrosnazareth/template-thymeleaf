@@ -1,0 +1,134 @@
+<div th:fragment="themeControls">
+    <section class="card theme-controls-card" data-theme-controls>
+        <div class="card-header d-flex align-items-center justify-content-between">
+            <div>
+                <h5 class="mb-1">Personalização de Tema</h5>
+                <p class="mb-0 text-muted small">Ajuste as cores e visualize o resultado em tempo real.</p>
+            </div>
+            <span class="badge bg-primary text-uppercase fw-semibold">Custom</span>
+        </div>
+        <div class="card-body">
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <div class="mb-3">
+                        <span class="d-block fw-semibold mb-2">Tema em uso</span>
+                        <div class="theme-toggle-group">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="theme-option" id="theme-option-light" value="light" checked>
+                                <label class="form-check-label" for="theme-option-light">Light</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="theme-option" id="theme-option-dark" value="dark">
+                                <label class="form-check-label" for="theme-option-dark">Dark</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="theme-option" id="theme-option-custom" value="custom">
+                                <label class="form-check-label" for="theme-option-custom">Custom</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="theme-color-grid">
+                        <div class="theme-color-field">
+                            <label class="form-label small text-uppercase fw-semibold" for="palette-primary">Primária</label>
+                            <input type="color" class="form-control form-control-color" id="palette-primary" name="palettePrimary" value="#0D6EFD" data-color-key="primary" disabled>
+                            <small class="text-muted">Botões principais e destaques.</small>
+                        </div>
+                        <div class="theme-color-field">
+                            <label class="form-label small text-uppercase fw-semibold" for="palette-secondary">Secundária</label>
+                            <input type="color" class="form-control form-control-color" id="palette-secondary" name="paletteSecondary" value="#6C757D" data-color-key="secondary" disabled>
+                            <small class="text-muted">Estados secundários.</small>
+                        </div>
+                        <div class="theme-color-field">
+                            <label class="form-label small text-uppercase fw-semibold" for="palette-bg">Fundo</label>
+                            <input type="color" class="form-control form-control-color" id="palette-bg" name="paletteBg" value="#FFFFFF" data-color-key="bg" disabled>
+                            <small class="text-muted">Plano de fundo global.</small>
+                        </div>
+                        <div class="theme-color-field">
+                            <label class="form-label small text-uppercase fw-semibold" for="palette-text">Texto</label>
+                            <input type="color" class="form-control form-control-color" id="palette-text" name="paletteText" value="#212529" data-color-key="text" disabled>
+                            <small class="text-muted">Texto padrão.</small>
+                        </div>
+                        <div class="theme-color-field">
+                            <label class="form-label small text-uppercase fw-semibold" for="palette-border">Bordas</label>
+                            <input type="color" class="form-control form-control-color" id="palette-border" name="paletteBorder" value="#DEE2E6" data-color-key="border" disabled>
+                            <small class="text-muted">Divisores e contornos.</small>
+                        </div>
+                        <div class="theme-color-field">
+                            <label class="form-label small text-uppercase fw-semibold" for="palette-success">Sucesso</label>
+                            <input type="color" class="form-control form-control-color" id="palette-success" name="paletteSuccess" value="#198754" data-color-key="success" disabled>
+                            <small class="text-muted">Estados de sucesso.</small>
+                        </div>
+                        <div class="theme-color-field">
+                            <label class="form-label small text-uppercase fw-semibold" for="palette-warning">Aviso</label>
+                            <input type="color" class="form-control form-control-color" id="palette-warning" name="paletteWarning" value="#FFC107" data-color-key="warning" disabled>
+                            <small class="text-muted">Alertas de atenção.</small>
+                        </div>
+                        <div class="theme-color-field">
+                            <label class="form-label small text-uppercase fw-semibold" for="palette-danger">Perigo</label>
+                            <input type="color" class="form-control form-control-color" id="palette-danger" name="paletteDanger" value="#DC3545" data-color-key="danger" disabled>
+                            <small class="text-muted">Alertas críticos.</small>
+                        </div>
+                        <div class="theme-color-field">
+                            <label class="form-label small text-uppercase fw-semibold" for="palette-info">Info</label>
+                            <input type="color" class="form-control form-control-color" id="palette-info" name="paletteInfo" value="#0DCAF0" data-color-key="info" disabled>
+                            <small class="text-muted">Mensagens informativas.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="theme-preview-card">
+                        <div class="theme-preview-header">
+                            <span class="fw-semibold">Navbar</span>
+                            <span class="badge bg-primary">Online</span>
+                        </div>
+                        <div class="theme-preview-body">
+                            <div class="theme-preview-row">
+                                <button type="button" class="btn btn-sm btn-primary">Primário</button>
+                                <button type="button" class="btn btn-sm btn-secondary">Secundário</button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary text-muted border">Outline</button>
+                            </div>
+                            <div class="theme-preview-row">
+                                <div class="card mb-0 flex-grow-1">
+                                    <div class="card-body p-3">
+                                        <h6 class="fw-semibold mb-1">Indicadores</h6>
+                                        <p class="mb-2 small text-muted">Prévia dos componentes com a paleta ativa.</p>
+                                        <div class="d-flex gap-2">
+                                            <span class="badge bg-info text-uppercase">Info</span>
+                                            <span class="badge bg-warning text-uppercase">Aviso</span>
+                                            <span class="badge bg-success text-uppercase">OK</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="theme-preview-row">
+                                <div class="alert alert-info flex-grow-1 py-2 mb-0">Mensagem informativa</div>
+                            </div>
+                            <div class="theme-preview-row">
+                                <div class="alert alert-warning flex-grow-1 py-2 mb-0">Atenção necessária</div>
+                            </div>
+                            <div class="theme-preview-row">
+                                <div class="theme-preview-sidebar flex-grow-1">
+                                    <nav class="nav flex-column small">
+                                        <a class="nav-link active" href="#">Dashboard</a>
+                                        <a class="nav-link" href="#">Relatórios</a>
+                                        <a class="nav-link" href="#">Configurações</a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 mt-4">
+                <button type="button" class="btn btn-outline-primary" data-theme-preview disabled>Pré-visualizar</button>
+                <button type="button" class="btn btn-primary" data-theme-save disabled>Salvar</button>
+                <button type="button" class="btn btn-outline-secondary" data-theme-reset>Resetar</button>
+            </div>
+
+            <div class="theme-contrast-messages mt-3" data-theme-warning hidden></div>
+            <div class="theme-feedback mt-3" data-theme-feedback hidden></div>
+        </div>
+    </section>
+</div>
