@@ -107,3 +107,8 @@ Projeto desenvolvido por **Leandro Nazareth**. Para sugestões, suporte ou contr
 - Linkedin [leandrosnazareth](https://www.linkedin.com/in/leandrosnazareth/)
 - GitHub: [github.com/leandrosnazareth](https://github.com/leandrosnazareth)
 - Email: [contato@leandrosnazareth.com](mailto:leandrosnazareth@gmail.com)
+- Projeto GitHub [github.com/leandrosnazareth/template-thymeleaf](https://github.com/leandrosnazareth/template-thymeleaf)
+
+---
+
+

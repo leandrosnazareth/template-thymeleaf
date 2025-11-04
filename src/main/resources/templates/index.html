@@ -197,101 +197,99 @@
 
                 <!-- Right side columns -->
                 <div class="col-lg-3">
+                    <div class="insights-stack">
 
-                    <!-- Recent Activity -->
-                    <div class="card timeline-card">
-                        <div class="card-body">
-                            <div class="card-heading">
-                                <h5 class="card-title">Atividade Recente</h5>
-                                <span class="card-period">Hoje</span>
+                        <!-- Recent Activity -->
+                        <div class="card timeline-card">
+                            <div class="card-body">
+                                <div class="card-heading">
+                                    <h5 class="card-title">Atividade Recente</h5>
+                                    <span class="card-period">Hoje</span>
+                                </div>
+                                <div class="activity">
+
+                                    <div class="activity-item is-success">
+                                        <div class="activity-meta">
+                                            <span class="activity-time">Há 32 min</span>
+                                            <span class="activity-status">
+                                                <i class="bi bi-check-circle-fill me-1"></i>
+                                                Concluído
+                                            </span>
+                                        </div>
+                                        <p class="activity-description">
+                                            Quia quae rerum <a href="#" class="fw-bold">explicabo officiis</a> beatae.
+                                        </p>
+                                    </div><!-- End activity item-->
+
+                                    <div class="activity-item is-warning">
+                                        <div class="activity-meta">
+                                            <span class="activity-time">Há 56 min</span>
+                                            <span class="activity-status">
+                                                <i class="bi bi-exclamation-octagon-fill me-1"></i>
+                                                Atenção
+                                            </span>
+                                        </div>
+                                        <p class="activity-description">
+                                            Voluptatem blanditiis blanditiis eveniet
+                                        </p>
+                                    </div><!-- End activity item-->
+
+                                    <div class="activity-item is-primary">
+                                        <div class="activity-meta">
+                                            <span class="activity-time">Há 2 h</span>
+                                            <span class="activity-status">
+                                                <i class="bi bi-lightning-charge-fill me-1"></i>
+                                                Novo
+                                            </span>
+                                        </div>
+                                        <p class="activity-description">
+                                            Voluptates corrupti praesentium quo nos
+                                        </p>
+                                    </div><!-- End activity item-->
+
+                                </div>
+
                             </div>
+                        </div><!-- End Recent Activity -->
 
-                            <div class="activity">
+                        <!-- Traffic Chart -->
+                        <div class="card chart-card">
+                            <div class="card-body pb-0">
+                                <div class="card-heading with-gap">
+                                    <h5 class="card-title">Fontes de Tráfego</h5>
+                                    <span class="card-period">Hoje</span>
+                                </div>
+                                <p class="card-intro">Veja a distribuição dos acessos por canal de aquisição.</p>
 
-                                <div class="activity-item d-flex">
-                                    <div class="activite-label">32 min</div>
-                                    <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
-                                    <div class="activity-content">
-                                        Quia quae rerum <a href="#" class="fw-bold text-dark">explicabo officiis</a>
-                                        beatae
+                                <div id="trafficChart" style="min-height: 320px;" class="echart"></div>
+
+                                <div class="traffic-summary">
+                                    <div class="traffic-source">
+                                        <div class="source-label">
+                                            <span class="source-dot source-dot--direct"></span>
+                                            Direto
+                                        </div>
+                                        <span class="source-value">44%</span>
                                     </div>
-                                </div><!-- End activity item-->
-
-                                <div class="activity-item d-flex">
-                                    <div class="activite-label">56 min</div>
-                                    <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
-                                    <div class="activity-content">
-                                        Voluptatem blanditiis blanditiis eveniet
+                                    <div class="traffic-source">
+                                        <div class="source-label">
+                                            <span class="source-dot source-dot--social"></span>
+                                            Social
+                                        </div>
+                                        <span class="source-value">55%</span>
                                     </div>
-                                </div><!-- End activity item-->
-
-                                <div class="activity-item d-flex">
-                                    <div class="activite-label">2 hrs</div>
-                                    <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
-                                    <div class="activity-content">
-                                        Voluptates corrupti praesentium quo nos
-                                    </div>
-                                </div><!-- End activity item-->
-
-                            </div>
-
-                        </div>
-                    </div><!-- End Recent Activity -->
-
-                    <!-- Traffic Chart -->
-                    <div class="card chart-card">
-                        <div class="card-body pb-0">
-                            <div class="card-heading with-gap">
-                                <h5 class="card-title">Fontes de Tráfego</h5>
-                                <span class="card-period">Hoje</span>
-                            </div>
-
-                            <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
-
-                        </div>
-                    </div><!-- End Traffic Chart -->
-
-                    <!-- Team Pulse -->
-                    <div class="card profile-card team-pulse-card">
-                        <div class="card-body">
-                            <div class="card-heading with-gap">
-                                <h5 class="card-title">Pulso da Equipe</h5>
-                                <span class="card-period">Esta semana</span>
-                            </div>
-                            <p class="text-muted small mb-3">Resumo rápido sobre clima, foco e estado do time.</p>
-                            <div class="pulse-indicators">
-                                <div class="pulse-item">
-                                    <div class="pulse-label">
-                                        <span>Engajamento</span>
-                                        <span class="badge bg-success-subtle text-success">Alto</span>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 78%"></div>
+                                    <div class="traffic-source">
+                                        <div class="source-label">
+                                            <span class="source-dot source-dot--search"></span>
+                                            Busca
+                                        </div>
+                                        <span class="source-value">13%</span>
                                     </div>
                                 </div>
-                                <div class="pulse-item">
-                                    <div class="pulse-label">
-                                        <span>Risco de Burnout</span>
-                                        <span class="badge bg-warning-subtle text-warning">Moderado</span>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 42%"></div>
-                                    </div>
-                                </div>
-                                <div class="pulse-item">
-                                    <div class="pulse-label">
-                                        <span>Capacidade Disponível</span>
-                                        <span class="badge bg-primary-subtle text-primary">+6h</span>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-primary" role="progressbar" style="width: 64%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-outline-primary w-100 mt-3">Ver relatório completo</a>
-                        </div>
-                    </div><!-- End Team Pulse -->
 
+                            </div>
+                        </div><!-- End Traffic Chart -->
+                    </div>
                 </div><!-- End Right side columns -->
 
             </div>

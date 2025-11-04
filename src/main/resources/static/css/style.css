@@ -742,25 +742,232 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-.timeline-card .activity {
+.insights-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.card-intro {
+    font-size: 13px;
+    color: var(--color-muted);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.timeline-card .card-body {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
 
-.timeline-card .activity-item {
-    padding: 14px 16px;
-    border-radius: 14px;
-    background: rgba(143, 155, 179, 0.12);
+.timeline-card .activity {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    padding-left: 18px;
 }
 
-.timeline-card .activity-content a {
+.timeline-card .activity::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: rgba(143, 155, 179, 0.24);
+}
+
+.timeline-card .activity-item {
+    position: relative;
+    padding: 16px 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(143, 155, 179, 0.16);
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 20px rgba(20, 25, 34, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    --activity-accent: var(--color-primary);
+}
+
+.timeline-card .activity-item::before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 18px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 3px solid var(--activity-accent);
+    background: var(--bs-body-bg, #fff);
+}
+
+.timeline-card .activity-item.is-success {
+    --activity-accent: var(--color-success);
+}
+
+.timeline-card .activity-item.is-warning {
+    --activity-accent: #f2a03f;
+}
+
+.timeline-card .activity-item.is-primary {
+    --activity-accent: var(--color-primary);
+}
+
+.timeline-card .activity-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--color-muted);
+}
+
+.timeline-card .activity-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--activity-accent);
+}
+
+.timeline-card .activity-description {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-dark);
+}
+
+.timeline-card .activity-description a {
+    color: var(--activity-accent);
+}
+
+.chart-card .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.traffic-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.traffic-source {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: rgba(143, 155, 179, 0.12);
+    border: 1px solid rgba(143, 155, 179, 0.1);
+}
+
+.traffic-source .source-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: var(--color-dark-variant);
+}
+
+.traffic-source .source-value {
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+.source-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.source-dot--direct {
+    background: #4154f1;
+}
+
+.source-dot--social {
+    background: #2eca6a;
+}
+
+.source-dot--search {
+    background: #ff771d;
+}
+
+.team-pulse-card .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pulse-indicators {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.pulse-item {
+    padding: 16px 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(143, 155, 179, 0.16);
+    background: rgba(255, 255, 255, 0.85);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pulse-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    color: var(--color-dark-variant);
+}
+
+.pulse-item .progress {
+    height: 8px;
+    background: rgba(143, 155, 179, 0.18);
+    border-radius: 999px;
+}
+
+.pulse-item .progress-bar {
+    border-radius: 999px;
+}
+
+.pulse-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.badge-soft {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.badge-soft-primary {
+    background: rgba(var(--color-primary-rgb), 0.12);
     color: var(--color-primary);
+}
+
+.badge-soft-success {
+    background: rgba(40, 199, 111, 0.12);
+    color: var(--color-success);
 }
 
 .chart-card #trafficChart,
 .chart-card #reportsChart {
-    margin-right: -10px;
+    margin-right: 0;
 }
 
 #reportsChart {
@@ -862,8 +1069,59 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(255, 255, 255, 0.06);
 }
 
+[data-bs-theme="dark"] .card-intro {
+    color: rgba(255, 255, 255, 0.64);
+}
+
+[data-bs-theme="dark"] .timeline-card .activity::before {
+    background: rgba(255, 255, 255, 0.08);
+}
+
 [data-bs-theme="dark"] .timeline-card .activity-item {
+    background: rgba(40, 45, 60, 0.82);
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+}
+
+[data-bs-theme="dark"] .timeline-card .activity-item::before {
+    background: var(--bs-body-bg, #141416);
+}
+
+[data-bs-theme="dark"] .timeline-card .activity-meta {
+    color: rgba(255, 255, 255, 0.56);
+}
+
+[data-bs-theme="dark"] .timeline-card .activity-description {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+[data-bs-theme="dark"] .traffic-source {
     background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-bs-theme="dark"] .traffic-source .source-label,
+[data-bs-theme="dark"] .traffic-source .source-value {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+[data-bs-theme="dark"] .team-pulse-card .pulse-item {
+    background: rgba(40, 45, 60, 0.82);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-bs-theme="dark"] .pulse-label {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+[data-bs-theme="dark"] .pulse-item .progress {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+[data-bs-theme="dark"] .badge-soft-primary,
+[data-bs-theme="dark"] .badge-soft-success {
+    background: rgba(255, 255, 255, 0.16);
+    color: rgba(255, 255, 255, 0.78);
 }
 
 .card {
