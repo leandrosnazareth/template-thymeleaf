@@ -338,10 +338,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-icon-item {
     margin-left: 12px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-top: 8px;
 }
 
 .header-nav .d-flex > .nav-icon-item:first-of-type {
     margin-left: 0;
+}
+
+.header-nav .nav-profile-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-top: 8px;
 }
 
 .header-nav .nav-icon {
@@ -355,10 +366,15 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+    margin-top: 8px;
 }
 
 .header-nav .nav-icon i {
     font-size: 18px;
+}
+
+.header-nav .nav-profile {
+    margin-top: 8px;
 }
 
 .header-nav .nav-icon:hover,
