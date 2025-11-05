@@ -85,6 +85,42 @@ public class DashboardController {
         return "layout/main";
     }
 
+    @GetMapping("/paginas/sistema/visao-geral")
+    public String paginasSistemaVisaoGeral(Model model) {
+        model.addAttribute("content", "paginas/sistema/visao-geral");
+        return "layout/main";
+    }
+
+    @GetMapping("/paginas/sistema/relatorios")
+    public String paginasSistemaRelatorios(Model model) {
+        model.addAttribute("content", "paginas/sistema/relatorios");
+        return "layout/main";
+    }
+
+    @GetMapping("/paginas/sistema/equipe")
+    public String paginasSistemaEquipe(Model model) {
+        model.addAttribute("content", "paginas/sistema/equipe");
+        return "layout/main";
+    }
+
+    @GetMapping("/paginas/website/landing")
+    public String paginasWebsiteLanding(Model model) {
+        model.addAttribute("content", "paginas/website/landing");
+        return "layout/main";
+    }
+
+    @GetMapping("/paginas/website/blog")
+    public String paginasWebsiteBlog(Model model) {
+        model.addAttribute("content", "paginas/website/blog");
+        return "layout/main";
+    }
+
+    @GetMapping("/paginas/website/contato")
+    public String paginasWebsiteContato(Model model) {
+        model.addAttribute("content", "paginas/website/contato");
+        return "layout/main";
+    }
+
 
     @GetMapping("/my-profile")
     public String profile(Model model) {
