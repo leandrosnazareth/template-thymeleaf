@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+    <div th:fragment="content">
+
+        <div class="pagetitle">
+            <div class="page-hero page-hero--analytics">
+                <div class="page-hero__copy">
+                    <span class="page-hero__eyebrow">BI &amp; Analytics</span>
+                    <h1>Relatórios dinâmicos</h1>
+                    <p class="page-hero__subtitle">
+                        Construa análises poderosas com filtros avançados, painéis compartilháveis e storytelling de
+                        dados pronto para apresentações executivas.
+                    </p>
+                </div>
+                <div class="page-hero__widgets">
+                    <div class="widget-stat">
+                        <span class="widget-stat__label">Relatórios agendados</span>
+                        <strong class="widget-stat__value">38</strong>
+                        <span class="widget-stat__meta text-success"><i class="bi bi-clock-history me-1"></i>
+                            Próxima execução às 22h</span>
+                    </div>
+                    <div class="widget-stat">
+                        <span class="widget-stat__label">Dashboards ativos</span>
+                        <strong class="widget-stat__value">14</strong>
+                        <span class="widget-stat__meta text-info"><i class="bi bi-people me-1"></i> 128
+                            visualizações esta semana</span>
+                    </div>
+                    <div class="widget-stat">
+                        <span class="widget-stat__label">Modelos reutilizados</span>
+                        <strong class="widget-stat__value">26</strong>
+                        <span class="widget-stat__meta text-primary"><i class="bi bi-stars me-1"></i> 5 novos
+                            modelos sugeridos</span>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End Page Title -->
+
+        <section class="section page-section">
+            <div class="row g-4">
+                <div class="col-xl-4">
+                    <div class="card page-panel h-100">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <h5 class="card-title mb-1">Biblioteca de relatórios</h5>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Criar novo</a>
+                            </div>
+                            <ul class="report-library">
+                                <li class="report-library__item">
+                                    <div class="report-library__icon bg-primary-subtle text-primary">
+                                        <i class="bi bi-bar-chart-line"></i>
+                                    </div>
+                                    <div>
+                                        <h6>Performance de vendas</h6>
+                                        <p>Comparativo semanal, projeção trimestral e análise por segmento.</p>
+                                        <span class="report-meta">
+                                            <i class="bi bi-calendar2-week me-1"></i>
+                                            Atualizado ontem · 24 assinantes
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="report-library__item">
+                                    <div class="report-library__icon bg-success-subtle text-success">
+                                        <i class="bi bi-activity"></i>
+                                    </div>
+                                    <div>
+                                        <h6>Saúde da plataforma</h6>
+                                        <p>Métricas de disponibilidade, erros críticos e capacidade de recursos.</p>
+                                        <span class="report-meta">
+                                            <i class="bi bi-broadcast-pin me-1"></i>
+                                            Streaming em tempo real
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="report-library__item">
+                                    <div class="report-library__icon bg-warning-subtle text-warning">
+                                        <i class="bi bi-person-lines-fill"></i>
+                                    </div>
+                                    <div>
+                                        <h6>Engajamento do usuário</h6>
+                                        <p>Retenção por cohort, funil de ativação e heatmap de funcionalidades.</p>
+                                        <span class="report-meta">
+                                            <i class="bi bi-stars me-1"></i>
+                                            Destaque do mês
+                                        </span>
+                                    </div>
+                                </li>
+                                <li class="report-library__item">
+                                    <div class="report-library__icon bg-info-subtle text-info">
+                                        <i class="bi bi-currency-exchange"></i>
+                                    </div>
+                                    <div>
+                                        <h6>Receita recorrente (MRR)</h6>
+                                        <p>Análise de churn, expansão e shrink por plano e região.</p>
+                                        <span class="report-meta">
+                                            <i class="bi bi-graph-up-arrow me-1"></i>
+                                            Crescimento de 11% MoM
+                                        </span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-8">
+                    <div class="card page-panel h-100">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <div>
+                                    <h5 class="card-title mb-1">Construtor de relatórios</h5>
+                                    <small class="text-muted">Arraste métricas, defina filtros e distribua em
+                                        dashboards</small>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-outline-secondary btn-sm">Salvar rascunho</button>
+                                    <button class="btn btn-primary btn-sm"><i class="bi bi-send me-1"></i>Compartilhar</button>
+                                </div>
+                            </div>
+                            <div class="report-builder">
+                                <div class="report-builder__sidebar">
+                                    <h6>Fontes de dados</h6>
+                                    <ul>
+                                        <li><i class="bi bi-database"></i> Data Warehouse (Snowflake)</li>
+                                        <li><i class="bi bi-cloud-check"></i> Eventos Realtime (Kafka)</li>
+                                        <li><i class="bi bi-window-stack"></i> CRM Integrado</li>
+                                        <li><i class="bi bi-bag-check"></i> ERP Financeiro</li>
+                                    </ul>
+                                    <h6 class="mt-4">Campos selecionados</h6>
+                                    <div class="selected-tags">
+                                        <span class="badge rounded-pill bg-primary-subtle text-primary">MRR</span>
+                                        <span class="badge rounded-pill bg-primary-subtle text-primary">Churn rate</span>
+                                        <span class="badge rounded-pill bg-primary-subtle text-primary">Segmento</span>
+                                        <span class="badge rounded-pill bg-primary-subtle text-primary">País</span>
+                                    </div>
+                                </div>
+                                <div class="report-builder__canvas">
+                                    <div class="canvas-header">
+                                        <div>
+                                            <h6 class="mb-1">Projeção de receita recorrente</h6>
+                                            <small class="text-muted">Filtro ativo: planos enterprise · Últimos 12
+                                                meses</small>
+                                        </div>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-secondary active">Linha</button>
+                                            <button class="btn btn-outline-secondary">Coluna</button>
+                                            <button class="btn btn-outline-secondary">Área</button>
+                                        </div>
+                                    </div>
+                                    <div class="canvas-chart">
+                                        <img th:src="@{/imagens/charts/projecao-mrr.svg}"
+                                            alt="Gráfico de projeção de MRR" class="img-fluid rounded-3 shadow-sm">
+                                    </div>
+                                    <div class="canvas-footer">
+                                        <div>
+                                            <span class="badge rounded-pill bg-success-subtle text-success">Forecast
+                                                IA</span>
+                                            <span class="ms-2 text-muted">Erro médio absoluto 4,2%</span>
+                                        </div>
+                                        <a href="#" class="btn btn-link btn-sm p-0">Abrir detalhes do modelo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="automation-callout">
+                                <div>
+                                    <h6>Automatize sua distribuição</h6>
+                                    <p>Agende o envio de relatórios, defina públicos, idiomas e formatos com versões
+                                        específicas por área.</p>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-outline-primary btn-sm">Ver automações</button>
+                                    <button class="btn btn-primary btn-sm">Criar fluxo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section page-section">
+            <div class="row g-4">
+                <div class="col-xl-5">
+                    <div class="card page-panel h-100">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <h5 class="card-title mb-0">Histórico de versões</h5>
+                                <span class="badge rounded-pill bg-secondary-subtle text-secondary">Controle completo</span>
+                            </div>
+                            <ul class="activity-feed">
+                                <li>
+                                    <div class="activity-indicator bg-primary"></div>
+                                    <div class="activity-body">
+                                        <strong>v3.4 · Performance Comercial</strong>
+                                        <p>Adicionado comparativo YOY e segmentação por canal de aquisição.</p>
+                                        <span>Por Júlia Campos · há 2 horas</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="activity-indicator bg-success"></div>
+                                    <div class="activity-body">
+                                        <strong>v1.9 · Saúde da Plataforma</strong>
+                                        <p>Novo alerta para taxa de erro acima de 1% com escalonamento automático.</p>
+                                        <span>Por Rodrigo Lima · há 1 dia</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="activity-indicator bg-warning"></div>
+                                    <div class="activity-body">
+                                        <strong>v2.2 · Funil de Engajamento</strong>
+                                        <p>Atualização dos estágios com eventos customizados da versão 5.3.</p>
+                                        <span>Por Ana Souza · há 3 dias</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="activity-indicator bg-info"></div>
+                                    <div class="activity-body">
+                                        <strong>v4.0 · Receita Recorrente</strong>
+                                        <p>Integração com dados financeiros do ERP e alerta de risco de cancelamento.</p>
+                                        <span>Por Daniel Freitas · há 5 dias</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7">
+                    <div class="card page-panel h-100">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <div>
+                                    <h5 class="card-title mb-1">Governança &amp; auditoria</h5>
+                                    <small class="text-muted">Quais times têm acesso a cada relatório e como estão
+                                        consumindo</small>
+                                </div>
+                                <a href="#" class="btn btn-outline-secondary btn-sm">Exportar CSV</a>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table align-middle table-modern">
+                                    <thead>
+                                        <tr>
+                                            <th>Relatório</th>
+                                            <th>Equipe</th>
+                                            <th>Último acesso</th>
+                                            <th>Formato</th>
+                                            <th>Permissões</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Performance Comercial</td>
+                                            <td>Growth &amp; Vendas</td>
+                                            <td>03 ago · 11:42</td>
+                                            <td>Dashboard / PDF</td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">Editor</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Saúde da Plataforma</td>
+                                            <td>Engenharia</td>
+                                            <td>03 ago · 09:17</td>
+                                            <td>Dashboard</td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">Colaborador</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Receita Recorrente</td>
+                                            <td>Financeiro</td>
+                                            <td>02 ago · 18:09</td>
+                                            <td>CSV / API</td>
+                                            <td><span class="badge rounded-pill bg-danger-subtle text-danger">Somente leitura</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Engajamento do usuário</td>
+                                            <td>Produto</td>
+                                            <td>02 ago · 15:46</td>
+                                            <td>Dashboard / Link público</td>
+                                            <td><span class="badge rounded-pill bg-info-subtle text-info">Compartilhado</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>NPS &amp; Feedback</td>
+                                            <td>Customer Success</td>
+                                            <td>02 ago · 08:13</td>
+                                            <td>Slides</td>
+                                            <td><span class="badge rounded-pill bg-primary-subtle text-primary">Gestor</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="compliance-hint">
+                                <div class="compliance-hint__icon bg-primary-subtle text-primary">
+                                    <i class="bi bi-shield-lock"></i>
+                                </div>
+                                <div>
+                                    <h6>Conformidade garantida</h6>
+                                    <p>Auditoria completa com trilhas de acesso, criptografia ponta a ponta e mascaramento
+                                        automático de dados sensíveis.</p>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Configurar políticas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

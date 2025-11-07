@@ -10,6 +10,7 @@
     <aside th:fragment="menu" class="sidebar"
         th:with="currentContent=${content},
                  componentsActive=${#strings.startsWith(currentContent, 'componentes/') or currentContent == 'accordion' or currentContent == 'alerts' or currentContent == 'badges'},
+                 pagesActive=${#strings.startsWith(currentContent, 'paginas/')},
                  authActive=${currentContent == 'login' or currentContent == 'register' or currentContent == 'forgot-password'},
                  errorsActive=${currentContent == 'error-403' or currentContent == 'error-404' or currentContent == 'error-500'}">
 
@@ -57,6 +58,54 @@
                     </li>
                 </ul>
             </li><!-- End Components Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link" data-bs-target="#pages-nav" data-bs-toggle="collapse" href="#"
+                    th:classappend="${pagesActive} ? ' active' : ' collapsed'">
+                    <i class="bi bi-layers"></i><span>Páginas</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="pages-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav"
+                    th:classappend="${pagesActive} ? ' show' : ''">
+                    <li class="nav-group-title">Sistema</li>
+                    <li>
+                        <a th:href="@{/paginas/sistema/visao-geral}"
+                            th:classappend="${currentContent} == 'paginas/sistema/visao-geral' ? ' active' : ''">
+                            <i class="bi bi-circle"></i><span>Visão Geral</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/paginas/sistema/relatorios}"
+                            th:classappend="${currentContent} == 'paginas/sistema/relatorios' ? ' active' : ''">
+                            <i class="bi bi-circle"></i><span>Relatórios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/paginas/sistema/equipe}"
+                            th:classappend="${currentContent} == 'paginas/sistema/equipe' ? ' active' : ''">
+                            <i class="bi bi-circle"></i><span>Equipe &amp; Permissões</span>
+                        </a>
+                    </li>
+                    <li class="nav-group-title">Website</li>
+                    <li>
+                        <a th:href="@{/paginas/website/landing}"
+                            th:classappend="${currentContent} == 'paginas/website/landing' ? ' active' : ''">
+                            <i class="bi bi-circle"></i><span>Landing Page</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/paginas/website/blog}"
+                            th:classappend="${currentContent} == 'paginas/website/blog' ? ' active' : ''">
+                            <i class="bi bi-circle"></i><span>Blog &amp; Artigos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/paginas/website/contato}"
+                            th:classappend="${currentContent} == 'paginas/website/contato' ? ' active' : ''">
+                            <i class="bi bi-circle"></i><span>Contato &amp; Suporte</span>
+                        </a>
+                    </li>
+                </ul>
+            </li><!-- End Pages Nav -->
 
             <li class="nav-heading">Pages</li>
 

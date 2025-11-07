@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+    <div th:fragment="content">
+
+        <div class="pagetitle">
+            <div class="page-hero page-hero--support">
+                <div class="page-hero__copy">
+                    <span class="page-hero__eyebrow">Contato &amp; suporte</span>
+                    <h1>Estamos prontos para ajudar</h1>
+                    <p class="page-hero__subtitle">
+                        Fale com especialistas, conheça nossos canais de suporte e encontre respostas rápidas em nossa
+                        base de conhecimento.
+                    </p>
+                    <div class="page-hero__actions">
+                        <a href="#" class="btn btn-primary btn-lg"><i class="bi bi-chat-right-text me-2"></i>Enviar
+                            mensagem</a>
+                        <a href="#" class="btn btn-outline-light btn-lg"><i class="bi bi-journal-richtext me-2"></i>
+                            Abrir base de ajuda</a>
+                    </div>
+                </div>
+                <div class="page-hero__illustration">
+                    <img th:src="@{/imagens/support/support-team.svg}" alt="Ilustração suporte" class="img-fluid">
+                </div>
+            </div>
+        </div><!-- End Page Title -->
+
+        <section class="section page-section">
+            <div class="row g-4">
+                <div class="col-xl-5">
+                    <div class="card page-panel h-100 support-card">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <h5 class="card-title mb-1">Canais diretos</h5>
+                                <span class="badge rounded-pill bg-success-subtle text-success">Tempo médio 4 min</span>
+                            </div>
+                            <ul class="channel-list">
+                                <li>
+                                    <div class="channel-icon bg-primary-subtle text-primary">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </div>
+                                    <div>
+                                        <strong>WhatsApp dedicado</strong>
+                                        <span>Seg-Sex · 08h às 20h</span>
+                                        <p>Respostas ágeis, envio de anexos, áudio e vídeo call instantâneo.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-outline-primary btn-sm">Iniciar conversa</a>
+                                </li>
+                                <li>
+                                    <div class="channel-icon bg-warning-subtle text-warning">
+                                        <i class="bi bi-telephone"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Hotline prioritária</strong>
+                                        <span>24/7 · clientes enterprise</span>
+                                        <p>Suporte crítico com monitoramento contínuo e SLA garantido.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-outline-warning btn-sm">Agendar ligação</a>
+                                </li>
+                                <li>
+                                    <div class="channel-icon bg-info-subtle text-info">
+                                        <i class="bi bi-envelope-paper"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Email inteligente</strong>
+                                        <span>Resposta em até 6h úteis</span>
+                                        <p>Triagem automática por IA e direcionamento para o especialista ideal.</p>
+                                    </div>
+                                    <a href="#" class="btn btn-outline-info btn-sm">Enviar e-mail</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7">
+                    <div class="card page-panel h-100">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <div>
+                                    <h5 class="card-title mb-1">Formulário de contato</h5>
+                                    <small class="text-muted">Descreva sua necessidade para conectarmos com o time ideal</small>
+                                </div>
+                                <div class="btn-group btn-group-sm">
+                                    <button class="btn btn-outline-secondary active">Suporte</button>
+                                    <button class="btn btn-outline-secondary">Comercial</button>
+                                    <button class="btn btn-outline-secondary">Parcerias</button>
+                                </div>
+                            </div>
+                            <form class="row g-3 contact-form">
+                                <div class="col-md-6">
+                                    <label class="form-label">Nome completo</label>
+                                    <input type="text" class="form-control" placeholder="Informe seu nome">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Empresa</label>
+                                    <input type="text" class="form-control" placeholder="Nome da sua empresa">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">E-mail profissional</label>
+                                    <input type="email" class="form-control" placeholder="nome@empresa.com">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Telefone</label>
+                                    <input type="tel" class="form-control" placeholder="(XX) 99999-9999">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Tipo de solicitação</label>
+                                    <select class="form-select">
+                                        <option>Selecione</option>
+                                        <option>Suporte técnico</option>
+                                        <option>Onboarding</option>
+                                        <option>Dúvidas sobre produto</option>
+                                        <option>Parceria comercial</option>
+                                        <option>Outro</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Urgência</label>
+                                    <div class="d-flex gap-2 flex-wrap">
+                                        <div class="form-check urgency-pill">
+                                            <input class="form-check-input" type="radio" name="urgency" id="urgencyLow"
+                                                checked>
+                                            <label class="form-check-label" for="urgencyLow">Baixa</label>
+                                        </div>
+                                        <div class="form-check urgency-pill">
+                                            <input class="form-check-input" type="radio" name="urgency"
+                                                id="urgencyMedium">
+                                            <label class="form-check-label" for="urgencyMedium">Média</label>
+                                        </div>
+                                        <div class="form-check urgency-pill">
+                                            <input class="form-check-input" type="radio" name="urgency"
+                                                id="urgencyHigh">
+                                            <label class="form-check-label" for="urgencyHigh">Alta</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Descreva seu contexto</label>
+                                    <textarea class="form-control" rows="4"
+                                        placeholder="Conte-nos sobre sua situação para agilizar o atendimento"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="copyEmail">
+                                        <label class="form-check-label" for="copyEmail">
+                                            Quero receber uma cópia por e-mail
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex justify-content-between align-items-center">
+                                    <span class="text-muted small"><i class="bi bi-shield-check me-1"></i>Seguimos
+                                        políticas de segurança e proteção de dados.</span>
+                                    <button class="btn btn-primary btn-lg">Enviar solicitação</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section page-section">
+            <div class="row g-4">
+                <div class="col-xl-6">
+                    <div class="card page-panel h-100 knowledge-card">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <h5 class="card-title mb-1">Central de conhecimento</h5>
+                                <a href="#" class="btn btn-outline-secondary btn-sm">Ver todas as categorias</a>
+                            </div>
+                            <div class="knowledge-grid">
+                                <div class="knowledge-item">
+                                    <div class="knowledge-item__icon bg-primary-subtle text-primary">
+                                        <i class="bi bi-rocket"></i>
+                                    </div>
+                                    <div>
+                                        <h6>Comece agora</h6>
+                                        <p>Guia de onboarding, checklist de ativação e melhores práticas de setup.</p>
+                                        <a href="#">Explorar guias</a>
+                                    </div>
+                                </div>
+                                <div class="knowledge-item">
+                                    <div class="knowledge-item__icon bg-success-subtle text-success">
+                                        <i class="bi bi-diagram-3"></i>
+                                    </div>
+                                    <div>
+                                        <h6>Integrações</h6>
+                                        <p>APIs, webhooks e SDKs para conectar a plataforma a qualquer stack.</p>
+                                        <a href="#">Ver integrações</a>
+                                    </div>
+                                </div>
+                                <div class="knowledge-item">
+                                    <div class="knowledge-item__icon bg-warning-subtle text-warning">
+                                        <i class="bi bi-shield-lock"></i>
+                                    </div>
+                                    <div>
+                                        <h6>Segurança &amp; compliance</h6>
+                                        <p>Documentação de privacidade, certificações e controles de acesso.</p>
+                                        <a href="#">Acessar políticas</a>
+                                    </div>
+                                </div>
+                                <div class="knowledge-item">
+                                    <div class="knowledge-item__icon bg-info-subtle text-info">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div>
+                                        <h6>Comunidade</h6>
+                                        <p>Eventos, fóruns, webinars e estudos de caso com clientes.</p>
+                                        <a href="#">Entrar na comunidade</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="card page-panel h-100">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <div>
+                                    <h5 class="card-title mb-1">Localizações &amp; horários</h5>
+                                    <small class="text-muted">Estamos próximos independentemente do fuso horário</small>
+                                </div>
+                                <a href="#" class="btn btn-outline-secondary btn-sm">Ver agenda completa</a>
+                            </div>
+                            <div class="location-grid">
+                                <div class="location-card">
+                                    <h6>São Paulo · HQ</h6>
+                                    <p>Avenida Paulista, 1230 · Bela Vista</p>
+                                    <span><i class="bi bi-clock me-1"></i>08h às 18h</span>
+                                    <span><i class="bi bi-building me-1"></i>Time de produto &amp; CS</span>
+                                </div>
+                                <div class="location-card">
+                                    <h6>Lisboa · EMEA</h6>
+                                    <p>Rua Garrett, 91 · Chiado</p>
+                                    <span><i class="bi bi-clock me-1"></i>08h às 17h</span>
+                                    <span><i class="bi bi-globe me-1"></i>Suporte &amp; parcerias</span>
+                                </div>
+                                <div class="location-card">
+                                    <h6>Miami · Américas</h6>
+                                    <p>Brickell Avenue, 78 · Brickell</p>
+                                    <span><i class="bi bi-clock me-1"></i>09h às 18h</span>
+                                    <span><i class="bi bi-briefcase me-1"></i>Equipe de vendas</span>
+                                </div>
+                                <div class="location-card">
+                                    <h6>Remoto · 24/7</h6>
+                                    <p>Especialistas disponíveis em todos os fusos</p>
+                                    <span><i class="bi bi-clock-history me-1"></i>Tempo real</span>
+                                    <span><i class="bi bi-chat-dots me-1"></i>Chat e e-mail</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section page-section">
+            <div class="card page-panel call-to-action">
+                <div class="card-body d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4">
+                    <div>
+                        <h4>Precisa de algo personalizado?</h4>
+                        <p>Nossa equipe de especialistas constrói soluções sob medida para seu cenário. Conte com a gente
+                            para acelerar resultados.</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-primary btn-lg">Agendar consultoria</a>
+                        <a href="#" class="btn btn-outline-primary btn-lg">Ver casos de sucesso</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>

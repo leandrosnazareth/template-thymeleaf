@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+    <div th:fragment="content">
+
+        <div class="pagetitle">
+            <div class="page-hero page-hero--marketing">
+                <div class="page-hero__copy">
+                    <span class="page-hero__eyebrow">Landing page</span>
+                    <h1>Construa campanhas memoráveis</h1>
+                    <p class="page-hero__subtitle">
+                        Uma landing moderna, otimizada para conversão, com blocos flexíveis, elementos visuais fortes e
+                        provas sociais consistentes.
+                    </p>
+                    <div class="page-hero__actions">
+                        <a href="#" class="btn btn-primary btn-lg"><i class="bi bi-cart-check me-2"></i>Começar agora</a>
+                        <a href="#" class="btn btn-outline-light btn-lg"><i class="bi bi-eye me-2"></i>Ver demo</a>
+                    </div>
+                    <div class="page-hero__confidence">
+                        <span class="badge rounded-pill bg-light text-dark"><i class="bi bi-check-circle me-1"></i>
+                            Garantia de 30 dias</span>
+                        <span class="badge rounded-pill bg-light text-dark"><i class="bi bi-lock me-1"></i>Pagamentos
+                            seguros</span>
+                    </div>
+                </div>
+                <div class="page-hero__illustration">
+                    <img th:src="@{/imagens/marketing/landing-hero.svg}" alt="Ilustração hero marketing"
+                        class="img-fluid">
+                </div>
+            </div>
+        </div><!-- End Page Title -->
+
+        <section class="section page-section">
+            <div class="row g-4 align-items-center">
+                <div class="col-xl-5">
+                    <div class="card page-panel h-100 marketing-highlight">
+                        <div class="card-body">
+                            <span class="badge rounded-pill bg-primary-subtle text-primary text-uppercase mb-3">O que faz
+                                sentido</span>
+                            <h2 class="mb-3">Uma jornada de impacto do primeiro clique até a ativação</h2>
+                            <p class="lead">Traga clareza para seus visitantes com seções que apresentam seu produto,
+                                benefícios tangíveis e uma história envolvente, sem abrir mão da performance.</p>
+                            <ul class="list-unstyled mt-4">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Hero visual com
+                                    CTA duplo e gatilhos de confiança</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Highlights com
+                                    ícones, benefícios e microcopy convincente</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Depoimentos e
+                                    indicadores sociais que amplificam autoridade</li>
+                                <li class="mb-0"><i class="bi bi-check-circle-fill text-primary me-2"></i>FAQ, planos e
+                                    seção final de conversão sem distrações</li>
+                            </ul>
+                            <div class="d-flex gap-3 mt-4">
+                                <button class="btn btn-primary">Ver templates</button>
+                                <button class="btn btn-outline-secondary">Agendar consultoria</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7">
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-card__icon bg-primary-subtle text-primary">
+                                <i class="bi bi-sliders"></i>
+                            </div>
+                            <h5>Personalização avançada</h5>
+                            <p>Componentes dinamicamente ajustáveis para contar a história com o tom certo, sempre na
+                                identidade visual da marca.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-card__icon bg-success-subtle text-success">
+                                <i class="bi bi-speedometer2"></i>
+                            </div>
+                            <h5>Performance impecável</h5>
+                            <p>Boas práticas de SEO, carregamento rápido e otimizações que impactam diretamente a taxa de
+                                conversão.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-card__icon bg-warning-subtle text-warning">
+                                <i class="bi bi-patch-check"></i>
+                            </div>
+                            <h5>Provas sociais estratégicas</h5>
+                            <p>Logos, depoimentos e dados de sucesso em formato modular para reforçar confiança em cada
+                                etapa da página.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-card__icon bg-info-subtle text-info">
+                                <i class="bi bi-bar-chart"></i>
+                            </div>
+                            <h5>Medição em tempo real</h5>
+                            <p>Mapeamento de eventos, variações A/B e heatmaps prontos para integrar com suas ferramentas
+                                de analytics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section page-section">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-xl-4">
+                    <div class="card page-panel h-100 testimonial-card">
+                        <div class="card-body">
+                            <div class="testimonial-card__quote">
+                                <i class="bi bi-quote"></i>
+                                <p>"Lançamos uma campanha em 48 horas, com layout limpo e focado no valor. A taxa de
+                                    conversão dobrou."</p>
+                            </div>
+                            <div class="testimonial-card__author">
+                                <img th:src="@{/imagens/avatars/avatar-01.jpg}" alt="Avatar"
+                                    class="testimonial-card__avatar">
+                                <div>
+                                    <strong>Camila Andrade</strong>
+                                    <span>Head de Marketing · OctaPay</span>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <span class="badge rounded-pill bg-primary-subtle text-primary">+102% conversão</span>
+                                <span class="badge rounded-pill bg-success-subtle text-success">Campanha fintech</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-8">
+                    <div class="card page-panel h-100">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <div>
+                                    <h5 class="card-title mb-1">Seção de conversão com foco em benefícios</h5>
+                                    <small class="text-muted">Traga clareza sobre o valor gerado nos primeiros segundos</small>
+                                </div>
+                                <a href="#" class="btn btn-outline-secondary btn-sm">Ver exemplos</a>
+                            </div>
+                            <div class="conversion-layout">
+                                <div class="conversion-layout__copy">
+                                    <h3>Transforme visitas em clientes em tempo recorde</h3>
+                                    <p>Construa uma narrativa que destaca o impacto real do seu produto com CTA <em>hero</em>,
+                                        sessão de benefícios e prova social bem posicionada.</p>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-dot"></i>CTA principal destacado com cor de contraste e
+                                            microcopy claro</li>
+                                        <li><i class="bi bi-dot"></i>Benefícios alinhados às principais dores e
+                                            objecções</li>
+                                        <li><i class="bi bi-dot"></i>Seção de logos + depoimentos para reforçar confiança</li>
+                                        <li><i class="bi bi-dot"></i>Bloco final com CTA secundário e FAQ para remover
+                                            atritos</li>
+                                    </ul>
+                                    <div class="d-flex gap-2 mt-3">
+                                        <button class="btn btn-primary btn-sm">Deploy com 1 clique</button>
+                                        <button class="btn btn-outline-secondary btn-sm">Ver checklist de copy</button>
+                                    </div>
+                                </div>
+                                <div class="conversion-layout__preview">
+                                    <img th:src="@{/imagens/marketing/landing-wireframe.svg}" alt="Wireframe de landing"
+                                        class="img-fluid rounded-4 shadow-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section page-section">
+            <div class="row g-4">
+                <div class="col-xl-7">
+                    <div class="card page-panel h-100 pricing-card">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <div>
+                                    <h5 class="card-title mb-1">Planos pensados para ampliar resultados</h5>
+                                    <small class="text-muted">Escolha a opção ideal e escale quando estiver pronto</small>
+                                </div>
+                                <div class="btn-group btn-group-sm">
+                                    <button class="btn btn-outline-secondary active">Mensal</button>
+                                    <button class="btn btn-outline-secondary">Anual (-15%)</button>
+                                </div>
+                            </div>
+                            <div class="pricing-grid">
+                                <div class="pricing-tier">
+                                    <span class="badge rounded-pill bg-light text-dark">Essentials</span>
+                                    <h3>R$ 89<span>/mês</span></h3>
+                                    <p>Perfeito para lançamentos rápidos e campanhas pontuais.</p>
+                                    <ul>
+                                        <li><i class="bi bi-check"></i>Páginas ilimitadas</li>
+                                        <li><i class="bi bi-check"></i>SEO otimizado</li>
+                                        <li><i class="bi bi-check"></i>Integração com CRM</li>
+                                        <li><i class="bi bi-check"></i>Suporte em 24h</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-outline-primary w-100">Começar</a>
+                                </div>
+                                <div class="pricing-tier pricing-tier--highlight">
+                                    <span class="badge rounded-pill bg-primary text-white">Growth</span>
+                                    <h3>R$ 149<span>/mês</span></h3>
+                                    <p>Para operações em escala, com testes A/B e automações.</p>
+                                    <ul>
+                                        <li><i class="bi bi-check"></i>Tudo do Essentials</li>
+                                        <li><i class="bi bi-check"></i>Teste A/B ilimitado</li>
+                                        <li><i class="bi bi-check"></i>Analytics avançado</li>
+                                        <li><i class="bi bi-check"></i>Suporte dedicado</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-primary w-100">Escolher Growth</a>
+                                </div>
+                                <div class="pricing-tier">
+                                    <span class="badge rounded-pill bg-light text-dark">Enterprise</span>
+                                    <h3>Personalizado</h3>
+                                    <p>Soluções customizadas com SLA dedicado e consultoria.</p>
+                                    <ul>
+                                        <li><i class="bi bi-check"></i>Time dedicado</li>
+                                        <li><i class="bi bi-check"></i>Integração com stack existente</li>
+                                        <li><i class="bi bi-check"></i>SLA de 99,9%</li>
+                                        <li><i class="bi bi-check"></i>Suporte 24/7</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-outline-secondary w-100">Falar com vendas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5">
+                    <div class="card page-panel h-100">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <div>
+                                    <h5 class="card-title mb-1">FAQ rápido</h5>
+                                    <small class="text-muted">Tudo que seus visitantes esperam saber</small>
+                                </div>
+                                <button class="btn btn-outline-secondary btn-sm">Ver base completa</button>
+                            </div>
+                            <div class="accordion accordion-flush" id="landingFaq">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="faqOneHeading">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false"
+                                            aria-controls="faqOne">
+                                            Quanto tempo levo para publicar uma landing?
+                                        </button>
+                                    </h2>
+                                    <div id="faqOne" class="accordion-collapse collapse" aria-labelledby="faqOneHeading"
+                                        data-bs-parent="#landingFaq">
+                                        <div class="accordion-body">
+                                            Você consegue publicar uma versão funcional em menos de 60 minutos com nossos
+                                            componentes e integrações pré-configuradas.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="faqTwoHeading">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false"
+                                            aria-controls="faqTwo">
+                                            Posso testar variações e medir resultados?
+                                        </button>
+                                    </h2>
+                                    <div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="faqTwoHeading"
+                                        data-bs-parent="#landingFaq">
+                                        <div class="accordion-body">
+                                            Sim! Oferecemos funcionalidades de teste A/B e integração com ferramentas
+                                            como Google Optimize, VWO e Hotjar.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="faqThreeHeading">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false"
+                                            aria-controls="faqThree">
+                                            Os formulários são customizáveis?
+                                        </button>
+                                    </h2>
+                                    <div id="faqThree" class="accordion-collapse collapse"
+                                        aria-labelledby="faqThreeHeading" data-bs-parent="#landingFaq">
+                                        <div class="accordion-body">
+                                            Completamente. Crie campos dinâmicos, lógica condicional, integrações com CRM
+                                            e mensagens de sucesso personalizadas.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="faqFourHeading">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#faqFour" aria-expanded="false"
+                                            aria-controls="faqFour">
+                                            Como funciona o suporte?
+                                        </button>
+                                    </h2>
+                                    <div id="faqFour" class="accordion-collapse collapse"
+                                        aria-labelledby="faqFourHeading" data-bs-parent="#landingFaq">
+                                        <div class="accordion-body">
+                                            Nossa equipe acompanha você do lançamento à otimização, oferecendo suporte
+                                            humano e biblioteca de melhores práticas.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>
