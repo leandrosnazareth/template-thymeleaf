@@ -101,6 +101,17 @@ template-thymeleaf/
 
 Este projeto está licenciado sob a **MIT License**. Sinta-se à vontade para utilizar, modificar e distribuir, mantendo os créditos da autoria.
 
+## 🫶 Contribua com o Projeto 💚
+
+Se este projeto te ajudou ou inspirou, considere apoiar o desenvolvimento com uma contribuição via **PIX**.  
+Sua doação ajuda a manter o projeto ativo e a evoluir com novas funcionalidades!
+
+**Chave PIX:** `998a4dac-add7-46d7-a117-9f8624b29d6a`
+
+<img src="imagens/qrcode-pix.png" alt="QR Code PIX" width="220" />
+
+*(Aponte a câmera do seu celular para o QR Code e contribua com qualquer valor!)*
+
 ## Contato
 
 Projeto desenvolvido por **Leandro Nazareth**. Para sugestões, suporte ou contribuições:
@@ -110,5 +121,3 @@ Projeto desenvolvido por **Leandro Nazareth**. Para sugestões, suporte ou contr
 - Projeto GitHub [github.com/leandrosnazareth/template-thymeleaf](https://github.com/leandrosnazareth/template-thymeleaf)
 
 ---
-
-
