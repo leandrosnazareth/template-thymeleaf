@@ -1410,6 +1410,205 @@ h1, h2, h3, h4, h5, h6 {
     padding: 26px 26px 24px 26px;
 }
 
+.table-showcase .table-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--shadow-medium);
+}
+
+.table-card .card-body {
+    padding: 1.8rem;
+}
+
+.table-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.table-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.table-modern thead th {
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--color-muted);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.table-modern tbody td {
+    border-color: rgba(143, 155, 179, 0.18);
+    font-size: 0.92rem;
+    vertical-align: middle;
+}
+
+.table-modern tbody tr:hover {
+    background: rgba(115, 103, 240, 0.035);
+}
+
+.table-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-avatar-sm {
+    width: 36px;
+    height: 36px;
+    font-size: 0.8rem;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #7367f0, #9f7dfa);
+}
+
+.bg-gradient-pink {
+    background: linear-gradient(135deg, #ff6cab, #7366ff);
+}
+
+.bg-gradient-orange {
+    background: linear-gradient(135deg, #ffb347, #ffcc33);
+}
+
+.bg-gradient-teal {
+    background: linear-gradient(135deg, #2ec4b6, #32ded4);
+}
+
+.table-status {
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.table-status::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    background: currentColor;
+}
+
+.status-online {
+    color: #28c76f;
+    background: rgba(40, 199, 111, 0.12);
+}
+
+.status-away {
+    color: #ff9f43;
+    background: rgba(255, 159, 67, 0.15);
+}
+
+.status-offline {
+    color: #a8aaae;
+    background: rgba(168, 170, 174, 0.26);
+}
+
+.progress-thin {
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(143, 155, 179, 0.25);
+    margin-bottom: 4px;
+}
+
+.table-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.btn-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-card .btn-outline-secondary.active {
+    background: rgba(115, 103, 240, 0.08);
+    border-color: rgba(115, 103, 240, 0.5);
+    color: var(--color-primary);
+}
+
+.badge-soft-warning {
+    background: rgba(255, 193, 7, 0.2);
+    color: #e2a000;
+}
+
+.badge-soft-danger {
+    background: rgba(234, 84, 85, 0.16);
+    color: #d63a3b;
+}
+
+.badge-soft-info {
+    background: rgba(13, 202, 240, 0.2);
+    color: #0aa2c0;
+}
+
+[data-bs-theme="dark"] .table-showcase .table-card {
+    border-color: rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+    background: var(--bs-body-bg, #1f2128);
+}
+
+[data-bs-theme="dark"] .table-modern thead th {
+    color: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-bs-theme="dark"] .table-modern tbody td {
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-bs-theme="dark"] .table-modern tbody tr:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.table-card .btn-light {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+.table-card .btn-light:hover {
+    border-color: rgba(115, 103, 240, 0.4);
+}
+
+.badge-soft-primary {
+    background: rgba(var(--color-primary-rgb), 0.16);
+    color: var(--color-primary);
+}
+
+.badge-soft-success {
+    background: rgba(40, 199, 111, 0.16);
+    color: var(--color-success);
+}
+
+[data-bs-theme="dark"] .badge-soft-primary,
+[data-bs-theme="dark"] .badge-soft-success,
+[data-bs-theme="dark"] .badge-soft-warning,
+[data-bs-theme="dark"] .badge-soft-danger,
+[data-bs-theme="dark"] .badge-soft-info {
+    color: rgba(255, 255, 255, 0.92);
+}
+
 @media (max-width: 1199px) {
     .dashboard-hero {
         grid-template-columns: 1fr;
