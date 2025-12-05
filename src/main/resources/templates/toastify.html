@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+    <div th:fragment="content">
+        <link rel="stylesheet" th:href="@{/css/toastify-custom.css}">
+
+        <div class="pagetitle">
+            <h1>Exemplos Toastify</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                    <li class="breadcrumb-item">Extras</li>
+                    <li class="breadcrumb-item active">Toastify</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Básico</h5>
+                            <p class="text-muted small">Toast simples com ação.</p>
+                            <button class="btn btn-primary" data-toastify="basic">Mostrar mensagem</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Cores &amp; gradientes</h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button class="btn btn-outline-success btn-sm" data-toastify="success">Success</button>
+                                <button class="btn btn-outline-danger btn-sm" data-toastify="danger">Danger</button>
+                                <button class="btn btn-outline-secondary btn-sm" data-toastify="gradient">Gradient</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Com avatar</h5>
+                            <p class="text-muted small">Use imagens ou ícones.</p>
+                            <button class="btn btn-info text-white" data-toastify="avatar">Mostrar toast</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Posicionamentos</h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <button class="btn btn-outline-primary btn-sm" data-toastify-placement="top-right">Topo direita</button>
+                                <button class="btn btn-outline-primary btn-sm" data-toastify-placement="top-left">Topo esquerda</button>
+                                <button class="btn btn-outline-primary btn-sm" data-toastify-placement="bottom-right">Base direita</button>
+                                <button class="btn btn-outline-primary btn-sm" data-toastify-placement="bottom-left">Base esquerda</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body d-flex flex-wrap justify-content-between gap-2 align-items-center">
+                            <div>
+                                <h5 class="card-title mb-0">Sequências interativas</h5>
+                                <p class="text-muted small mb-0">Toast com botão e progresso.</p>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-outline-secondary" data-toastify="callback">Callback</button>
+                                <button class="btn btn-outline-secondary" data-toastify="long">Long duration</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script th:src="@{/js/toastify-custom.js}"></script>
+    <script th:inline="javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof Toastify === 'undefined') {
+                console.warn('Toastify não carregado.');
+                return;
+            }
+
+            const showToast = (options) => Toastify(Object.assign({
+                duration: 3500,
+                gravity: 'top',
+                position: 'right',
+                close: true,
+                stopOnFocus: true,
+                offset: { x: 12, y: 12 }
+            }, options)).showToast();
+
+            const wire = (selector, handler) => {
+                const el = document.querySelector(selector);
+                if (el) {
+                    el.addEventListener('click', handler);
+                }
+            };
+
+            wire('[data-toastify="basic"]', () => {
+                showToast({
+                    text: 'Feedback sincronizado!',
+                    style: { background: '#4b7bec' }
+                });
+            });
+
+            wire('[data-toastify="success"]', () => {
+                showToast({
+                    text: 'Deploy finalizado com sucesso.',
+                    style: { background: '#28c76f' }
+                });
+            });
+
+            wire('[data-toastify="danger"]', () => {
+                showToast({
+                    text: 'Falha de autenticação detectada.',
+                    style: { background: '#ea5455' }
+                });
+            });
+
+            wire('[data-toastify="gradient"]', () => {
+                showToast({
+                    text: 'Monitorando novas métricas...',
+                    style: { background: 'linear-gradient(135deg, #7367f0, #ce9ffc)' }
+                });
+            });
+
+            wire('[data-toastify="avatar"]', () => {
+                showToast({
+                    text: 'Nova mensagem de Customer Success.',
+                    avatar: 'https://i.pravatar.cc/48?img=5'
+                });
+            });
+
+            document.querySelectorAll('[data-toastify-placement]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const placement = btn.dataset.toastifyPlacement.split('-');
+                    showToast({
+                        text: `Toast em ${btn.textContent}`,
+                        gravity: placement[0],
+                        position: placement[1],
+                        style: { background: '#20bbe0' }
+                    });
+                });
+            });
+
+            wire('[data-toastify="callback"]', () => {
+                showToast({
+                    text: 'Aplicar migração agora?',
+                    style: { background: '#ff9f43' },
+                    destination: '#',
+                    newWindow: false,
+                    onClick: () => alert('Migração agendada!')
+                });
+            });
+
+            wire('[data-toastify="long"]', () => {
+                showToast({
+                    text: 'Sincronizando dados analíticos. Aguarde...',
+                    duration: 6000,
+                    style: { background: '#252f40' }
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

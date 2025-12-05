@@ -18,14 +18,20 @@
         </div><!-- End Page Title -->
 
         <section class="section">
-            <div class="row">
-                <div class="col-lg-7">
-
-                    <div class="card">
+            <div class="row g-4">
+                <div class="col-12 col-xl-7">
+                    <div class="card email-card">
                         <div class="card-body">
-                            <div class="card-heading">
-                                <h5 class="card-title">Resumo de email</h5>
-                                <span class="card-period">Exemplo 01</span>
+                            <div class="email-toolbar mb-3">
+                                <div class="d-flex flex-wrap align-items-center gap-2">
+                                    <button class="btn btn-icon btn-outline-secondary"><i class="bi bi-arrow-left"></i></button>
+                                    <button class="btn btn-icon btn-outline-secondary"><i class="bi bi-arrow-right"></i></button>
+                                    <span class="text-muted small">4 de 28</span>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-outline-secondary btn-sm">Arquivar</button>
+                                    <button class="btn btn-outline-secondary btn-sm">Spam</button>
+                                </div>
                             </div>
 
                             <div class="email-preview">
@@ -35,6 +41,13 @@
                                         <span class="email-preview-date">Enviado em 12/07/2024 às 09:14</span>
                                     </div>
                                     <h4 class="email-preview-subject">[Sprint 24] Check-in de alinhamento semanal</h4>
+                                    <div class="email-preview-from">
+                                        <div class="avatar">PM</div>
+                                        <div>
+                                            <strong>Equipe PMO</strong>
+                                            <span class="text-muted small">pmo@company.com</span>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="email-preview-body">
                                     <p>Olá squad,</p>
@@ -45,39 +58,37 @@
                                         <li>Definir responsáveis pelos OKRs do próximo ciclo</li>
                                     </ul>
                                     <p>Links úteis:</p>
-                                    <ul>
-                                        <li><a href="#">Dashboard de growth</a></li>
-                                        <li><a href="#">Documento com pendências da retro</a></li>
-                                        <li><a href="#">Backlog priorizado no Jira</a></li>
-                                    </ul>
+                                    <div class="link-pills">
+                                        <a href="#" class="link-pill">Dashboard de growth</a>
+                                        <a href="#" class="link-pill">Pendências da retro</a>
+                                        <a href="#" class="link-pill">Backlog no Jira</a>
+                                    </div>
                                     <p>Abraços,<br>Equipe PMO</p>
                                 </div>
                                 <div class="email-preview-footer">
-                                    <button class="btn btn-primary">Responder</button>
-                                    <button class="btn btn-outline-secondary">Encaminhar</button>
+                                    <button class="btn btn-primary"><i class="bi bi-reply me-1"></i>Responder</button>
+                                    <button class="btn btn-outline-secondary"><i class="bi bi-forward me-1"></i>Encaminhar</button>
+                                    <button class="btn btn-outline-secondary"><i class="bi bi-printer me-1"></i>Imprimir</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
 
-                <div class="col-lg-5">
-
-                    <div class="card">
+                <div class="col-12 col-xl-5">
+                    <div class="card newsletter-card">
                         <div class="card-body">
                             <div class="card-heading">
-                                <h5 class="card-title">Card de newsletter</h5>
-                                <span class="card-period">Exemplo 02</span>
+                                <h5 class="card-title">Newsletter semanal</h5>
+                                <span class="badge bg-info-subtle text-info">12.420 inscritos</span>
                             </div>
-
-                            <div class="newsletter-card">
+                            <div class="newsletter-card-body">
                                 <span class="newsletter-pill">Atualizações do produto</span>
                                 <h4>Roadmap Q3 liberado com novidades</h4>
                                 <p>Veja os principais lançamentos previstos e participe das sessões de feedback.</p>
                                 <div class="newsletter-meta">
-                                    <span class="badge bg-info-subtle text-info">12.420 inscritos</span>
-                                    <span class="newsletter-date">Último envio há 2 dias</span>
+                                    <span class="text-muted">Último envio há 2 dias</span>
+                                    <span class="badge bg-soft-success text-success">CTR 11%</span>
                                 </div>
                                 <div class="newsletter-actions">
                                     <button class="btn btn-outline-primary">Ver edição mais recente</button>
@@ -89,36 +100,49 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <div class="card-heading">
-                                <h5 class="card-title">Templates rápidos</h5>
-                                <span class="card-period">Exemplo 03</span>
+                            <div class="card-heading d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                <div>
+                                    <h5 class="card-title mb-0">Templates rápidos</h5>
+                                    <p class="text-muted small mb-0">Escolha um modelo para enviar em minutos.</p>
+                                </div>
+                                <button class="btn btn-outline-primary btn-sm">Novo template</button>
                             </div>
-
                             <div class="email-templates-grid">
-                                <div class="email-template">
-                                    <span class="email-template-title">Confirmação</span>
-                                    <p class="email-template-description">Agradeça o cadastro e encaminhe os próximos passos.</p>
+                                <article class="email-template">
+                                    <div class="email-template-icon bg-primary-subtle text-primary"><i class="bi bi-check2-circle"></i></div>
+                                    <div>
+                                        <span class="email-template-title">Confirmação</span>
+                                        <p class="email-template-description">Agradeça o cadastro e encaminhe os próximos passos.</p>
+                                    </div>
                                     <button class="btn btn-sm btn-outline-primary">Ver modelo</button>
-                                </div>
-                                <div class="email-template">
-                                    <span class="email-template-title">Boas-vindas trial</span>
-                                    <p class="email-template-description">Introdução personalizada para quem iniciou o teste.</p>
+                                </article>
+                                <article class="email-template">
+                                    <div class="email-template-icon bg-success-subtle text-success"><i class="bi bi-stars"></i></div>
+                                    <div>
+                                        <span class="email-template-title">Boas-vindas trial</span>
+                                        <p class="email-template-description">Introdução personalizada para quem iniciou o teste.</p>
+                                    </div>
                                     <button class="btn btn-sm btn-outline-primary">Ver modelo</button>
-                                </div>
-                                <div class="email-template">
-                                    <span class="email-template-title">Recuperação</span>
-                                    <p class="email-template-description">Sugestões de melhorias para leads inativos.</p>
+                                </article>
+                                <article class="email-template">
+                                    <div class="email-template-icon bg-warning-subtle text-warning"><i class="bi bi-arrow-counterclockwise"></i></div>
+                                    <div>
+                                        <span class="email-template-title">Recuperação</span>
+                                        <p class="email-template-description">Sugestões de melhorias para leads inativos.</p>
+                                    </div>
                                     <button class="btn btn-sm btn-outline-primary">Ver modelo</button>
-                                </div>
-                                <div class="email-template">
-                                    <span class="email-template-title">Upsell</span>
-                                    <p class="email-template-description">Recomendações de upgrades com CTA direto.</p>
+                                </article>
+                                <article class="email-template">
+                                    <div class="email-template-icon bg-danger-subtle text-danger"><i class="bi bi-graph-up"></i></div>
+                                    <div>
+                                        <span class="email-template-title">Upsell</span>
+                                        <p class="email-template-description">Recomendações de upgrades com CTA direto.</p>
+                                    </div>
                                     <button class="btn btn-sm btn-outline-primary">Ver modelo</button>
-                                </div>
+                                </article>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>

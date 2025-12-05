@@ -79,6 +79,12 @@ public class DashboardController {
         return "layout/main";
     }
 
+    @GetMapping("/toastify")
+    public String toastify(Model model) {
+        model.addAttribute("content", "toastify");
+        return "layout/main";
+    }
+
     @GetMapping("/alerts")
     public String alerts(Model model) {
         model.addAttribute("content", "alerts");
