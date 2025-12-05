@@ -136,13 +136,21 @@
         </div>
 
         <!-- Loading modal -->
-        <div class="modal fade" id="loadingModal" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true">
+        <div class="modal fade" id="loadingModal" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
             <div class="modal-dialog modal-sm modal-dialog-centered">
-                <div class="modal-content text-center py-4">
-                    <div class="spinner-border text-warning mb-3" role="status">
-                        <span class="visually-hidden">Carregando...</span>
+                <div class="modal-content modal-loading-card text-center">
+                    <div class="modal-body">
+                        <div class="loading-icon mb-3">
+                            <i class="bi bi-cloud-arrow-down"></i>
+                            <span class="loading-pulse"></span>
+                        </div>
+                        <h6 class="mb-1">Sincronizando dados</h6>
+                        <p class="text-muted small">Aplicando configurações no cluster principal...</p>
+                        <div class="loading-progress">
+                            <div class="loading-progress-bar"></div>
+                        </div>
+                        <small class="text-muted d-block mt-2">Esta ação pode levar alguns segundos.</small>
                     </div>
-                    <p class="mb-0">Sincronizando com o servidor...</p>
                 </div>
             </div>
         </div>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+    <div th:fragment="content">
+        <div class="pagetitle">
+            <h1>Exemplos de Navs</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                    <li class="breadcrumb-item">Componentes</li>
+                    <li class="breadcrumb-item active">Navs</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="card-heading">
+                                <h5 class="card-title">Nav padrão</h5>
+                                <p class="text-muted small">Uso básico com indicador ativo.</p>
+                            </div>
+                            <ul class="nav nav-pills gap-2 flex-wrap">
+                                <li class="nav-item"><a class="nav-link active" href="#">Visão geral</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Relatórios</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Campanhas</a></li>
+                                <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1">Desativado</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="card-heading">
+                                <h5 class="card-title">Nav com ícones</h5>
+                                <p class="text-muted small">Ideal para dashboards.</p>
+                            </div>
+                            <ul class="nav nav-pills nav-fill">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#"><i class="bi bi-bar-chart me-1"></i> Insights</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="bi bi-people me-1"></i> Equipe</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="bi bi-gear me-1"></i> Configurações</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                                <div>
+                                    <h5 class="card-title mb-0">Navs com conteúdo</h5>
+                                    <p class="text-muted small mb-0">Tabs usando dados e gráficos resumidos.</p>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn-outline-secondary btn-sm" data-nav-sync="monthly">Mensal</button>
+                                    <button class="btn btn-outline-secondary btn-sm active" data-nav-sync="quarterly">Trimestral</button>
+                                    <button class="btn btn-outline-secondary btn-sm" data-nav-sync="yearly">Anual</button>
+                                </div>
+                            </div>
+
+                            <ul class="nav nav-tabs" id="navTabsExample" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Performance</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Clientes</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Operações</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content pt-3" id="navTabsContent">
+                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                    <div class="row g-3">
+                                        <div class="col-md-4">
+                                            <div class="border rounded-4 p-3 h-100">
+                                                <span class="text-muted small d-block">Receita</span>
+                                                <h4 class="mb-0">R$ 124k</h4>
+                                                <span class="badge bg-soft-success text-success mt-2">+18%</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="border rounded-4 p-3 h-100">
+                                                <span class="text-muted small d-block">Conversão</span>
+                                                <h4 class="mb-0">4.2%</h4>
+                                                <span class="badge bg-soft-primary text-primary mt-2">+0.6pp</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="border rounded-4 p-3 h-100">
+                                                <span class="text-muted small d-block">Canais ativos</span>
+                                                <h4 class="mb-0">12</h4>
+                                                <span class="badge bg-soft-warning text-warning mt-2">+3</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                    <p class="text-muted mb-0">55% dos novos clientes vieram de indicações. O churn caiu para 2.3%.</p>
+                                </div>
+                                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                    <p class="text-muted mb-0">Tempo médio de resolução: 1h42. 4 alertas críticos aguardando ação.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Nav vertical</h5>
+                            <div class="row">
+                                <div class="col-5">
+                                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                        <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Overview</button>
+                                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Deploy</button>
+                                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Logs</button>
+                                    </div>
+                                </div>
+                                <div class="col-7">
+                                    <div class="tab-content" id="v-pills-tabContent">
+                                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">Estado geral do cluster saudável, 12 pods ativos.</div>
+                                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Pipeline CI/CD finalizado há 12 minutos.</div>
+                                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">Últimas mensagens agregadas no ELK stack.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Nav pills suave</h5>
+                            <ul class="nav nav-pills nav-justified nav-pills-soft">
+                                <li class="nav-item"><a class="nav-link active" href="#">Planejamento</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Backlog</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Entregas</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+
+</html>
