@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+    <div th:fragment="content">
+        <div class="pagetitle">
+            <h1>Exemplos de Modal</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                    <li class="breadcrumb-item">Componentes</li>
+                    <li class="breadcrumb-item active">Modais</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
+
+        <section class="section">
+            <div class="row g-4">
+                <div class="col-12 col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="card-heading">
+                                <h5 class="card-title mb-2">Modal padrão</h5>
+                                <p class="text-muted small mb-0">Janela básica com título, corpo e rodapé.</p>
+                            </div>
+                            <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#defaultModal">
+                                Abrir modal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="card-heading">
+                                <h5 class="card-title mb-2">Modal com formulário</h5>
+                                <p class="text-muted small mb-0">Ideal para capturar dados rápidos.</p>
+                            </div>
+                            <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#formModal">
+                                Abrir formulário
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="card-heading">
+                                <h5 class="card-title mb-2">Modal com estado de carregamento</h5>
+                                <p class="text-muted small mb-0">Use para feedback assíncrono.</p>
+                            </div>
+                            <button class="btn btn-warning mt-3" data-bs-toggle="modal" data-bs-target="#loadingModal">
+                                Mostrar carregamento
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="card-heading">
+                                <h5 class="card-title mb-2">Modal fullscreen responsivo</h5>
+                                <p class="text-muted small mb-0">Expande em telas pequenas.</p>
+                            </div>
+                            <button class="btn btn-outline-secondary mt-3" data-bs-toggle="modal" data-bs-target="#fullscreenModal">
+                                Abrir modal fullscreen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Default modal -->
+        <div class="modal fade" id="defaultModal" tabindex="-1" aria-labelledby="defaultModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="defaultModalLabel">Atualização disponível</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Há uma nova versão do dashboard com melhorias nos gráficos e correções de segurança. Deseja aplicar
+                        agora?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Depois</button>
+                        <button type="button" class="btn btn-primary">Atualizar agora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form modal -->
+        <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="formModalLabel">Agendar reunião</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row g-3">
+                            <div class="col-12">
+                                <label class="form-label">Título</label>
+                                <input type="text" class="form-control" placeholder="Ex: Revisão sprint" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Data</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Hora</label>
+                                <input type="time" class="form-control" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Participantes</label>
+                                <input type="email" class="form-control" placeholder="email@empresa.com">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Descrição</label>
+                                <textarea class="form-control" rows="3" placeholder="Detalhes breves da pauta."></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-success">Salvar reunião</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading modal -->
+        <div class="modal fade" id="loadingModal" tabindex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm modal-dialog-centered">
+                <div class="modal-content text-center py-4">
+                    <div class="spinner-border text-warning mb-3" role="status">
+                        <span class="visually-hidden">Carregando...</span>
+                    </div>
+                    <p class="mb-0">Sincronizando com o servidor...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fullscreen modal -->
+        <div class="modal fade" id="fullscreenModal" tabindex="-1" aria-labelledby="fullscreenModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen-sm-down modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div>
+                            <h5 class="modal-title" id="fullscreenModalLabel">Pesquisa de satisfação</h5>
+                            <p class="text-muted small mb-0">Ajude-nos a priorizar melhorias para o próximo trimestre.</p>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row g-4">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Quão satisfeito está com o desempenho atual?</label>
+                                <div class="d-flex gap-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="satisfacao" id="sat1" value="1">
+                                        <label class="form-check-label" for="sat1">Baixo</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="satisfacao" id="sat2" value="2">
+                                        <label class="form-check-label" for="sat2">Médio</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="satisfacao" id="sat3" value="3">
+                                        <label class="form-check-label" for="sat3">Alto</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label">Funcionalidades prioritárias</label>
+                                <select class="form-select" multiple>
+                                    <option value="dashboards">Dashboards customizados</option>
+                                    <option value="automations">Automações</option>
+                                    <option value="alerts">Alertas inteligentes</option>
+                                    <option value="integrations">Integrações</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Feedback adicional</label>
+                                <textarea class="form-control" rows="4" placeholder="Compartilhe ideias, dores e sugestões."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="button" class="btn btn-primary">Enviar respostas</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

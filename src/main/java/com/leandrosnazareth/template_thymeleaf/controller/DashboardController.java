@@ -67,6 +67,12 @@ public class DashboardController {
         return "layout/main";
     }
 
+    @GetMapping("/modals")
+    public String modals(Model model) {
+        model.addAttribute("content", "modals");
+        return "layout/main";
+    }
+
     @GetMapping("/alerts")
     public String alerts(Model model) {
         model.addAttribute("content", "alerts");

@@ -9,7 +9,7 @@
     <!-- ======= Sidebar ======= -->
     <aside th:fragment="menu" class="sidebar"
         th:with="currentContent=${content},
-                 componentsActive=${#strings.startsWith(currentContent, 'componentes/') or currentContent == 'accordion' or currentContent == 'alerts' or currentContent == 'badges'},
+                 componentsActive=${#strings.startsWith(currentContent, 'componentes/') or currentContent == 'accordion' or currentContent == 'alerts' or currentContent == 'badges' or currentContent == 'modals'},
                  pagesActive=${#strings.startsWith(currentContent, 'paginas/')},
                  authActive=${currentContent == 'login' or currentContent == 'register' or currentContent == 'forgot-password'},
                  errorsActive=${currentContent == 'error-403' or currentContent == 'error-404' or currentContent == 'error-500'}">
@@ -44,6 +44,11 @@
                     <li>
                         <a th:href="@{/badges}" th:classappend="${currentContent} == 'badges' ? ' active' : ''">
                             <i class="bi bi-circle"></i><span>Badges</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a th:href="@{/modals}" th:classappend="${currentContent} == 'modals' ? ' active' : ''">
+                            <i class="bi bi-circle"></i><span>Modais</span>
                         </a>
                     </li>
                     <li>
