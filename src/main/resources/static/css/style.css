@@ -1804,6 +1804,41 @@ h1, h2, h3, h4, h5, h6 {
     100% { transform: translateX(120%); }
 }
 
+.bg-soft-primary {
+    background: rgba(var(--color-primary-rgb, 115, 103, 240), 0.13) !important;
+}
+
+.bg-soft-success {
+    background: rgba(40, 199, 111, 0.15) !important;
+}
+
+.bg-soft-warning {
+    background: rgba(255, 193, 7, 0.2) !important;
+}
+
+.nav-pills-soft .nav-link {
+    border-radius: 999px;
+    padding: 0.6rem 1.5rem;
+    background: rgba(143, 155, 179, 0.16);
+    color: var(--color-dark);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-pills-soft .nav-link.active {
+    background: var(--color-primary);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(var(--color-primary-rgb, 115, 103, 240), 0.2);
+}
+
+[data-bs-theme="dark"] .nav-pills-soft .nav-link {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+[data-bs-theme="dark"] .nav-pills-soft .nav-link.active {
+    color: #fff;
+}
+
 /* Footer */
 .footer {
     margin-top: auto;

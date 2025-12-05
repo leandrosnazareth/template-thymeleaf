@@ -73,6 +73,12 @@ public class DashboardController {
         return "layout/main";
     }
 
+    @GetMapping("/navs")
+    public String navs(Model model) {
+        model.addAttribute("content", "navs");
+        return "layout/main";
+    }
+
     @GetMapping("/alerts")
     public String alerts(Model model) {
         model.addAttribute("content", "alerts");
