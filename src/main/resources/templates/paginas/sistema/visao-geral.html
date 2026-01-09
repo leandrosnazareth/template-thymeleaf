@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+    <div th:fragment="content">
+
+        <div class="pagetitle">
+            <div class="page-hero page-hero--system">
+                <div class="page-hero__copy">
+                    <span class="page-hero__eyebrow">Painel executivo</span>
+                    <h1>Visão geral da plataforma</h1>
+                    <p class="page-hero__subtitle">
+                        Acompanhe o pulso da operação em tempo real com indicadores críticos, status de serviços e
+                        projeções que ajudam a priorizar decisões estratégicas.
+                    </p>
+                    <div class="page-hero__actions">
+                        <a href="#" class="btn btn-primary btn-sm">
+                            <i class="bi bi-lightning-charge me-2"></i>Executar ação rápida
+                        </a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm">
+                            <i class="bi bi-download me-2"></i>Exportar snapshot
+                        </a>
+                    </div>
+                </div>
+                <div class="page-hero__metrics">
+                    <div class="metric-card">
+                        <div class="metric-card__label">Disponibilidade</div>
+                        <div class="metric-card__value text-success">99,97%</div>
+                        <div class="metric-card__trend positive">
+                            <i class="bi bi-arrow-up-right"></i>
+                            +0,04% nos últimos 30 dias
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-card__label">Tempo médio de resposta</div>
+                        <div class="metric-card__value">212 ms</div>
+                        <div class="metric-card__trend neutral">
+                            <i class="bi bi-arrow-repeat"></i>
+                            Estável nas últimas 24h
+                        </div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-card__label">Usuários ativos</div>
+                        <div class="metric-card__value">18.420</div>
+                        <div class="metric-card__trend positive">
+                            <i class="bi bi-people-fill"></i>
+                            +1.240 versus semana anterior
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End Page Title -->
+
+        <section class="section page-section">
+            <div class="row g-4">
+                <div class="col-xl-8">
+                    <div class="card page-panel h-100">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <div>
+                                    <h5 class="card-title mb-1">Indicadores de desempenho</h5>
+                                    <small class="text-muted">Última atualização há 2 minutos</small>
+                                </div>
+                                <div>
+                                    <span class="badge rounded-pill bg-primary-subtle text-primary">SLA monitorado</span>
+                                </div>
+                            </div>
+                            <div class="row g-3 align-items-stretch">
+                                <div class="col-md-4">
+                                    <div class="performance-pod">
+                                        <div class="performance-pod__icon bg-primary-subtle text-primary">
+                                            <i class="bi bi-graph-up"></i>
+                                        </div>
+                                        <div class="performance-pod__body">
+                                            <span class="performance-pod__title">Conversão</span>
+                                            <span class="performance-pod__value">6,8%</span>
+                                            <span class="performance-pod__delta positive">
+                                                <i class="bi bi-arrow-up"></i>
+                                                +0,9 p.p em 7 dias
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="performance-pod">
+                                        <div class="performance-pod__icon bg-success-subtle text-success">
+                                            <i class="bi bi-reception-4"></i>
+                                        </div>
+                                        <div class="performance-pod__body">
+                                            <span class="performance-pod__title">Throughput</span>
+                                            <span class="performance-pod__value">3,2 K req/s</span>
+                                            <span class="performance-pod__delta neutral">
+                                                <i class="bi bi-arrow-right"></i>
+                                                Alinhado com a meta
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="performance-pod">
+                                        <div class="performance-pod__icon bg-danger-subtle text-danger">
+                                            <i class="bi bi-shield-exclamation"></i>
+                                        </div>
+                                        <div class="performance-pod__body">
+                                            <span class="performance-pod__title">Falhas críticas</span>
+                                            <span class="performance-pod__value">3 incidentes</span>
+                                            <span class="performance-pod__delta negative">
+                                                <i class="bi bi-arrow-down"></i>
+                                                -2 vs. mês anterior
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="my-4">
+
+                            <div class="row g-4">
+                                <div class="col-lg-6">
+                                    <div class="status-board">
+                                        <div class="status-board__header">
+                                            <h6>Status de serviços</h6>
+                                            <a href="#" class="status-board__link">Ver histórico</a>
+                                        </div>
+                                        <ul class="status-board__list">
+                                            <li class="status-board__item">
+                                                <span class="status-indicator status-indicator--ok"></span>
+                                                API pública
+                                                <span class="status-board__meta text-success">Operando</span>
+                                            </li>
+                                            <li class="status-board__item">
+                                                <span class="status-indicator status-indicator--warning"></span>
+                                                Processamento de filas
+                                                <span class="status-board__meta text-warning">Latência alta</span>
+                                            </li>
+                                            <li class="status-board__item">
+                                                <span class="status-indicator status-indicator--ok"></span>
+                                                Integração parceiros
+                                                <span class="status-board__meta text-success">Operando</span>
+                                            </li>
+                                            <li class="status-board__item">
+                                                <span class="status-indicator status-indicator--scheduled"></span>
+                                                Data warehouse
+                                                <span class="status-board__meta text-info">Manutenção 23h</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="status-board">
+                                        <div class="status-board__header">
+                                            <h6>Próximos marcos</h6>
+                                            <a href="#" class="status-board__link">Ver roadmap</a>
+                                        </div>
+                                        <ul class="timeline">
+                                            <li class="timeline__item">
+                                                <div class="timeline__indicator bg-primary"></div>
+                                                <div class="timeline__body">
+                                                    <span class="timeline__date">10 AGO</span>
+                                                    <h6 class="timeline__title">Lançamento do fluxo de onboarding</h6>
+                                                    <p class="timeline__text">Experiência guiada com 4 passos e
+                                                        personalização por segmento.</p>
+                                                </div>
+                                            </li>
+                                            <li class="timeline__item">
+                                                <div class="timeline__indicator bg-success"></div>
+                                                <div class="timeline__body">
+                                                    <span class="timeline__date">18 AGO</span>
+                                                    <h6 class="timeline__title">Revisão de governança de dados</h6>
+                                                    <p class="timeline__text">Nova taxonomia e políticas de retenção
+                                                        alinhadas à LGPD.</p>
+                                                </div>
+                                            </li>
+                                            <li class="timeline__item">
+                                                <div class="timeline__indicator bg-warning"></div>
+                                                <div class="timeline__body">
+                                                    <span class="timeline__date">25 AGO</span>
+                                                    <h6 class="timeline__title">Migração do módulo de billing</h6>
+                                                    <p class="timeline__text">Transição para arquitetura baseada em
+                                                        eventos com feature flags.</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4">
+                    <div class="card page-panel h-100">
+                        <div class="card-body">
+                            <div class="card-heading">
+                                <h5 class="card-title mb-0">Alertas inteligentes</h5>
+                                <span class="badge rounded-pill bg-warning-subtle text-warning">3 ativos</span>
+                            </div>
+                            <div class="alert-pulse">
+                                <div class="alert-pulse__item">
+                                    <div class="alert-pulse__icon bg-danger-subtle text-danger">
+                                        <i class="bi bi-lightning-fill"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="alert-pulse__title">Erros 500 em auth-service</h6>
+                                        <p class="alert-pulse__text">Taxa de erro acima de 2% por 5 minutos.</p>
+                                        <span class="alert-pulse__meta">Detecção há 3 min · Prioridade alta</span>
+                                    </div>
+                                </div>
+                                <div class="alert-pulse__item">
+                                    <div class="alert-pulse__icon bg-info-subtle text-info">
+                                        <i class="bi bi-wifi"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="alert-pulse__title">Agente de monitoramento</h6>
+                                        <p class="alert-pulse__text">Atualização disponível para 12 instâncias.</p>
+                                        <span class="alert-pulse__meta">Planejado para 22h · Prioridade média</span>
+                                    </div>
+                                </div>
+                                <div class="alert-pulse__item">
+                                    <div class="alert-pulse__icon bg-success-subtle text-success">
+                                        <i class="bi bi-patch-check"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="alert-pulse__title">Health check marketplace</h6>
+                                        <p class="alert-pulse__text">Testes de fumaça finalizados sem regressões.</p>
+                                        <span class="alert-pulse__meta">Há 32 min · Prioridade baixa</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="my-4">
+
+                            <div class="card-heading with-gap">
+                                <h5 class="card-title mb-1">Insights de produto</h5>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Ver tudo</a>
+                            </div>
+                            <ul class="insights-list">
+                                <li>
+                                    <h6>Fluxo de checkout</h6>
+                                    <p>Conversão de etapa de pagamento subiu 12% após melhoria de feedback de erro.</p>
+                                    <span class="insight-meta text-success"><i class="bi bi-graph-up-arrow me-1"></i>
+                                        Impacto alto</span>
+                                </li>
+                                <li>
+                                    <h6>Central de ajuda integrada</h6>
+                                    <p>Redução de 18% na abertura de tickets N1 em 15 dias.</p>
+                                    <span class="insight-meta text-info"><i class="bi bi-people me-1"></i> Engajamento
+                                        crescente</span>
+                                </li>
+                                <li>
+                                    <h6>Nova jornada mobile</h6>
+                                    <p>Tempo médio de setup caiu de 11 min para 6 min na versão 5.2.</p>
+                                    <span class="insight-meta text-warning"><i class="bi bi-stopwatch me-1"></i>
+                                        Monitorando estabilidade</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section page-section">
+            <div class="row g-4">
+                <div class="col-xl-7">
+                    <div class="card page-panel h-100">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <div>
+                                    <h5 class="card-title mb-1">Acompanhamento de squads</h5>
+                                    <small class="text-muted">KPIs de execução e qualidade por time</small>
+                                </div>
+                                <div class="btn-group btn-group-sm">
+                                    <button type="button" class="btn btn-outline-secondary active">Semana</button>
+                                    <button type="button" class="btn btn-outline-secondary">Mês</button>
+                                    <button type="button" class="btn btn-outline-secondary">Trimestre</button>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table align-middle table-modern">
+                                    <thead>
+                                        <tr>
+                                            <th>Time</th>
+                                            <th>Entrega</th>
+                                            <th>Qualidade</th>
+                                            <th>Confiabilidade</th>
+                                            <th>Health score</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="team-cell">
+                                                    <span class="team-badge bg-primary-subtle text-primary">Atlas</span>
+                                                    Plataforma Core
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="progress tiny-progress">
+                                                    <div class="progress-bar bg-primary" style="width: 82%;"></div>
+                                                </div>
+                                                <small class="text-muted">82% roadmap Q3</small>
+                                            </td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">98% testes
+                                                    verdes</span></td>
+                                            <td>99,4% uptime</td>
+                                            <td><span class="health-score positive">8,7</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="team-cell">
+                                                    <span class="team-badge bg-info-subtle text-info">Aurora</span>
+                                                    Experiência Cliente
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="progress tiny-progress">
+                                                    <div class="progress-bar bg-info" style="width: 74%;"></div>
+                                                </div>
+                                                <small class="text-muted">9 features entregues</small>
+                                            </td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">0 bugs
+                                                    críticos</span></td>
+                                            <td>98,1% uptime</td>
+                                            <td><span class="health-score neutral">7,9</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="team-cell">
+                                                    <span class="team-badge bg-warning-subtle text-warning">Nebula</span>
+                                                    Dados &amp; IA
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="progress tiny-progress">
+                                                    <div class="progress-bar bg-warning" style="width: 65%;"></div>
+                                                </div>
+                                                <small class="text-muted">Treinando novos modelos</small>
+                                            </td>
+                                            <td><span class="badge rounded-pill bg-danger-subtle text-danger">4 tickets QA</span></td>
+                                            <td>97,6% uptime</td>
+                                            <td><span class="health-score caution">6,8</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-5">
+                    <div class="card page-panel h-100">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <h5 class="card-title mb-0">Resumo de feedback dos clientes</h5>
+                                <span class="badge rounded-pill bg-info-subtle text-info">Últimos 7 dias</span>
+                            </div>
+                            <div class="feedback-grid">
+                                <div class="feedback-grid__item">
+                                    <h6>UX Mobile</h6>
+                                    <p>"Fluxo de cadastro muito mais rápido! Adorei os tooltips contextuais."</p>
+                                    <span class="feedback-grid__meta text-success"><i
+                                            class="bi bi-emoji-smile me-1"></i>Promotor NPS</span>
+                                </div>
+                                <div class="feedback-grid__item">
+                                    <h6>Integração API</h6>
+                                    <p>"Documentação do webhook melhorou, mas falta exemplo em Go."</p>
+                                    <span class="feedback-grid__meta text-warning"><i
+                                            class="bi bi-emoji-neutral me-1"></i>Neutro</span>
+                                </div>
+                                <div class="feedback-grid__item">
+                                    <h6>Relatórios personalizados</h6>
+                                    <p>"Seria ótimo agendar envios automáticos para times parceiros."</p>
+                                    <span class="feedback-grid__meta text-info"><i
+                                            class="bi bi-lightbulb me-1"></i>Feature request</span>
+                                </div>
+                                <div class="feedback-grid__item">
+                                    <h6>Suporte</h6>
+                                    <p>"Atendimento incrível, resolveram meu problema em menos de 15 min."</p>
+                                    <span class="feedback-grid__meta text-success"><i
+                                            class="bi bi-chat-dots me-1"></i>CSAT 4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>

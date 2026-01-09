@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
 
 <body>
-
     <div th:fragment="content">
         <div class="pagetitle">
             <h1>Tabelas</h1>
@@ -13,214 +12,436 @@
                     <li class="breadcrumb-item active">Tabelas</li>
                 </ol>
             </nav>
-        </div><!-- End Page Title -->
+        </div>
 
-        <section class="section">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="card">
+        <section class="section table-showcase">
+            <div class="row g-4">
+                <div class="col-xl-7">
+                    <div class="card table-card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">Tabela Padrão</h5>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Nome</th>
-                                        <th scope="col">Posição</th>
-                                        <th scope="col">Idade</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Brandon Jacob</td>
-                                        <td>Designer</td>
-                                        <td>28</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Bridie Kessler</td>
-                                        <td>Developer</td>
-                                        <td>35</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Tabela com Linhas Listradas</h5>
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Nome</th>
-                                        <th scope="col">Posição</th>
-                                        <th scope="col">Idade</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Brandon Jacob</td>
-                                        <td>Designer</td>
-                                        <td>28</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Bridie Kessler</td>
-                                        <td>Developer</td>
-                                        <td>35</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Tabela com Bordas</h5>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Nome</th>
-                                        <th scope="col">Posição</th>
-                                        <th scope="col">Idade</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Brandon Jacob</td>
-                                        <td>Designer</td>
-                                        <td>28</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Bridie Kessler</td>
-                                        <td>Developer</td>
-                                        <td>35</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Tabela com Hover</h5>
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Nome</th>
-                                        <th scope="col">Posição</th>
-                                        <th scope="col">Idade</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Brandon Jacob</td>
-                                        <td>Designer</td>
-                                        <td>28</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Bridie Kessler</td>
-                                        <td>Developer</td>
-                                        <td>35</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-card-header">
+                                <div>
+                                    <p class="text-muted text-uppercase fw-semibold small mb-1">Operações</p>
+                                    <h4 class="card-title mb-2">Equipe ativa</h4>
+                                    <span class="badge badge-soft badge-soft-success">8 colaboradores online</span>
+                                </div>
+                                <div class="table-toolbar">
+                                    <button class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-plus-circle me-1"></i>Adicionar
+                                    </button>
+                                    <button class="btn btn-light btn-sm">
+                                        <i class="bi bi-funnel me-1"></i>Filtrar
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-modern align-middle mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Colaborador</th>
+                                            <th>Squad</th>
+                                            <th>Foco</th>
+                                            <th>Status</th>
+                                            <th>Produtividade</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="table-avatar bg-gradient-primary">AJ</div>
+                                                    <div class="ms-3">
+                                                        <span class="fw-semibold d-block">Alana Jardim</span>
+                                                        <small class="text-muted">UX Lead · São Paulo</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Discovery</td>
+                                            <td>Pesquisa</td>
+                                            <td><span class="table-status status-online">Online</span></td>
+                                            <td>
+                                                <div class="progress progress-thin">
+                                                    <div class="progress-bar bg-success" style="width: 82%"></div>
+                                                </div>
+                                                <small class="text-muted">82% sprint atual</small>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="table-avatar bg-gradient-pink">CF</div>
+                                                    <div class="ms-3">
+                                                        <span class="fw-semibold d-block">Caio Fernandes</span>
+                                                        <small class="text-muted">Backend Senior</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>API Core</td>
+                                            <td>Escalabilidade</td>
+                                            <td><span class="table-status status-away">Em revisão</span></td>
+                                            <td>
+                                                <div class="progress progress-thin">
+                                                    <div class="progress-bar bg-info" style="width: 67%"></div>
+                                                </div>
+                                                <small class="text-muted">5 PRs abertos</small>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="table-avatar bg-gradient-orange">MV</div>
+                                                    <div class="ms-3">
+                                                        <span class="fw-semibold d-block">Mirella Vieira</span>
+                                                        <small class="text-muted">Product Manager</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Growth</td>
+                                            <td>Roadmap Q3</td>
+                                            <td><span class="table-status status-offline">Em reunião</span></td>
+                                            <td>
+                                                <div class="progress progress-thin">
+                                                    <div class="progress-bar bg-warning" style="width: 45%"></div>
+                                                </div>
+                                                <small class="text-muted">3 OKRs pendentes</small>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="table-avatar bg-gradient-teal">LS</div>
+                                                    <div class="ms-3">
+                                                        <span class="fw-semibold d-block">Luan Souza</span>
+                                                        <small class="text-muted">Data Engineer</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Analytics</td>
+                                            <td>Pipeline BI</td>
+                                            <td><span class="table-status status-online">Online</span></td>
+                                            <td>
+                                                <div class="progress progress-thin">
+                                                    <div class="progress-bar bg-primary" style="width: 91%"></div>
+                                                </div>
+                                                <small class="text-muted">Deploy agendado</small>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-12">
-                    <div class="card">
+                <div class="col-xl-5">
+                    <div class="card table-card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">Tabela Avançada com Paginação</h5>
-                            <p>Uma tabela mais rica com busca, ordenação e paginação, com textos traduzidos.</p>
+                            <div class="table-card-header">
+                                <div>
+                                    <p class="text-muted text-uppercase fw-semibold small mb-1">Vendas</p>
+                                    <h4 class="card-title mb-2">Pipeline listrado</h4>
+                                    <span class="badge badge-soft badge-soft-primary">Atualizado há 2h</span>
+                                </div>
+                                <div class="table-toolbar">
+                                    <button class="btn btn-light btn-sm"><i class="bi bi-arrow-repeat me-1"></i>Atualizar</button>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-modern table-striped align-middle mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Negócio</th>
+                                            <th>Owner</th>
+                                            <th>Valor</th>
+                                            <th>Stage</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p class="fw-semibold mb-0">Expansão Ateliê Digital</p>
+                                                <small class="text-muted">Contrato anual</small>
+                                            </td>
+                                            <td>Gabriela</td>
+                                            <td>R$ 72k</td>
+                                            <td><span class="badge badge-soft badge-soft-success">Fechamento</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="fw-semibold mb-0">E-commerce Pulse</p>
+                                                <small class="text-muted">Nova logo</small>
+                                            </td>
+                                            <td>Bruno</td>
+                                            <td>R$ 38k</td>
+                                            <td><span class="badge badge-soft badge-soft-warning">Proposta</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="fw-semibold mb-0">Onboarding Vanguarda</p>
+                                                <small class="text-muted">18 licenças</small>
+                                            </td>
+                                            <td>Larissa</td>
+                                            <td>R$ 19k</td>
+                                            <td><span class="badge badge-soft badge-soft-info">Apresentação</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="fw-semibold mb-0">Reativação Cobalto</p>
+                                                <small class="text-muted">Upsell CX</small>
+                                            </td>
+                                            <td>Daniel</td>
+                                            <td>R$ 11k</td>
+                                            <td><span class="badge badge-soft badge-soft-danger">Risco</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                            <table class="table datatable">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Cliente</th>
-                                        <th scope="col">Produto</th>
-                                        <th scope="col">Preço</th>
-                                        <th scope="col">Status</th>
-                                        <th scope="col">Ações</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Brandon Jacob</td>
-                                        <td>At praesentium</td>
-                                        <td>$64</td>
-                                        <td><span class="badge bg-success">Aprovado</span></td>
-                                        <td>
-                                            <button class="btn btn-primary btn-sm" title="Ver"><i class="bi bi-eye"></i></button>
-                                            <button class="btn btn-info btn-sm" title="Editar"><i class="bi bi-pencil"></i></button>
-                                            <button class="btn btn-danger btn-sm" title="Excluir"><i class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Bridie Kessler</td>
-                                        <td>Blanditiis dolor</td>
-                                        <td>$47</td>
-                                        <td><span class="badge bg-warning">Pendente</span></td>
-                                        <td>
-                                            <button class="btn btn-primary btn-sm" title="Ver"><i class="bi bi-eye"></i></button>
-                                            <button class="btn btn-info btn-sm" title="Editar"><i class="bi bi-pencil"></i></button>
-                                            <button class="btn btn-danger btn-sm" title="Excluir"><i class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Ashleigh Langosh</td>
-                                        <td>At recusandae</td>
-                                        <td>$147</td>
-                                        <td><span class="badge bg-success">Aprovado</span></td>
-                                        <td>
-                                            <button class="btn btn-primary btn-sm" title="Ver"><i class="bi bi-eye"></i></button>
-                                            <button class="btn btn-info btn-sm" title="Editar"><i class="bi bi-pencil"></i></button>
-                                            <button class="btn btn-danger btn-sm" title="Excluir"><i class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td>Angus Grady</td>
-                                        <td>Ut voluptatem</td>
-                                        <td>$67</td>
-                                        <td><span class="badge bg-danger">Rejeitado</span></td>
-                                        <td>
-                                            <button class="btn btn-primary btn-sm" title="Ver"><i class="bi bi-eye"></i></button>
-                                            <button class="btn btn-info btn-sm" title="Editar"><i class="bi bi-pencil"></i></button>
-                                            <button class="btn btn-danger btn-sm" title="Excluir"><i class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">5</th>
-                                        <td>Raheem Lehner</td>
-                                        <td>Sunt similique</td>
-                                        <td>$165</td>
-                                        <td><span class="badge bg-success">Aprovado</span></td>
-                                        <td>
-                                            <button class="btn btn-primary btn-sm" title="Ver"><i class="bi bi-eye"></i></button>
-                                            <button class="btn btn-info btn-sm" title="Editar"><i class="bi bi-pencil"></i></button>
-                                            <button class="btn btn-danger btn-sm" title="Excluir"><i class="bi bi-trash"></i></button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+            <div class="row g-4 mt-1">
+                <div class="col-12">
+                    <div class="card table-card">
+                        <div class="card-body">
+                            <div class="table-card-header flex-wrap">
+                                <div>
+                                    <p class="text-muted text-uppercase fw-semibold small mb-1">Financeiro</p>
+                                    <h4 class="card-title mb-2">Pedidos recentes</h4>
+                                    <small class="text-muted">Integração com gateway · últimos 7 dias</small>
+                                </div>
+                                <div class="table-toolbar gap-2">
+                                    <div class="btn-group btn-group-sm" role="group" aria-label="Filtros">
+                                        <button type="button" class="btn btn-outline-secondary active">Todos</button>
+                                        <button type="button" class="btn btn-outline-secondary">Pago</button>
+                                        <button type="button" class="btn btn-outline-secondary">Pendente</button>
+                                    </div>
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="bi bi-download me-1"></i>Exportar CSV
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-modern table-hover align-middle mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Cliente</th>
+                                            <th>Produto</th>
+                                            <th>Data</th>
+                                            <th>Pagamento</th>
+                                            <th>Status</th>
+                                            <th class="text-end">Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>15241</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="table-avatar table-avatar-sm bg-gradient-primary">LT</div>
+                                                    <div class="ms-3">
+                                                        <span class="fw-semibold d-block">Lumina Tech</span>
+                                                        <small class="text-muted">lumina.io</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Plano Business</td>
+                                            <td>03 Jul</td>
+                                            <td>
+                                                <span class="badge badge-soft badge-soft-success">
+                                                    <i class="bi bi-check-circle me-1"></i>Pix
+                                                </span>
+                                            </td>
+                                            <td><span class="badge bg-success-subtle text-success">Concluído</span></td>
+                                            <td class="text-end">
+                                                <button class="btn btn-icon btn-light btn-sm" title="Compartilhar"><i class="bi bi-box-arrow-up-right"></i></button>
+                                                <button class="btn btn-icon btn-outline-secondary btn-sm" title="Ver"><i class="bi bi-eye"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>15218</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="table-avatar table-avatar-sm bg-gradient-teal">NR</div>
+                                                    <div class="ms-3">
+                                                        <span class="fw-semibold d-block">Nuvem Radar</span>
+                                                        <small class="text-muted">nradar.com</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Consultoria CX</td>
+                                            <td>02 Jul</td>
+                                            <td>
+                                                <span class="badge badge-soft badge-soft-warning">
+                                                    <i class="bi bi-clock-history me-1"></i>Cartão
+                                                </span>
+                                            </td>
+                                            <td><span class="badge bg-warning-subtle text-warning">Pendente</span></td>
+                                            <td class="text-end">
+                                                <button class="btn btn-icon btn-light btn-sm" title="Lembrar"><i class="bi bi-bell"></i></button>
+                                                <button class="btn btn-icon btn-outline-secondary btn-sm" title="Ver"><i class="bi bi-eye"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>15204</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="table-avatar table-avatar-sm bg-gradient-orange">VP</div>
+                                                    <div class="ms-3">
+                                                        <span class="fw-semibold d-block">Vortex Pay</span>
+                                                        <small class="text-muted">vortexpay.com</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Suporte Premium</td>
+                                            <td>02 Jul</td>
+                                            <td>
+                                                <span class="badge badge-soft badge-soft-danger">
+                                                    <i class="bi bi-exclamation-triangle me-1"></i>Boleto
+                                                </span>
+                                            </td>
+                                            <td><span class="badge bg-danger-subtle text-danger">Atrasado</span></td>
+                                            <td class="text-end">
+                                                <button class="btn btn-icon btn-light btn-sm" title="Reenviar"><i class="bi bi-arrow-clockwise"></i></button>
+                                                <button class="btn btn-icon btn-outline-secondary btn-sm" title="Ver"><i class="bi bi-eye"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>15178</td>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="table-avatar table-avatar-sm bg-gradient-pink">SD</div>
+                                                    <div class="ms-3">
+                                                        <span class="fw-semibold d-block">Studio Domo</span>
+                                                        <small class="text-muted">studiodomo</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>Treinamento interno</td>
+                                            <td>01 Jul</td>
+                                            <td>
+                                                <span class="badge badge-soft badge-soft-info">
+                                                    <i class="bi bi-credit-card me-1"></i>Visa
+                                                </span>
+                                            </td>
+                                            <td><span class="badge bg-primary-subtle text-primary">Processing</span></td>
+                                            <td class="text-end">
+                                                <button class="btn btn-icon btn-light btn-sm" title="Aprovar"><i class="bi bi-check2-circle"></i></button>
+                                                <button class="btn btn-icon btn-outline-secondary btn-sm" title="Ver"><i class="bi bi-eye"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mt-1">
+                <div class="col-12">
+                    <div class="card table-card">
+                        <div class="card-body">
+                            <div class="table-card-header flex-wrap">
+                                <div>
+                                    <p class="text-muted text-uppercase fw-semibold small mb-1">DataTable</p>
+                                    <h4 class="card-title mb-2">Tabela interativa</h4>
+                                    <small class="text-muted">Busca, paginação e ordenação com labels traduzidos.</small>
+                                </div>
+                                <div class="table-toolbar">
+                                    <button class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-sliders me-1"></i>Preferências
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-modern datatable align-middle mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Cliente</th>
+                                            <th>Produto</th>
+                                            <th>Preço</th>
+                                            <th>Status</th>
+                                            <th>Ações</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Brandon Jacob</td>
+                                            <td>Suite CRM</td>
+                                            <td>R$ 64</td>
+                                            <td><span class="badge bg-success">Aprovado</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button class="btn btn-light btn-sm"><i class="bi bi-eye"></i></button>
+                                                    <button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil"></i></button>
+                                                    <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Bridie Kessler</td>
+                                            <td>Onboarding</td>
+                                            <td>R$ 47</td>
+                                            <td><span class="badge bg-warning text-dark">Pendente</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button class="btn btn-light btn-sm"><i class="bi bi-eye"></i></button>
+                                                    <button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil"></i></button>
+                                                    <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Ashleigh Langosh</td>
+                                            <td>Consultoria</td>
+                                            <td>R$ 147</td>
+                                            <td><span class="badge bg-success">Aprovado</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button class="btn btn-light btn-sm"><i class="bi bi-eye"></i></button>
+                                                    <button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil"></i></button>
+                                                    <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Angus Grady</td>
+                                            <td>Roadmap</td>
+                                            <td>R$ 67</td>
+                                            <td><span class="badge bg-danger">Rejeitado</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button class="btn btn-light btn-sm"><i class="bi bi-eye"></i></button>
+                                                    <button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil"></i></button>
+                                                    <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Raheem Lehner</td>
+                                            <td>Upgrade Cloud</td>
+                                            <td>R$ 165</td>
+                                            <td><span class="badge bg-success">Aprovado</span></td>
+                                            <td>
+                                                <div class="table-actions">
+                                                    <button class="btn btn-light btn-sm"><i class="bi bi-eye"></i></button>
+                                                    <button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil"></i></button>
+                                                    <button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -235,15 +456,13 @@
                             placeholder: "Pesquisar...",
                             perPage: "{select} entradas por página",
                             noRows: "Nenhuma entrada encontrada",
-                            info: "Mostrando {start} a {end} de {rows} entradas",
+                            info: "Mostrando {start} a {end} de {rows} entradas"
                         }
                     });
                 }
             });
         </script>
-
     </div>
-
 </body>
 
 </html>

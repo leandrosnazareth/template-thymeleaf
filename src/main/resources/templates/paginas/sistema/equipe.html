@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+    <div th:fragment="content">
+
+        <div class="pagetitle">
+            <div class="page-hero page-hero--people">
+                <div class="page-hero__copy">
+                    <span class="page-hero__eyebrow">Orquestração de equipes</span>
+                    <h1>Gestão de times &amp; permissões</h1>
+                    <p class="page-hero__subtitle">
+                        Tenha uma visão completa da estrutura organizacional, níveis de acesso, workload e rituais de
+                        colaboração entre squads.
+                    </p>
+                    <div class="page-hero__actions">
+                        <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-person-plus me-2"></i>Adicionar
+                            membro</a>
+                        <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-diagram-3 me-2"></i>Ver
+                            organograma</a>
+                    </div>
+                </div>
+                <div class="page-hero__metrics">
+                    <div class="metric-card metric-card--compact">
+                        <span class="metric-card__label">Total de squads</span>
+                        <span class="metric-card__value">8 times</span>
+                        <span class="metric-card__trend neutral"><i class="bi bi-people me-1"></i>82 membros ativos</span>
+                    </div>
+                    <div class="metric-card metric-card--compact">
+                        <span class="metric-card__label">Alocação atual</span>
+                        <span class="metric-card__value text-success">94%</span>
+                        <span class="metric-card__trend positive"><i class="bi bi-graph-up-arrow me-1"></i>
+                            6 vagas em aberto</span>
+                    </div>
+                    <div class="metric-card metric-card--compact">
+                        <span class="metric-card__label">Treinamentos concluídos</span>
+                        <span class="metric-card__value">312</span>
+                        <span class="metric-card__trend positive"><i class="bi bi-award me-1"></i>93% compliance
+                            LGPD</span>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End Page Title -->
+
+        <section class="section page-section">
+            <div class="row g-4">
+                <div class="col-xl-6">
+                    <div class="card page-panel h-100">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <h5 class="card-title mb-1">Mapa de squads</h5>
+                                <a href="#" class="btn btn-outline-secondary btn-sm">Ver matriz completa</a>
+                            </div>
+                            <div class="squad-grid">
+                                <div class="squad-card">
+                                    <div class="squad-card__header">
+                                        <span class="squad-icon bg-primary-subtle text-primary"><i
+                                                class="bi bi-cpu"></i></span>
+                                        <div>
+                                            <h6>Squad Atlas</h6>
+                                            <small>Plataforma core</small>
+                                        </div>
+                                        <span class="badge rounded-pill bg-success-subtle text-success ms-auto">Saudável</span>
+                                    </div>
+                                    <p>Responsável por arquitetura, autenticação e billing.</p>
+                                    <div class="squad-meta">
+                                        <span><i class="bi bi-people me-1"></i>12 pessoas</span>
+                                        <span><i class="bi bi-kanban me-1"></i>Sprint 28</span>
+                                        <span><i class="bi bi-lightbulb me-1"></i>3 OKRs ativos</span>
+                                    </div>
+                                </div>
+                                <div class="squad-card">
+                                    <div class="squad-card__header">
+                                        <span class="squad-icon bg-info-subtle text-info"><i
+                                                class="bi bi-phone"></i></span>
+                                        <div>
+                                            <h6>Squad Aurora</h6>
+                                            <small>Experiência do cliente</small>
+                                        </div>
+                                        <span class="badge rounded-pill bg-info-subtle text-info ms-auto">Em foco</span>
+                                    </div>
+                                    <p>Cuida de jornada mobile, comunicação contextual e onboarding.</p>
+                                    <div class="squad-meta">
+                                        <span><i class="bi bi-people me-1"></i>10 pessoas</span>
+                                        <span><i class="bi bi-kanban me-1"></i>Sprint 15</span>
+                                        <span><i class="bi bi-star me-1"></i>Feature destaque</span>
+                                    </div>
+                                </div>
+                                <div class="squad-card">
+                                    <div class="squad-card__header">
+                                        <span class="squad-icon bg-warning-subtle text-warning"><i
+                                                class="bi bi-cloud-upload"></i></span>
+                                        <div>
+                                            <h6>Squad Nebula</h6>
+                                            <small>Dados &amp; IA</small>
+                                        </div>
+                                        <span class="badge rounded-pill bg-warning-subtle text-warning ms-auto">Atenção</span>
+                                    </div>
+                                    <p>Foca em pipelines de dados, modelos preditivos e governança.</p>
+                                    <div class="squad-meta">
+                                        <span><i class="bi bi-people me-1"></i>9 pessoas</span>
+                                        <span><i class="bi bi-kanban me-1"></i>Sprint 22</span>
+                                        <span><i class="bi bi-exclamation-circle me-1"></i>Incident review</span>
+                                    </div>
+                                </div>
+                                <div class="squad-card">
+                                    <div class="squad-card__header">
+                                        <span class="squad-icon bg-success-subtle text-success"><i
+                                                class="bi bi-shop"></i></span>
+                                        <div>
+                                            <h6>Squad Nimbus</h6>
+                                            <small>Marketplace</small>
+                                        </div>
+                                        <span class="badge rounded-pill bg-success-subtle text-success ms-auto">Confiante</span>
+                                    </div>
+                                    <p>Evolui catálogo, parceiros e automações para sellers.</p>
+                                    <div class="squad-meta">
+                                        <span><i class="bi bi-people me-1"></i>8 pessoas</span>
+                                        <span><i class="bi bi-kanban me-1"></i>Sprint 9</span>
+                                        <span><i class="bi bi-rocket me-1"></i>Go-live 12/08</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="card page-panel h-100">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <div>
+                                    <h5 class="card-title mb-1">Matriz de permissões</h5>
+                                    <small class="text-muted">Controle granular por função, escopo e módulos</small>
+                                </div>
+                                <button class="btn btn-outline-primary btn-sm"><i class="bi bi-sliders2 me-1"></i>Gerenciar</button>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table align-middle table-permissions">
+                                    <thead>
+                                        <tr>
+                                            <th>Role</th>
+                                            <th>Recursos</th>
+                                            <th>Acessos críticos</th>
+                                            <th>Última revisão</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="role-badge bg-primary-subtle text-primary">
+                                                    <i class="bi bi-shield-lock"></i> Administrador
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <ul class="role-scopes">
+                                                    <li>Gestão de usuários</li>
+                                                    <li>Configurações avançadas</li>
+                                                    <li>Billing &amp; planos</li>
+                                                </ul>
+                                            </td>
+                                            <td><span class="badge rounded-pill bg-danger-subtle text-danger">Acesso total</span></td>
+                                            <td>03 ago · 09:10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="role-badge bg-success-subtle text-success">
+                                                    <i class="bi bi-diagram-3"></i> Gestor
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <ul class="role-scopes">
+                                                    <li>Dashboards &amp; relatórios</li>
+                                                    <li>Roadmap e OKRs</li>
+                                                    <li>Gestão de squads</li>
+                                                </ul>
+                                            </td>
+                                            <td><span class="badge rounded-pill bg-warning-subtle text-warning">Somente leitura crítica</span></td>
+                                            <td>02 ago · 18:27</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="role-badge bg-info-subtle text-info">
+                                                    <i class="bi bi-kanban"></i> Product Owner
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <ul class="role-scopes">
+                                                    <li>Backlog &amp; priorização</li>
+                                                    <li>Experimentos</li>
+                                                    <li>Métricas de produto</li>
+                                                </ul>
+                                            </td>
+                                            <td><span class="badge rounded-pill bg-info-subtle text-info">Acesso moderado</span></td>
+                                            <td>02 ago · 12:04</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="role-badge bg-secondary-subtle text-secondary">
+                                                    <i class="bi bi-code-slash"></i> Tech Lead
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <ul class="role-scopes">
+                                                    <li>Observabilidade</li>
+                                                    <li>Infraestrutura cloud</li>
+                                                    <li>Deploy &amp; feature flags</li>
+                                                </ul>
+                                            </td>
+                                            <td><span class="badge rounded-pill bg-success-subtle text-success">Acesso privilegiado</span></td>
+                                            <td>01 ago · 16:49</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="policy-callout">
+                                <div class="policy-callout__icon bg-primary-subtle text-primary">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+                                <div>
+                                    <h6>Política de least privilege</h6>
+                                    <p>Auditoria contínua garante que cada membro tenha apenas o acesso necessário para
+                                        executar suas tarefas.</p>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Rever políticas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section page-section">
+            <div class="row g-4">
+                <div class="col-xl-5">
+                    <div class="card page-panel h-100">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <h5 class="card-title mb-1">Rituals &amp; cadências</h5>
+                                <a href="#" class="btn btn-outline-secondary btn-sm">Editar agenda</a>
+                            </div>
+                            <ul class="ritual-list">
+                                <li>
+                                    <div class="ritual-icon bg-primary-subtle text-primary">
+                                        <i class="bi bi-calendar4-week"></i>
+                                    </div>
+                                    <div>
+                                        <h6>Planejamento trimestral</h6>
+                                        <span class="ritual-meta">Próxima sessão: 05 set · 09h</span>
+                                        <p>Revisão de OKRs, alinhamento estratégico e dependências críticas.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ritual-icon bg-success-subtle text-success">
+                                        <i class="bi bi-clipboard-check"></i>
+                                    </div>
+                                    <div>
+                                        <h6>Reviews de produto</h6>
+                                        <span class="ritual-meta">Cadência quinzenal · 90 min</span>
+                                        <p>Rodada de demonstração, dados de uso e próximos experimentos.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ritual-icon bg-warning-subtle text-warning">
+                                        <i class="bi bi-chat-dots"></i>
+                                    </div>
+                                    <div>
+                                        <h6>Retrospectivas cruzadas</h6>
+                                        <span class="ritual-meta">Mensal · Multi-squad</span>
+                                        <p>Debate sobre aprendizados, gargalos e ações de melhoria.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ritual-icon bg-info-subtle text-info">
+                                        <i class="bi bi-journal-medical"></i>
+                                    </div>
+                                    <div>
+                                        <h6>Runbooks de incidentes</h6>
+                                        <span class="ritual-meta">Atualizados semanalmente</span>
+                                        <p>Checklists e owner responsável para cada serviço crítico.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7">
+                    <div class="card page-panel h-100">
+                        <div class="card-body">
+                            <div class="card-heading with-gap">
+                                <div>
+                                    <h5 class="card-title mb-1">Radar de clima &amp; capacitação</h5>
+                                    <small class="text-muted">Sentimento da equipe, desenvolvimento e riscos de burnout
+                                        monitorados semanalmente</small>
+                                </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm">Ver pesquisa</a>
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="wellbeing-card">
+                                        <h6>Bem-estar geral</h6>
+                                        <div class="wellbeing-score positive">8,9</div>
+                                        <p>Índice construído a partir de pesquisas anônimas, ausências e horas extras.</p>
+                                        <span class="badge rounded-pill bg-success-subtle text-success">+0,7 vs. mês passado</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="wellbeing-card">
+                                        <h6>Plano de desenvolvimento</h6>
+                                        <div class="wellbeing-score neutral">72%</div>
+                                        <p>Planos individuais revisados trimestralmente com mentores dedicados.</p>
+                                        <span class="badge rounded-pill bg-info-subtle text-info">26 mentorias ativas</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="skill-matrix">
+                                <h6>Matriz de habilidades chave</h6>
+                                <div class="skill-matrix__grid">
+                                    <div class="skill-matrix__item">
+                                        <span>Arquitetura distribuída</span>
+                                        <div class="progress tiny-progress">
+                                            <div class="progress-bar bg-primary" style="width: 78%;"></div>
+                                        </div>
+                                        <small class="text-muted">15 especialistas · 6 em formação</small>
+                                    </div>
+                                    <div class="skill-matrix__item">
+                                        <span>Pesquisa de UX</span>
+                                        <div class="progress tiny-progress">
+                                            <div class="progress-bar bg-info" style="width: 62%;"></div>
+                                        </div>
+                                        <small class="text-muted">8 especialistas · 4 em formação</small>
+                                    </div>
+                                    <div class="skill-matrix__item">
+                                        <span>Machine Learning Ops</span>
+                                        <div class="progress tiny-progress">
+                                            <div class="progress-bar bg-warning" style="width: 55%;"></div>
+                                        </div>
+                                        <small class="text-muted">6 especialistas · 9 em formação</small>
+                                    </div>
+                                    <div class="skill-matrix__item">
+                                        <span>Segurança da informação</span>
+                                        <div class="progress tiny-progress">
+                                            <div class="progress-bar bg-success" style="width: 84%;"></div>
+                                        </div>
+                                        <small class="text-muted">12 especialistas · 3 em formação</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>
