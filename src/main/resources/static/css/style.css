@@ -4825,3 +4825,94 @@ body.auth-page .back-to-top {
         color: #fff;
     }
 }
+
+/* Theme Palette Overrides */
+:root[data-theme-palette="nevoa"] {
+    --color-primary: #2f6aa6;
+    --color-primary-rgb: 47, 106, 166;
+    --color-background: #eef2f7;
+    --color-surface: #ffffff;
+    --color-muted: #62708a;
+    --color-border: rgba(46, 74, 104, 0.25);
+    --color-dark: #1f2b3a;
+    --color-light: rgba(32, 45, 60, 0.08);
+    --shadow-soft: 0 16px 38px rgba(47, 106, 166, 0.18);
+    --shadow-medium: 0 12px 32px rgba(18, 24, 34, 0.12);
+}
+
+:root[data-theme-palette="areia"] {
+    --color-primary: #a46a3f;
+    --color-primary-rgb: 164, 106, 63;
+    --color-background: #f6efe6;
+    --color-surface: #fffaf4;
+    --color-muted: #7a6a5a;
+    --color-border: rgba(142, 104, 74, 0.3);
+    --color-dark: #2f241c;
+    --color-light: rgba(51, 35, 22, 0.08);
+    --shadow-soft: 0 16px 38px rgba(164, 106, 63, 0.18);
+    --shadow-medium: 0 12px 32px rgba(26, 20, 15, 0.12);
+}
+
+:root[data-theme-palette="nevoa"] .header {
+    background: linear-gradient(135deg, #f8fbff 0%, #e6edf6 100%);
+    border-bottom: 1px solid rgba(47, 106, 166, 0.18);
+}
+
+:root[data-theme-palette="areia"] .header {
+    background: linear-gradient(135deg, #fff6ec 0%, #f1e5d8 100%);
+    border-bottom: 1px solid rgba(164, 106, 63, 0.22);
+}
+
+:root[data-theme-palette="nevoa"] .sidebar {
+    background: linear-gradient(180deg, #f3f7fc 0%, #e3eaf4 100%);
+    border-right: 1px solid rgba(47, 106, 166, 0.18);
+}
+
+:root[data-theme-palette="areia"] .sidebar {
+    background: linear-gradient(180deg, #fff7ef 0%, #f2e7dc 100%);
+    border-right: 1px solid rgba(164, 106, 63, 0.22);
+}
+
+:root[data-theme-palette="nevoa"] .header .header-nav .nav-icon,
+:root[data-theme-palette="nevoa"] .header .header-username,
+:root[data-theme-palette="nevoa"] .sidebar .nav-link {
+    color: #2f405a;
+}
+
+:root[data-theme-palette="areia"] .header .header-nav .nav-icon,
+:root[data-theme-palette="areia"] .header .header-username,
+:root[data-theme-palette="areia"] .sidebar .nav-link {
+    color: #3a2b21;
+}
+
+:root[data-theme-palette="nevoa"] .theme-palette-options .btn,
+:root[data-theme-palette="nevoa"] .theme-palette-options .btn.btn-outline-secondary {
+    color: #2f6aa6 !important;
+    border-color: rgba(47, 106, 166, 0.45) !important;
+    background-color: rgba(47, 106, 166, 0.14) !important;
+}
+
+:root[data-theme-palette="nevoa"] .theme-palette-options .btn.active,
+:root[data-theme-palette="nevoa"] .theme-palette-options .btn:hover,
+:root[data-theme-palette="nevoa"] .theme-palette-options .btn:focus {
+    color: #ffffff !important;
+    border-color: #2f6aa6 !important;
+    background-color: #2f6aa6 !important;
+    box-shadow: 0 8px 20px rgba(47, 106, 166, 0.25);
+}
+
+:root[data-theme-palette="areia"] .theme-palette-options .btn,
+:root[data-theme-palette="areia"] .theme-palette-options .btn.btn-outline-secondary {
+    color: #a46a3f !important;
+    border-color: rgba(164, 106, 63, 0.45) !important;
+    background-color: rgba(164, 106, 63, 0.14) !important;
+}
+
+:root[data-theme-palette="areia"] .theme-palette-options .btn.active,
+:root[data-theme-palette="areia"] .theme-palette-options .btn:hover,
+:root[data-theme-palette="areia"] .theme-palette-options .btn:focus {
+    color: #ffffff !important;
+    border-color: #a46a3f !important;
+    background-color: #a46a3f !important;
+    box-shadow: 0 8px 20px rgba(164, 106, 63, 0.25);
+}

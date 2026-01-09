@@ -137,6 +137,47 @@
     }
 
     /**
+     * Theme Palette
+     */
+    const themePaletteButtons = select('[data-theme-palette]', true);
+
+    const setStoredPalette = palette => localStorage.setItem('theme-palette', palette);
+    const getStoredPalette = () => localStorage.getItem('theme-palette');
+
+    const applyPalette = palette => {
+        if (palette === 'nevoa' || palette === 'areia') {
+            document.documentElement.setAttribute('data-theme-palette', palette);
+        } else {
+            document.documentElement.removeAttribute('data-theme-palette');
+        }
+    };
+
+    const updatePaletteButtons = palette => {
+        themePaletteButtons.forEach(button => {
+            const isActive = button.dataset.themePalette === palette;
+            button.classList.toggle('active', isActive);
+            button.classList.toggle('btn-secondary', isActive);
+            button.classList.toggle('btn-outline-secondary', !isActive);
+        });
+    };
+
+    if (themePaletteButtons.length > 0) {
+        const storedPalette = getStoredPalette();
+        const initialPalette = storedPalette === 'nevoa' || storedPalette === 'areia' ? storedPalette : 'default';
+        applyPalette(initialPalette);
+        updatePaletteButtons(initialPalette);
+
+        themePaletteButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const selected = this.dataset.themePalette;
+                setStoredPalette(selected);
+                applyPalette(selected);
+                updatePaletteButtons(selected);
+            });
+        });
+    }
+
+    /**
      * Menu Position
      */
     const getStoredMenuPosition = () => localStorage.getItem('menuPosition');
